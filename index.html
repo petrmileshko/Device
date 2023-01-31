@@ -10,22 +10,83 @@
 <body>
 
   <header class="site-header">
-
+    <!-- Шапка сайта, повторяется на всех страницах -->
     <nav class="navigation">
 
-      <a href="/" class="navigation-logo">
-
+      <a class="navigation-logo" href="/">
+        <!-- <svg class="logo-image"> Тут втставим картинку логотипа в формате svg  </svg>-->
+        <span class="visually-hidden">Логотип магазина - ссылка на главную страницу.</span>
+        <!-- visually-hidden - визуально скрытое пояснение к интерактивному элементу navigation-logo -->
       </a>
 
       <form class="navigation-search" action="https://echo.htmlacademy.ru/" method="post">
 
+        <label class="search-label" for="search">
+
+          <span class="visually-hidden">Иконка поиска</span>
+          <!-- <svg class="search-icon"> Тут втставим картинку иконки формате svg  </svg>-->
+
+        </label>
+
+        <input class="search-input" type="text" id="search" name="search" placeholder="Текст поиска">
+
+        <button class="button-submit" type="submit">Найти</button>
+
       </form>
 
       <ul class="navigtion-menu user-menu">
+        <li class="menu-item">
 
+          <a class="menu-link" href="#">
+            <span class="menu-icon">
+              <!-- <svg class="enter-icon"> Тут втставим иконку в формате svg  </svg>-->
+            </span>
+            Войти
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="#">
+            <span class="menu-icon">
+              <!-- <svg class="compare-icon"> Тут втставим иконку в формате svg  </svg>-->
+            </span>
+            Сравнить
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="#">
+            <span class="cart-goods">
+              2
+            </span>
+            <span class="menu-icon">
+              <!-- <svg class="cart-icon"> Тут втставим иконку в формате svg  </svg>-->
+            </span>
+            Корзина
+          </a>
+        </li>
       </ul>
 
       <ul class="navigation-menu">
+
+        <li class="menu-item">
+          <button class="menu-button" type="button">
+            <span class="button-text">Каталог товара</span>
+            <span class="button-toggle">
+              <!-- <svg class="button-icon"> Тут втставим иконку в формате svg  </svg>-->
+            </span>
+          </button>
+        </li>
+
+        <li class="menu-item">
+          <a href="#" class="menu-link">доставка</a>
+        </li>
+
+        <li class="menu-item">
+          <a href="#" class="menu-link">гарантия</a>
+        </li>
+
+        <li class="menu-item">
+          <a href="#" class="menu-link">контакты</a>
+        </li>
 
       </ul>
 
@@ -34,9 +95,57 @@
   </header>
 
   <main class="home-content">
+    <!-- Основное содержимое главной страницы -->
+    <section class="slider">
+      <h2 class="visually-hidden">Слайдер промо товаров</h2>
 
-    <section class="gallery">
+      <ol class="slider-list">
 
+        <li class="slider-item">
+
+          <img src="" alt="" class="slider-image">
+
+          <button class="slider-button slide-prev">
+            <span>Предыдущий слайд</span>
+          </button>
+
+          <button class="slider-button slide-next">
+            <span>Следующий слайд</span>
+          </button>
+
+          <div class="slide-description">
+
+            <h3 class="slide-title"></h3>
+
+            <p class="slide-text"></p>
+
+            <ul class="slider-navigation">
+              <li class="slider-navigation-item"></li>
+              <li class="slider-navigation-item"></li>
+              <li class="slider-navigation-item"></li>
+              <li class="slider-navigation-item"></li>
+            </ul>
+
+            <table class="slider-table">
+              <tr class="table-data">
+                <td class="data-value"></td>
+                <td class="data-value"></td>
+              </tr>
+              <th class="table-heading">
+              <td class="heading-name"></td>
+              <td class="heading-name"></td>
+              </th>
+            </table>
+
+          </div>
+
+        </li>
+
+        <li class="gallery-item"></li>
+
+        <li class="gallery-item"></li>
+
+      </ol>
       <div class="gallery-slider">
 
       </div>
