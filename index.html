@@ -15,28 +15,21 @@
 
       <a class="navigation-logo" href="/">
         <!-- <svg class="logo-image"> Тут втставим картинку логотипа в формате svg  </svg>-->
-        <span class="visually-hidden">Логотип магазина - ссылка на главную страницу.</span>
+        <span class="visually-hidden">Логотип магазина.</span>
         <!-- visually-hidden - визуально скрытое пояснение к интерактивному элементу navigation-logo -->
       </a>
 
       <form class="navigation-search" action="https://echo.htmlacademy.ru/" method="post">
-
         <label class="search-label" for="search">
-
           <span class="visually-hidden">Иконка поиска</span>
           <!-- <svg class="search-icon"> Тут втставим картинку иконки формате svg  </svg>-->
-
         </label>
-
         <input class="search-input" type="text" id="search" name="search" placeholder="Текст поиска">
-
         <button class="button-submit" type="submit">Найти</button>
-
       </form>
 
       <ul class="navigtion-menu user-menu">
         <li class="menu-item">
-
           <a class="menu-link" href="#">
             <span class="menu-icon">
               <!-- <svg class="enter-icon"> Тут втставим иконку в формате svg  </svg>-->
@@ -66,28 +59,38 @@
       </ul>
 
       <ul class="navigation-menu">
-
         <li class="menu-item">
-          <button class="menu-button" type="button">
-            <span class="button-text">Каталог товара</span>
-            <span class="button-toggle">
+          <a class="menu-button" href="#submenu">
+            <span class="button-text">Каталог товаров</span>
+            <p class="button-toggle">
               <!-- <svg class="button-icon"> Тут втставим иконку в формате svg  </svg>-->
-            </span>
-          </button>
+            </p>
+          </a>
+          <ul class="submenu-categories-list" id="submenu">
+            <li class="category-items" data-category="category-1">
+              <!-- Вместо "category-1" будет подставляться alias категории или его id-номер -->
+              <a class="category-item-link" href="#">Виртуальная реальность</a>
+              <a class="category-item-link" href="#">Моноподы для cелфи</a>
+              <a class="category-item-link" href="#">Экшн-камеры</a>
+            </li>
+            <li class="category-items" data-category="category-2">
+              <a class="category-item-link" href="#">Фитнес-браслеты</a>
+              <a class="category-item-link" href="#">Умные часы</a>
+            </li>
+            <li class="category-items" data-category="category-3">
+              <a class="category-item-link" href="#">Квадрокоптеры</a>
+            </li>
+          </ul>
         </li>
-
         <li class="menu-item">
-          <a href="#" class="menu-link">доставка</a>
+          <a class="menu-link" href="#delivery">доставка</a>
         </li>
-
         <li class="menu-item">
-          <a href="#" class="menu-link">гарантия</a>
+          <a class="menu-link" href="#warranty">гарантия</a>
         </li>
-
         <li class="menu-item">
-          <a href="#" class="menu-link">контакты</a>
+          <a class="menu-link" href="#contacts">контакты</a>
         </li>
-
       </ul>
 
     </nav>
@@ -96,63 +99,136 @@
 
   <main class="home-content">
     <!-- Основное содержимое главной страницы -->
-    <section class="slider">
-      <h2 class="visually-hidden">Слайдер промо товаров</h2>
+
+    <section class="slider-categories-best">
+      <!-- Секция со слайдами -->
+      <h2 class="visually-hidden">Лучшие предложения из каждой категории</h2>
+
+      <div class="slider-navigation">
+        <!-- Кнопки навигации по слайдам -->
+        <button class="navigation-button slide-prev">
+          <!-- Кнопка перехода назад -->
+          <span class="visually-hidden">Предыдущее.</span>
+        </button>
+        <button class="navigation-button slide-next">
+          <!-- Кнопка перехода вперед -->
+          <span class="visually-hidden">Следующее.</span>
+        </button>
+      </div>
 
       <ol class="slider-list">
+        <!-- Список слайдов предложений продукции/товаров по одному из каждой категории -->
+        <li class="slide slide-active" id="category-1" data-slide="1">
+          <!-- Вместо "category-1" будет подставляться alias категории или его id-номер -->
+          <!-- Слайд предложения номер 1  активный -->
+          <h3 class="visually-hidden">Квадрокоптер</h3>
 
-        <li class="slider-item">
+          <img class="slide-image" src="/images/index/slide-1.png" alt="Квадрокоптер c мощным лазером.">
 
-          <img src="" alt="" class="slider-image">
+          <p class="slide-number"><span class="visually-hidden">предложение номер </span>01</p>
 
-          <button class="slider-button slide-prev">
-            <span>Предыдущий слайд</span>
-          </button>
+          <div class="slide-information">
+            <p class="slide-title"><strong>Порхает как бабочка, жалит как пчела!</strong></p>
 
-          <button class="slider-button slide-next">
-            <span>Следующий слайд</span>
-          </button>
+            <p class="slide-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
+              замаскированным под стандартную камеру.</p>
 
-          <div class="slide-description">
-
-            <h3 class="slide-title"></h3>
-
-            <p class="slide-text"></p>
-
-            <ul class="slider-navigation">
-              <li class="slider-navigation-item"></li>
-              <li class="slider-navigation-item"></li>
-              <li class="slider-navigation-item"></li>
-              <li class="slider-navigation-item"></li>
-            </ul>
+            <a class="button slide-details" href="product-1-card.html">Подробнее</a>
 
             <table class="slider-table">
+              <!-- Таблица основных характеристик/параметров продукта-->
+              <caption class="visually-hidden">Основные характеристики товара</caption>
               <tr class="table-data">
-                <td class="data-value"></td>
-                <td class="data-value"></td>
+                <td class="data-value"><b>800 м</b></td>
+                <td class="data-value"><b>50 м</b></td>
               </tr>
-              <th class="table-heading">
-              <td class="heading-name"></td>
-              <td class="heading-name"></td>
-              </th>
+              <tr class="table-heading">
+                <th class="heading-name">Дальность полета</th>
+                <th class="heading-name">Радиус поражения</th>
+              </tr>
             </table>
-
           </div>
-
         </li>
+        <li class="slide" id="category-2" data-slide="2">
+          <!-- Слайд предложения номер 2  неактивный -->
+          <h3 class="visually-hidden">Фитнес-браслет</h3>
 
-        <li class="gallery-item"></li>
+          <img class="slide-image" src="/images/index/slide-1.png" alt="Спортивный фитнес-браслет.">
 
-        <li class="gallery-item"></li>
+          <p class="slide-number"><span class="visually-hidden">предложение номер </span>02</p>
 
+          <div class="slide-information">
+            <p class="slide-title"><strong>Худеем правильно!</strong></p>
+
+            <p class="slide-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и
+              соблюдать диету.</p>
+
+            <a class="button slide-details" href="product-1-card.html">Подробнее</a>
+
+            <table class="slider-table">
+              <!-- Таблица основных характеристик/параметров продукта-->
+              <caption class="visually-hidden">Основные характеристики товара</caption>
+              <tr class="table-data">
+                <td class="data-value"><b>48 часов</b></td>
+              </tr>
+              <tr class="table-heading">
+                <th class="heading-name">Без подзарядки</th>
+              </tr>
+            </table>
+          </div>
+        </li>
+        <li class="slide" id="category-3" data-slide="3">
+          <!-- Слайд предложения номер 3 неактивный -->
+          <h3 class="visually-hidden">Палка для селфи</h3>
+
+          <img class="slide-image" src="/images/index/slide-1.png" alt="Длинная палка для селфи.">
+
+          <p class="slide-number"><span class="visually-hidden">предложение номер </span>03</p>
+
+          <div class="slide-information">
+            <p class="slide-title"><strong>Делай селфи, как Бен Стиллер!</strong></p>
+
+            <p class="slide-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!)
+              метров длиной и весом всего 5 кг.</p>
+
+            <a class="button slide-details" href="product-1-card.html">Подробнее</a>
+
+            <table class="slider-table">
+              <!-- Таблица основных характеристик/параметров продукта-->
+              <caption class="visually-hidden">Основные характеристики товара</caption>
+              <tr class="table-data">
+                <td class="data-value"><b>8,5 м</b></td>
+                <td class="data-value"><b>5 кг</b></td>
+                <td class="data-value"><b>Карбон</b></td>
+              </tr>
+              <tr class="table-heading">
+                <th class="heading-name">Длина палки</th>
+                <th class="heading-name">Вес палки</th>
+                <th class="heading-name">Материал</th>
+              </tr>
+            </table>
+          </div>
+        </li>
       </ol>
-      <div class="gallery-slider">
 
-      </div>
-
-      <div class="gallery-descriptions">
-
-      </div>
+      <!-- Список интерактивных индикаторов-кнопок навигации по слайдам -->
+      <ol class="slide-indicators">
+        <li class="slide-indicator">
+          <button class="indicator-toggle indicator-active" data-toggle="1">
+            <span class="visually-hidden">Квадрокоптер.</span>
+          </button>
+        </li>
+        <li class="slide-indicator">
+          <button class="indicator-toggle" data-toggle="2">
+            <span class="visually-hidden">Фитнес-браслеты.</span>
+          </button>
+        </li>
+        <li class="slide-indicator">
+          <button class="indicator-toggle" data-toggle="3">
+            <span class="visually-hidden">Палка для селфи.</span>
+          </button>
+        </li>
+      </ol>
 
     </section>
 
