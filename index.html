@@ -66,19 +66,19 @@
               <!-- <svg class="button-icon"> Тут втставим иконку в формате svg  </svg>-->
             </p>
           </a>
-          <ul class="submenu-categories-list" id="submenu">
-            <li class="category-items" data-category="category-1">
-              <!-- Вместо "category-1" будет подставляться alias категории или его id-номер -->
-              <a class="category-item-link" href="#">Виртуальная реальность</a>
-              <a class="category-item-link" href="#">Моноподы для cелфи</a>
-              <a class="category-item-link" href="#">Экшн-камеры</a>
+          <ul class="submenu-categories" id="submenu">
+            <li class="category-group" data-category="category-group-1">
+              <!-- Вместо "category-group-1" будет подставляться alias группы категорий или ее id-номер -->
+              <a class="category-link" href="#">Виртуальная реальность</a>
+              <a class="category-link" href="#">Моноподы для cелфи</a>
+              <a class="category-link" href="#">Экшн-камеры</a>
             </li>
-            <li class="category-items" data-category="category-2">
-              <a class="category-item-link" href="#">Фитнес-браслеты</a>
-              <a class="category-item-link" href="#">Умные часы</a>
+            <li class="category-group" data-category="category-group-2">
+              <a class="category-link" href="#">Фитнес-браслеты</a>
+              <a class="category-link" href="#">Умные часы</a>
             </li>
-            <li class="category-items" data-category="category-3">
-              <a class="category-item-link" href="#">Квадрокоптеры</a>
+            <li class="category-group" data-category="category-group-3">
+              <a class="category-link" href="#">Квадрокоптеры</a>
             </li>
           </ul>
         </li>
@@ -123,17 +123,17 @@
           <!-- Слайд предложения номер 1  активный -->
           <h3 class="visually-hidden">Квадрокоптер</h3>
 
-          <img class="slide-image" src="/images/index/slide-1.png" alt="Квадрокоптер c мощным лазером.">
+          <img class="slide-image" src="/images/index/product1-img.png" alt="Квадрокоптер c мощным лазером.">
 
           <p class="slide-number"><span class="visually-hidden">предложение номер </span>01</p>
 
           <div class="slide-information">
-            <p class="slide-title"><strong>Порхает как бабочка, жалит как пчела!</strong></p>
+            <p class="slide-title heading-text"><strong>Порхает как бабочка, жалит как пчела!</strong></p>
 
             <p class="slide-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
               замаскированным под стандартную камеру.</p>
 
-            <a class="button slide-details" href="product-1-card.html">Подробнее</a>
+            <a class="button" href="catalog.html/?card_id=product1">Подробнее</a>
 
             <table class="slider-table">
               <!-- Таблица основных характеристик/параметров продукта-->
@@ -153,17 +153,17 @@
           <!-- Слайд предложения номер 2  неактивный -->
           <h3 class="visually-hidden">Фитнес-браслет</h3>
 
-          <img class="slide-image" src="/images/index/slide-1.png" alt="Спортивный фитнес-браслет.">
+          <img class="slide-image" src="/images/index/product2-img.png" alt="Спортивный фитнес-браслет.">
 
           <p class="slide-number"><span class="visually-hidden">предложение номер </span>02</p>
 
           <div class="slide-information">
-            <p class="slide-title"><strong>Худеем правильно!</strong></p>
+            <p class="slide-title heading-text"><strong>Худеем правильно!</strong></p>
 
             <p class="slide-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и
               соблюдать диету.</p>
 
-            <a class="button slide-details" href="product-1-card.html">Подробнее</a>
+            <a class="button" href="catalog.html/?card_id=product2">Подробнее</a>
 
             <table class="slider-table">
               <!-- Таблица основных характеристик/параметров продукта-->
@@ -181,17 +181,17 @@
           <!-- Слайд предложения номер 3 неактивный -->
           <h3 class="visually-hidden">Палка для селфи</h3>
 
-          <img class="slide-image" src="/images/index/slide-1.png" alt="Длинная палка для селфи.">
+          <img class="slide-image" src="/images/index/product3-img.png" alt="Длинная палка для селфи.">
 
           <p class="slide-number"><span class="visually-hidden">предложение номер </span>03</p>
 
           <div class="slide-information">
-            <p class="slide-title"><strong>Делай селфи, как Бен Стиллер!</strong></p>
+            <p class="slide-title heading-text"><strong>Делай селфи, как Бен Стиллер!</strong></p>
 
             <p class="slide-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!)
               метров длиной и весом всего 5 кг.</p>
 
-            <a class="button slide-details" href="product-1-card.html">Подробнее</a>
+            <a class="button" href="catalog.html/?card_id=product3">Подробнее</a>
 
             <table class="slider-table">
               <!-- Таблица основных характеристик/параметров продукта-->
@@ -233,27 +233,148 @@
     </section>
 
     <section class="categories">
+      <h2 class="visually-hidden">Категории товаров</h2>
 
       <ul class="categories-list">
-
+        <li class="category">
+          <p class="category-icon" aria-describedby="virtual-reality">
+            <!-- <svg class="category-image"> Тут втставим картинку в формате svg  </svg>-->
+          </p>
+          <a class="category-name" href="catalog.html/?category=virtual-reality" id="virtual-reality">Виртуальная
+            реальность</a>
+        </li>
+        <li class="category">
+          <p class="category-icon" aria-describedby="monopods">
+            <!-- <svg class="category-image"> Тут втставим картинку в формате svg  </svg>-->
+          </p>
+          <a class="category-name" href="catalog.html/?category=monopods" id="monopods">Моноподы
+            для селфи</a>
+        </li>
+        <li class="category">
+          <p class="category-icon" aria-describedby="action-cameras">
+            <!-- <svg class="category-image"> Тут втставим картинку в формате svg  </svg>-->
+          </p>
+          <a class="category-name" href="catalog.html/?category=action-cameras" id="action-cameras">Экшн-камеры</a>
+        </li>
+        <li class="category">
+          <p class="category-icon" aria-describedby="fitness-bracelets">
+            <!-- <svg class="category-image"> Тут втставим картинку в формате svg  </svg>-->
+          </p>
+          <a class="category-name" href="catalog.html/?category=fitness-bracelets"
+            id="fitness-bracelets">Фитнес-браслеты</a>
+        </li>
+        <li class="category">
+          <p class="category-icon" aria-describedby="smart-watches">
+            <!-- <svg class="category-image"> Тут втставим картинку в формате svg  </svg>-->
+          </p>
+          <a class="category-name" href="catalog.html/?category=smart-watches" id="smart-watches">Умные часы</a>
+        </li>
+        <li class="category">
+          <p class="category-icon" aria-describedby="quadrocopters">
+            <!-- <svg class="category-image"> Тут втставим картинку в формате svg  </svg>-->
+          </p>
+          <a class="category-name" href="catalog.html/?category=quadrocopters" id="quadrocopters">Квадрокоптеры</a>
+        </li>
       </ul>
 
     </section>
 
     <section class="services">
+      <h2 class="visually-hidden">Дополнительные услуги</h2>
+
+      <ul class="services-menu">
+        <li class="service">
+          <a class="service-link button service-current" href="#delivery">
+            Доставка
+          </a>
+        </li>
+        <li class="service">
+          <a class="service-link button" href="#warranty">
+            Гарантия
+          </a>
+        </li>
+        <li class="service">
+          <a class="service-link button" href="#credit">
+            Кредит
+          </a>
+        </li>
+      </ul>
+
+      <ul class="service-info-list">
+        <li class="service-description description-current" id="#delivery">
+          <h3 class="service-title heading-text">Доставка</h3>
+          <p class="description-text">Мы с удовольствием доставим ваш товар прямо
+            к вашему подъезду совершенно бесплатно! Ведь
+            мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          <!-- декоративное изображение иконки сервиса - background-image у псевдо-элемнта service-description::after -->
+        </li>
+        <li class="service-description" id="#warranty">
+          <h3 class="service-title heading-text">Гарантия</h3>
+          <p class="description-text">Если из-за возгорания купленного у нас товара у вас
+            сгорит дом — не переживайте, мы выдадим вам новый.
+            Товар, не дом, конечно же.</p>
+          <!-- декоративное изображение иконки сервиса - background-image у псевдо-элемнта service-description::after -->
+        </li>
+        <li class="service-description" id="#credit">
+          <h3 class="service-title heading-text">Кредит</h3>
+          <p class="description-text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас
+            наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
+          <!-- декоративное изображение иконки сервиса - background-image у псевдо-элемнта service-description::after -->
+        </li>
+      </ul>
 
     </section>
 
+    <section class="delivery-order">
+      <h2 class="visually-hidden">Заказ доставки</h2>
+      <a class="delivery-button" href="#">
+        <span class="button-icon">
+          <!-- <svg class="delivery-image"> Тут втставим картинку в формате svg  </svg>-->
+        </span>
+        <span class="button-text">Доставим редкий товар под заказ</span>
+        <span class="info-icon">
+          <!-- <svg class="icon-i"> Тут втставим картинку в формате svg  </svg>-->
+        </span>
+      </a>
+    </section>
+
     <section class="shop-info">
+      <h2 class="visually-hidden">Информация о магазине</h2>
 
       <section class="about-us">
-
+        <!-- декоративное изображение полоски сверху - псевдо-элемнт about-title::before -->
+        <h3 class="about-title heading-text">О нас</h3>
+        <p class="about-text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+        <p class="about-text">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:
+        </p>
+        <ul class="courier-services">
+          <li class="courier-name"><b>Меловые линии</b></li>
+          <li class="courier-name"><b>СДИК</b></li>
+          <li class="courier-name"><b>ТоксБерри</b></li>
+        </ul>
+        <a class="button" href="about-us.html">Подробнее</a>
       </section>
 
       <section class="contacts">
+        <!-- декоративное изображение полоски сверху - псевдо-элемнт contacts-title::before -->
+        <h3 class="contacts-title heading-text">Контакты</h3>
+        <p class="contacts-text">Вы можете забрать товар сами, заехав в наш офис.
+          Заодно сможете проверить работоспособность покупки.</p>
 
+        <h4 class="contacts-subtitle">Интернет-магазин «Девайс»</h4>
+        <address class="contacts-address">
+          <p class="address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+          <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        </address>
+
+        <h4 class="contacts-subtitle">Время работы</h4>
+        <ul class="working-hours-list">
+          <li class="working-hours-item">пн—пт: с 10:00 до 22:00</li>
+          <li class="working-hours-item">сб—вс: с 10:00 до 19:00</li>
+        </ul>
+
+        <a class="button" href="contact-us.html">Напишите нам</a>
       </section>
-
     </section>
 
     <section class="newsletter-subscribe">
