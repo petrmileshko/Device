@@ -4,15 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML Academy: Device</title>
+  <title>Главная: Магазин электроники Device</title>
 </head>
 
 <body>
-
+  <h1 class="visually-hidden">Магазин электроники Device</h1>
   <header class="site-header">
     <!-- Шапка сайта, повторяется на всех страницах -->
     <nav class="navigation">
-
+      <h2 class="visually-hidden">Навигация по магазиу</h2>
       <a class="navigation-logo" href="/">
         <!-- <svg class="logo-image"> Тут втставим картинку логотипа в формате svg  </svg>-->
         <span class="visually-hidden">Логотип магазина.</span>
@@ -352,7 +352,7 @@
           <li class="courier-name"><b>СДИК</b></li>
           <li class="courier-name"><b>ТоксБерри</b></li>
         </ul>
-        <a class="button" href="about-us.html">Подробнее</a>
+        <a class="button" href="about-us.html">Подробнее о нас</a>
       </section>
 
       <section class="contacts">
@@ -378,27 +378,88 @@
     </section>
 
     <section class="newsletter-subscribe">
-
+      <h2 class="newsletter-title heading-text">Подпишитесь на рассылку</h2>
+      <p class="newsletter-text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а
+        также акции, спецпредложения и вот это вот всё.</p>
+      <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+        <input class="subscribe-input" type="email" name="email" placeholder="Ваш e-mail">
+        <button class="subscribe-button">Подписаться</button>
+        <input class="vissualy-hidden" type="checkbox" id="confirm" name="confirm" checked required>
+        <label class="checkbox-label" for="confirm">
+          Это бесплатно
+          <span class="vissualy-hidden">Подтвердить отправку</span>
+        </label>
+      </form>
     </section>
 
   </main>
 
   <footer class="site-footer">
+    <h2 class="visually-hidden">Подвал сайта</h2>
 
-    <section class="footer-shop-info">
-
+    <section class="footer-about">
+      <h3 class="visually-hidden">О нас</h3>
+      <a class="footer-about-logo" href="/">
+        <!-- <svg class="logo-image"> Тут втставим картинку логотипа в формате svg  </svg>-->
+        <span class="visually-hidden">Логотип магазина.</span>
+        <!-- visually-hidden - визуально скрытое пояснение к интерактивному элементу navigation-logo -->
+      </a>
+      <address class="footer-about-address">Санкт-Петербург, набережная
+        реки Карповки, 5, литера П.</address>
+      <!-- декоративное изображение полоски снизу - псевдо-элемнт footer-about::before -->
     </section>
 
-    <section class="footer-menu">
+      <section class="footer-menu">
+        <h3 class="visually-hidden">Дополнительные услуги</h3>
+        <ul class="footer-menu-list">
+          <li class="footer-menu-item">
+            <a class="footer-menu-link" href="#delivery">доставка</a>
+          </li>
+          <li class="footer-menu-item">
+            <a class="footer-menu-link" href="#warranty">гарантия</a>
+          </li>
+          <li class="footer-menu-item">
+            <a class="footer-menu-link" href="#contacts">контакты</a>
+          </li>
+        </ul>
 
-    </section>
+      </section>
 
-    <section class="footer-developer-info">
+      <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
 
-    </section>
+      <section class="footer-socials">
+        <h3 class="visually-hidden">МЫ в социальных сетях</h3>
 
-    <section class="footer-socials">
+        <ul class="socials-list">
+          <li class="socials-item">
+            <a class="socials-button" href="#">
+              <span class="visually-hidden">Facebook</span>
+              <!-- <svg class="icon-facebook"> Тут втставим картинку в формате svg  </svg>-->
+            </a>
+          </li>
+          <li class="socials-item">
+            <a class="socials-button" href="#">
+              <span class="visually-hidden">Instagramm</span>
+              <!-- <svg class="icon-instagramm"> Тут втставим картинку в формате svg  </svg>-->
+            </a>
+          </li>
+          <li class="socials-item">
+            <a class="socials-button" href="#">
+              <span class="visually-hidden">Twitter</span>
+              <!-- <svg class="icon-twitter"> Тут втставим картинку в формате svg  </svg>-->
+            </a>
+          </li>
+        </ul>
 
+      </section>
+
+    <section class="footer-developers">
+      <!-- Секция о разработчиках проекта -->
+      <h3 class="visually-hidden">Разработчики проекта</h3>
+      <a class="developers-link" href="https://htmlacademy.ru/">
+        <!-- Тут вставить логотип Академии <svg class="developer-icon"></svg> -->
+        <span class="visually-hidden">сайт HTML Академии</span>
+      </a>
     </section>
 
   </footer>
