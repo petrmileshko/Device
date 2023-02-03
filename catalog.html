@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог: Магазин электроники Device</title>
+</head>
+
+<body>
+  <h1 class="visually-hidden">Каталог магазин электроники Device</h1>
+
+  <header class="site-header">
+    <!-- Шапка сайта, повторяется на всех страницах -->
+    <nav class="navigation">
+      <h2 class="visually-hidden">Навигация по магазиу</h2>
+      <a class="navigation-logo" href="/">
+        <!-- <svg class="logo-image"> Тут втставим картинку логотипа в формате svg  </svg>-->
+        <span class="visually-hidden">Логотип магазина.</span>
+        <!-- visually-hidden - визуально скрытое пояснение к интерактивному элементу navigation-logo -->
+      </a>
+
+      <form class="navigation-search" action="https://echo.htmlacademy.ru/" method="post">
+        <label class="search-label" for="search">
+          <span class="visually-hidden">Иконка поиска</span>
+          <!-- <svg class="search-icon"> Тут втставим картинку иконки формате svg  </svg>-->
+        </label>
+        <input class="search-input" type="text" id="search" name="search" placeholder="Текст поиска">
+        <button class="button-submit" type="submit">Найти</button>
+      </form>
+
+      <ul class="navigtion-menu user-menu">
+        <li class="menu-item">
+          <a class="menu-link" href="#">
+            <span class="menu-icon">
+              <!-- <svg class="enter-icon"> Тут втставим иконку в формате svg  </svg>-->
+            </span>
+            <!-- с помощью класса switch-on включаем имя пользователя -->
+            <span class="user-name switch-on" id="user_id">Коля Петухов</span>
+
+            <!-- с помощью класса switch-on вкл/выкл нужную подпись кнопки -->
+            <span class="log-in-text">
+              <!-- Войти --></span>
+            <span class="log-out-text switch-on">Выйти</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="#">
+            <span class="menu-icon">
+              <!-- <svg class="compare-icon"> Тут втставим иконку в формате svg  </svg>-->
+            </span>
+            Сравнить
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="#">
+            <span class="cart-goods">
+              2
+            </span>
+            <span class="menu-icon">
+              <!-- <svg class="cart-icon"> Тут втставим иконку в формате svg  </svg>-->
+            </span>
+            Корзина
+          </a>
+        </li>
+      </ul>
+
+      <ul class="navigation-menu">
+        <li class="menu-item">
+          <a class="menu-button" href="#submenu">
+            <span class="button-text">Каталог товаров</span>
+            <p class="button-toggle">
+              <!-- <svg class="button-icon"> Тут втставим иконку в формате svg  </svg>-->
+            </p>
+          </a>
+          <ul class="submenu-categories" id="submenu">
+            <li class="category-group" data-category="category-group-1">
+              <!-- Вместо "category-group-1" будет подставляться alias группы категорий или ее id-номер -->
+              <a class="category-link" href="#">Виртуальная реальность</a>
+              <a class="category-link" href="#">Моноподы для cелфи</a>
+              <a class="category-link" href="#">Экшн-камеры</a>
+            </li>
+            <li class="category-group" data-category="category-group-2">
+              <a class="category-link" href="#">Фитнес-браслеты</a>
+              <a class="category-link" href="#">Умные часы</a>
+            </li>
+            <li class="category-group" data-category="category-group-3">
+              <a class="category-link" href="#">Квадрокоптеры</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="#delivery">доставка</a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="#warranty">гарантия</a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="#contacts">контакты</a>
+        </li>
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <main class="home-content">
+    <!-- Основное содержимое страницы Каталога -->
+
+  </main>
+
+  <footer class="site-footer">
+    <h2 class="visually-hidden">Подвал сайта</h2>
+
+    <section class="footer-about">
+      <h3 class="visually-hidden">О нас</h3>
+
+      <a class="footer-about-logo" href="/">
+        <!-- <svg class="logo-image"> Тут втставим картинку логотипа в формате svg  </svg>-->
+        <span class="visually-hidden">Логотип магазина.</span>
+        <!-- visually-hidden - визуально скрытое пояснение к интерактивному элементу navigation-logo -->
+      </a>
+
+      <address class="footer-about-address">Санкт-Петербург, набережная
+        реки Карповки, 5, литера П.</address>
+      <!-- декоративное изображение полоски снизу - псевдо-элемнт footer-about::before -->
+
+    </section>
+
+    <section class="footer-menu">
+      <h3 class="visually-hidden">Дополнительные услуги</h3>
+
+      <ul class="footer-menu-list">
+        <li class="footer-menu-item">
+          <a class="footer-menu-link" href="#delivery">доставка</a>
+        </li>
+        <li class="footer-menu-item">
+          <a class="footer-menu-link" href="#warranty">гарантия</a>
+        </li>
+        <li class="footer-menu-item">
+          <a class="footer-menu-link" href="#contacts">контакты</a>
+        </li>
+      </ul>
+
+    </section>
+
+    <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+
+    <section class="footer-socials">
+      <h3 class="visually-hidden">МЫ в социальных сетях</h3>
+
+      <ul class="socials-list">
+        <li class="socials-item">
+          <a class="socials-button" href="#">
+            <span class="visually-hidden">Facebook</span>
+            <!-- <svg class="icon-facebook"> Тут втставим картинку в формате svg  </svg>-->
+          </a>
+        </li>
+        <li class="socials-item">
+          <a class="socials-button" href="#">
+            <span class="visually-hidden">Instagramm</span>
+            <!-- <svg class="icon-instagramm"> Тут втставим картинку в формате svg  </svg>-->
+          </a>
+        </li>
+        <li class="socials-item">
+          <a class="socials-button" href="#">
+            <span class="visually-hidden">Twitter</span>
+            <!-- <svg class="icon-twitter"> Тут втставим картинку в формате svg  </svg>-->
+          </a>
+        </li>
+      </ul>
+
+    </section>
+
+    <section class="footer-developers">
+      <!-- Секция о разработчиках проекта -->
+      <h3 class="visually-hidden">Разработчики проекта</h3>
+
+      <a class="developers-link" href="https://htmlacademy.ru/">
+        <!-- Тут вставить логотип Академии <svg class="developer-icon"></svg> -->
+        <span class="visually-hidden">сайт HTML Академии</span>
+      </a>
+
+    </section>
+
+  </footer>
+
+</body>
+
+</html>
