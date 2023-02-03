@@ -128,7 +128,7 @@
           <p class="slide-number"><span class="visually-hidden">предложение номер </span>01</p>
 
           <div class="slide-information">
-            <p class="slide-heading"><strong>Порхает как бабочка, жалит как пчела!</strong></p>
+            <p class="slide-title"><strong>Порхает как бабочка, жалит как пчела!</strong></p>
 
             <p class="slide-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
               замаскированным под стандартную камеру.</p>
@@ -158,7 +158,7 @@
           <p class="slide-number"><span class="visually-hidden">предложение номер </span>02</p>
 
           <div class="slide-information">
-            <p class="slide-heading"><strong>Худеем правильно!</strong></p>
+            <p class="slide-title"><strong>Худеем правильно!</strong></p>
 
             <p class="slide-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и
               соблюдать диету.</p>
@@ -186,7 +186,7 @@
           <p class="slide-number"><span class="visually-hidden">предложение номер </span>03</p>
 
           <div class="slide-information">
-            <p class="slide-heading"><strong>Делай селфи, как Бен Стиллер!</strong></p>
+            <p class="slide-title"><strong>Делай селфи, как Бен Стиллер!</strong></p>
 
             <p class="slide-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!)
               метров длиной и весом всего 5 кг.</p>
@@ -302,24 +302,24 @@
 
       <ul class="service-info-list">
         <li class="service-description description-current" id="#delivery">
-          <h3 class="service-heading">Доставка</h3>
+          <h3 class="service-title">Доставка</h3>
           <p class="description-text">Мы с удовольствием доставим ваш товар прямо
             к вашему подъезду совершенно бесплатно! Ведь
             мы неплохо заработаем, поднимая его на ваш этаж.</p>
-          <!-- декоративное изображение иконки сервиса - background-image у псевдо-элемнта service-description::after -->
+          <!-- декоративное изображение иконки сервиса - background-image у псевдо-элемнта service-description[id="#delivery"]::after -->
         </li>
         <li class="service-description" id="#warranty">
-          <h3 class="service-heading">Гарантия</h3>
+          <h3 class="service-title">Гарантия</h3>
           <p class="description-text">Если из-за возгорания купленного у нас товара у вас
             сгорит дом — не переживайте, мы выдадим вам новый.
             Товар, не дом, конечно же.</p>
-          <!-- декоративное изображение иконки сервиса - background-image у псевдо-элемнта service-description::after -->
+          <!-- декоративное изображение иконки сервиса - background-image у псевдо-элемнта service-description[id="#warranty"]::after -->
         </li>
         <li class="service-description" id="#credit">
-          <h3 class="service-heading">Кредит</h3>
+          <h3 class="service-title">Кредит</h3>
           <p class="description-text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас
             наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
-          <!-- декоративное изображение иконки сервиса - background-image у псевдо-элемнта service-description::after -->
+          <!-- декоративное изображение иконки сервиса - background-image у псевдо-элемнта service-description[id="#credit"]::after -->
         </li>
       </ul>
 
@@ -343,7 +343,7 @@
 
       <section class="about-us">
         <!-- декоративное изображение полоски сверху - псевдо-элемнт about-title::before -->
-        <h3 class="about-heading">О нас</h3>
+        <h3 class="about-title">О нас</h3>
         <p class="about-text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
         <p class="about-text">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:
         </p>
@@ -357,7 +357,7 @@
 
       <section class="contacts">
         <!-- декоративное изображение полоски сверху - псевдо-элемнт contacts-title::before -->
-        <h3 class="contacts-heading">Контакты</h3>
+        <h3 class="contacts-title">Контакты</h3>
         <p class="contacts-text">Вы можете забрать товар сами, заехав в наш офис.
           Заодно сможете проверить работоспособность покупки.</p>
 
@@ -378,7 +378,7 @@
     </section>
 
     <section class="newsletter-subscribe">
-      <h2 class="newsletter-heading">Подпишитесь на рассылку</h2>
+      <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
       <p class="newsletter-text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а
         также акции, спецпредложения и вот это вот всё.</p>
       <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -410,49 +410,49 @@
       <!-- декоративное изображение полоски снизу - псевдо-элемнт footer-about::before -->
     </section>
 
-      <section class="footer-menu">
-        <h3 class="visually-hidden">Дополнительные услуги</h3>
-        <ul class="footer-menu-list">
-          <li class="footer-menu-item">
-            <a class="footer-menu-link" href="#delivery">доставка</a>
-          </li>
-          <li class="footer-menu-item">
-            <a class="footer-menu-link" href="#warranty">гарантия</a>
-          </li>
-          <li class="footer-menu-item">
-            <a class="footer-menu-link" href="#contacts">контакты</a>
-          </li>
-        </ul>
+    <section class="footer-menu">
+      <h3 class="visually-hidden">Дополнительные услуги</h3>
+      <ul class="footer-menu-list">
+        <li class="footer-menu-item">
+          <a class="footer-menu-link" href="#delivery">доставка</a>
+        </li>
+        <li class="footer-menu-item">
+          <a class="footer-menu-link" href="#warranty">гарантия</a>
+        </li>
+        <li class="footer-menu-item">
+          <a class="footer-menu-link" href="#contacts">контакты</a>
+        </li>
+      </ul>
 
-      </section>
+    </section>
 
-      <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+    <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
 
-      <section class="footer-socials">
-        <h3 class="visually-hidden">МЫ в социальных сетях</h3>
+    <section class="footer-socials">
+      <h3 class="visually-hidden">МЫ в социальных сетях</h3>
 
-        <ul class="socials-list">
-          <li class="socials-item">
-            <a class="socials-button" href="#">
-              <span class="visually-hidden">Facebook</span>
-              <!-- <svg class="icon-facebook"> Тут втставим картинку в формате svg  </svg>-->
-            </a>
-          </li>
-          <li class="socials-item">
-            <a class="socials-button" href="#">
-              <span class="visually-hidden">Instagramm</span>
-              <!-- <svg class="icon-instagramm"> Тут втставим картинку в формате svg  </svg>-->
-            </a>
-          </li>
-          <li class="socials-item">
-            <a class="socials-button" href="#">
-              <span class="visually-hidden">Twitter</span>
-              <!-- <svg class="icon-twitter"> Тут втставим картинку в формате svg  </svg>-->
-            </a>
-          </li>
-        </ul>
+      <ul class="socials-list">
+        <li class="socials-item">
+          <a class="socials-button" href="#">
+            <span class="visually-hidden">Facebook</span>
+            <!-- <svg class="icon-facebook"> Тут втставим картинку в формате svg  </svg>-->
+          </a>
+        </li>
+        <li class="socials-item">
+          <a class="socials-button" href="#">
+            <span class="visually-hidden">Instagramm</span>
+            <!-- <svg class="icon-instagramm"> Тут втставим картинку в формате svg  </svg>-->
+          </a>
+        </li>
+        <li class="socials-item">
+          <a class="socials-button" href="#">
+            <span class="visually-hidden">Twitter</span>
+            <!-- <svg class="icon-twitter"> Тут втставим картинку в формате svg  </svg>-->
+          </a>
+        </li>
+      </ul>
 
-      </section>
+    </section>
 
     <section class="footer-developers">
       <!-- Секция о разработчиках проекта -->
