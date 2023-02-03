@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <h1 class="visually-hidden">Каталог магазин электроники Device</h1>
+  <h1 class="visually-hidden">Каталог магазина электроники Device</h1>
 
   <header class="site-header">
     <!-- Шапка сайта, повторяется на всех страницах -->
@@ -105,8 +105,186 @@
 
   </header>
 
-  <main class="home-content">
+  <main class="catalog-content">
     <!-- Основное содержимое страницы Каталога -->
+    <h2 class="content-title">Моноподы для селфи</h2>
+
+    <header class="content-header">
+      <h3 class="visually-hidden">Маршрут к странице</h3>
+      <ul class="breadcramps-list">
+        <li class="breadcramps-item">
+          <a class="breadcramps-link" href="/">Главная</a>
+          <!-- декоративное изображение стрелки вправо - background-image у псевдо-элемнта breadcramps-item::after -->
+        </li>
+        <li class="breadcramps-item">
+          <a class="breadcramps-link" href="catalog.html">Каталог товаров</a>
+          <!-- декоративное изображение стрелки вправо - background-image у псевдо-элемнта breadcramps-item::after -->
+        </li>
+        <li class="breadcramps-item">
+          <a class="breadcramps-link" href="catalog.html">Моноподы для селфи</a>
+          <!-- стрелки у всех кроме последнего элемента -->
+        </li>
+      </ul>
+    </header>
+
+    <section class="content-catalog">
+      <h2 class="visuaaly-hidden">Каталог </h2>
+
+      <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="post">
+        <p class="filters-groups-label">фильтр:</p>
+        <fieldset class="filters-group">
+          <legend class="group-name">Стоимость</legend>
+
+          <button class="min-pin" type="button">
+            <span class="visually-hidden">Изментить минимальную цену</span>
+          </button>
+          <button class="max-pin" type="button">
+            <span class="visually-hidden">Изментить максимальную цену</span>
+          </button>
+
+          <label class="input-label">
+            <span class="visually-hidden">Минимальная цена </span> От
+            <input class="input-price" type="number" name="min-price" value="0">
+
+          </label>
+
+          <label class="input-label">
+            <span class="visually-hidden">Максимальная цена </span>До
+            <input class="input-price" type="number" name="max-price" value="50000">
+
+          </label>
+        </fieldset>
+
+        <fieldset class="filters-group">
+          <legend class="group-name">Цвет</legend>
+          <ul class="filters-list">
+            <li class="filters-item">
+              <label class="item-label">
+                <input type="checkbox" class="visually-hidden control-input" name="Colors" value="black" checked>
+                <span class="control-mark"></span>
+                Черный
+              </label>
+            </li>
+            <li class="filters-item">
+              <label class="item-label">
+                <input type="checkbox" class="visually-hidden control-input" name="Colors" value="white" checked>
+                <span class="control-mark"></span>
+                Белый
+              </label>
+            </li>
+            <li class="filters-item">
+              <label class="item-label">
+                <input type="checkbox" class="visually-hidden control-input" name="Colors" value="blue">
+                <span class="control-mark"></span>
+                Синий
+              </label>
+            </li>
+            <li class="filters-item">
+              <label class="item-label">
+                <input type="checkbox" class="visually-hidden control-input" name="Colors" value="red">
+                <span class="control-mark"></span>
+                Красный
+              </label>
+            </li>
+            <li class="filters-item">
+              <label class="item-label">
+                <input type="checkbox" class="visually-hidden control-input" name="Colors" value="pink">
+                <span class="control-mark"></span>
+                Розовый
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="filters-group">
+          <legend class="group-name">Bluetooth</legend>
+          <ul class="filters-list">
+            <li class="filters-item">
+              <label class="item-label">
+                <input type="radio" class="visually-hidden control-input" name="Bluetooth" value="yes" checked>
+                <span class="control-mark"></span>
+                Есть
+              </label>
+            </li>
+            <li class="filters-item">
+              <label class="item-label">
+                <input type="radio" class="visually-hidden control-input" name="Bluetooth" value="no">
+                <span class="control-mark"></span>
+                Нет
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <button class="button" type="submit">Показать</button>
+      </form>
+
+      <form class="catalog-sorting" action="https://echo.htmlacademy.ru/" method="post">
+        <label class="sorting-label" for="sorting">сортировка:</label>
+        <select class="sorting-select" name="sorting" id="sorting">
+          <option class="sorting-type" value="popular" selected>Популярные</option>
+          <option class="sorting-type" value="cheap">Дешевые</option>
+          <option class="sorting-type" value="expensive">Дорогие</option>
+          <option class="sorting-type" value="chinese">Китайские</option>
+        </select>
+        <button class="visually-hidden" type="submit">Отсортировать по критерию</button>
+      </form>
+      <a class="sorting-button-ascending" href="#">
+        <span class="visually-hidden">Отсортировать по возрастанию</span>
+        <!-- <svg class="button-icon"> Тут втставим картинку кнопки в формате svg  </svg>-->
+      </a>
+      <a class="sorting-button-descending" href="#">
+        <span class="visually-hidden">Отсортировать по убыванию</span>
+        <!-- <svg class="button-icon"> Тут втставим картинку кнопки в формате svg  </svg>-->
+      </a>
+
+      <div class="catalog-wrapper">
+
+        <ul class="products-list">
+          <li class="products-item">
+            <img class="product-image" src="/images/catalog/product-img1.png" alt="Любительская селфи-палка.">
+            <!-- Реализация кликабельной области с помощью псевдо-элемента product-link::before и появление кнопки Подробнее с помощью  product-link::before:hover -->
+            <a href="" class="product-link button">Подробнее</a>
+            <h3 class="product-name">Любительская селфи-палка</h3>
+            <p class="product-price">500 ₽</p>
+          </li>
+          <li class="products-item">
+            <img class="product-image" src="/images/catalog/product-img2.png" alt="Профессиональная селфи-палка.">
+            <a href="" class="product-link button">Подробнее</a>
+            <h3 class="product-name">Профессиональная селфи-палка</h3>
+            <p class="product-price">1 500 ₽</p>
+          </li>
+          <li class="products-item">
+            <img class="product-image" src="/images/catalog/product-img3.png" alt="Непотопляемая селфи-палка.">
+            <a href="" class="product-link button">Подробнее</a>
+            <h3 class="product-name">Непотопляемая селфи-палка</h3>
+            <p class="product-price">2 500 ₽</p>
+          </li>
+          <li class="products-item">
+            <img class="product-image" src="/images/catalog/product-img4.png" alt="Селфи-палка «Следуй за мной».">
+            <a href="" class="product-link button">Подробнее</a>
+            <h3 class="product-name">Селфи-палка «Следуй за мной»</h3>
+            <p class="product-price">1 500 ₽</p>
+          </li>
+        </ul>
+
+        <button class="catalog-more">Загрузить ещЁ</button>
+
+        <ul class="pagination-list">
+          <!-- С помощью класса  scroll-available реализуем появление/скрытие подписей кнопок прокрутки -->
+          <!-- С помощью классов  scroll-prev и scroll-next зададим стили и реализуем прокурутку списка страниц -->
+          <li class="pagination-item"><a class="pagination-link scroll-prev scroll-available" href="#">Назад</a></li>
+          <li class="pagination-item"><a class="pagination-link" href="#">1</a></li>
+          <li class="pagination-item"><a class="pagination-link" href="#">2</a></li>
+          <li class="pagination-item"><a class="pagination-link" href="#">3</a></li>
+          <li class="pagination-item"><a class="pagination-link" href="#">...</a></li>
+          <li class="pagination-item"><a class="pagination-link" href="#">15</a></li>
+          <li class="pagination-item"><a class="pagination-link scroll-next scroll-available" href="#">Вперёд</a></li>
+        </ul>
+
+      </div>
+
+    </section>
 
   </main>
 
