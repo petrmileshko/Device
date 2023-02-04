@@ -253,6 +253,7 @@
 
       <form class="catalog-sorting" action="https://echo.htmlacademy.ru/" method="post">
         <label class="sorting-label" for="sorting">сортировка:</label>
+        <!-- у поля селект вставим кастомный указатель в svg формате -->
         <select class="sorting-select" name="sorting" id="sorting">
           <option class="sorting-type" value="popular" selected>Популярные</option>
           <option class="sorting-type" value="cheap">Дешевые</option>
@@ -263,37 +264,39 @@
       </form>
       <a class="sorting-button-ascending" href="#">
         <span class="visually-hidden">Отсортировать по возрастанию</span>
-        <!-- <svg class="button-icon"> Тут втставим картинку кнопки в формате svg  </svg>-->
+        <!-- <svg class="button-sort"> Тут втставим картинку кнопки в формате svg  </svg>-->
+        <svg class="button-sort" aria-hidden="true" focusable="flase" width="12" height="10" xmlns="http://www.w3.org/2000/svg"><path d="m6 0 5.5 10H.5" fill="#000"/></svg>
       </a>
       <a class="sorting-button-descending" href="#">
         <span class="visually-hidden">Отсортировать по убыванию</span>
-        <!-- <svg class="button-icon"> Тут втставим картинку кнопки в формате svg  </svg>-->
+        <!-- <svg class="button-sort"> Тут втставим картинку кнопки в формате svg  </svg>-->
+        <svg class="button-sort" aria-hidden="true" focusable="flase" width="12" height="10" xmlns="http://www.w3.org/2000/svg"><path d="m6 0 5.5 10H.5" fill="#000"/></svg>
       </a>
 
       <div class="catalog-wrapper">
 
         <ul class="products-list">
           <li class="products-item">
-            <img class="product-image" src="/images/catalog/product-img1.png" alt="Любительская селфи-палка.">
+            <img class="product-image" src="images/catalog/product-1.jpg" alt="Любительская селфи-палка.">
             <!-- Реализация кликабельной области с помощью псевдо-элемента product-link::before и появление кнопки Подробнее с помощью  product-link::before:hover -->
             <a href="" class="product-link button">Подробнее</a>
             <h3 class="product-name">Любительская селфи-палка</h3>
             <p class="product-price">500 ₽</p>
           </li>
           <li class="products-item">
-            <img class="product-image" src="/images/catalog/product-img2.png" alt="Профессиональная селфи-палка.">
+            <img class="product-image" src="images/catalog/product-2.jpg" alt="Профессиональная селфи-палка.">
             <a href="" class="product-link button">Подробнее</a>
             <h3 class="product-name">Профессиональная селфи-палка</h3>
             <p class="product-price">1 500 ₽</p>
           </li>
           <li class="products-item">
-            <img class="product-image" src="/images/catalog/product-img3.png" alt="Непотопляемая селфи-палка.">
+            <img class="product-image" src="images/catalog/product-3.jpg" alt="Непотопляемая селфи-палка.">
             <a href="" class="product-link button">Подробнее</a>
             <h3 class="product-name">Непотопляемая селфи-палка</h3>
             <p class="product-price">2 500 ₽</p>
           </li>
           <li class="products-item">
-            <img class="product-image" src="/images/catalog/product-img4.png" alt="Селфи-палка «Следуй за мной».">
+            <img class="product-image" src="images/catalog/product-4.jpg" alt="Селфи-палка «Следуй за мной».">
             <a href="" class="product-link button">Подробнее</a>
             <h3 class="product-name">Селфи-палка «Следуй за мной»</h3>
             <p class="product-price">1 500 ₽</p>
