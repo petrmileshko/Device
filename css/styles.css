@@ -85,7 +85,7 @@ body {
   margin: 0;
   padding: 0;
   font: inherit;
-  color: inherit;
+  color: #000000;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -107,7 +107,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.2em;
-  background-image: linear-gradient(to bottom, #ffffff 40%,#ffe17f 40% 60%, #ffffff 60% 100%);
+  background-image: linear-gradient(to bottom, #ffffff 40%, #ffe17f 40% 60%, #ffffff 60% 100%);
   border: none;
 }
 
@@ -183,4 +183,74 @@ body {
 
 .footer-about-address {
   font-style: normal;
+}
+
+/* Главная страница основное содержимое */
+
+/* Секция со слайдами */
+.slider-categories-best {
+  position: relative;
+  outline-offset: -1px;
+  padding-right: 49px;
+  background-image: linear-gradient(to bottom, #ffe17f 152px, #ffffff 152px 100%);
+}
+
+.slider-navigation {
+  position: absolute;
+  top: 241px;
+  left: 0;
+  z-index: 1;
+}
+
+.navigation-button {
+  fill: #000000;
+}
+
+.slide {
+  position: relative;
+}
+
+.slide-number {
+  position: absolute;
+  top: 29px;
+  right: 0;
+  font-weight: 700;
+  font-size: 180px;
+  line-height: 135px;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.slide-title strong {
+  font-weight: 800;
+}
+
+.slide-information {
+  position: absolute;
+  top: 123px;
+  right: 0;
+}
+
+.data-value b {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.heading-name {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+/* Секция categories - Категории товаров */
+.category-name {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: #000000;
 }
