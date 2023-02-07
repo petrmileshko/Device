@@ -245,6 +245,11 @@ body {
 }
 
 /* Секция categories - Категории товаров */
+.categories-list {
+  display: flex;
+  justify-content: center;
+}
+
 .category-name {
   font-family: "Raleway", sans-serif;
   font-style: normal;
