@@ -191,7 +191,8 @@ body {
   text-decoration-line: underline;
 }
 
-.footer-about-address {
+.footer-about-address,
+.contacts-address {
   font-style: normal;
 }
 
@@ -268,4 +269,90 @@ body {
   line-height: 24px;
   letter-spacing: -0.02em;
   color: #000000;
+}
+
+/* Секция services - Дополнительные услуги */
+.services {
+  display: flex;
+  background-image: linear-gradient(to bottom, #ffffff 102px, #f0f0f0 102px 100%);
+  padding: 64px 63px 72px 0;
+}
+
+.service-description {  /* Изначально описание услуг скрыто */
+  display: none;
+}
+
+.service-link.service-current {   /* Выделяем в меню пункт текущей услуги */
+  color: #ffe17f;
+  background-color: #000000;
+  background-image: none;
+}
+
+.service-description.description-current {  /* Показываем описание выбранной услуги */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Секция delivery-order - Заказ доставки */
+.delivery-order {
+  background-color: #f0f0f0;
+}
+
+.delivery-button {
+  display: flex;
+}
+
+.delivery-order .button-icon {
+  display: block;
+  background-color: #ffe17f;
+}
+
+.delivery-button .button-text {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.2em;
+}
+
+/* Секция shop-info - Информация о магазине */
+.shop-info {
+  display: flex;
+}
+
+/* Подраздел секции shop-info - О нас */
+.about-us .courier-services {
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+.courier-services .courier-name::marker {
+  color: #ffe17f;
+}
+
+/* Подраздел секции shop-info - Контакты */
+.contacts .contacts-subtitle {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+/* Секция newsletter-subscribe - Подпишитесь на рассылку */
+.newsletter-subscribe {
+  display: block;
+}
+
+.subscribe-form .subscribe-input::placeholder {
+  color: rgba(68, 68, 68, 0.5);
+}
+
+.subscribe-form .subscribe-button {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  border: 3px solid #cecece;
 }
