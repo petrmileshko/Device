@@ -356,3 +356,175 @@ body {
   letter-spacing: 0.2em;
   border: 3px solid #cecece;
 }
+
+/*
+      Страница Каталог.
+      Корневая секция catalog-content - основное содержимое:
+  - Список товаров выбранной категории и инструменты фильтрации, сортировки, пагинации
+*/
+
+/* Секция content-header - шапка с элементами навигации в виде маршрута до текущей страницы (breadcramps)  */
+.content-header .breadcramps-list {
+  display: flex;
+  gap: 10px;
+}
+
+.breadcramps-list .breadcramps-item {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+/* Секция container-catalog - тело/контейнер каталога */
+.container-catalog {
+  background-color: #f0f0f0;
+}
+
+.catalog-filters .filters-groups-label,
+.catalog-sorting .sorting-label {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.filters-group .group-name {
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+.filters-group .input-label,
+.filters-group .input-price {
+  font-size: 15px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  border: none;
+}
+
+.filters-group .item-label {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.catalog-sorting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.catalog-sorting .sorting-select {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 30px;
+  background-color: transparent;
+  border: none;
+}
+
+.button-sort {
+  fill: rgba(0, 0, 0, 0.2);
+}
+
+.sorting-button-descending .button-sort {
+  transform: rotate(180deg);
+}
+
+.catalog-wrapper {
+  background-color: #ffffff;
+}
+
+.products-list {
+  display: flex;
+  font-size: 18px;
+  line-height: 21px;
+  color: #444444;
+}
+
+.products-list .products-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.products-item .product-image {
+  grid-column: 1/-1;
+}
+
+.products-item .product-name {
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.products-item .product-price {
+  margin-left: auto;
+}
+
+.product-link.button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  transform: translate(-50%, -50%);
+}
+
+.products-item:hover .product-link.button {
+  display: block;
+}
+
+.catalog-more {
+  width: 100%;
+  padding: 18px 0;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  background-color: transparent;
+  border: 3px solid #e5e5e5;
+}
+
+.pagination-list {
+  display: flex;
+  align-items: center;
+}
+
+.pagination-list .pagination-item {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.pagination-item .pagination-link:not(.pagination-link.scroll) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  color: rgba(68, 68, 68, 0.3);
+}
+
+.pagination-link.scroll {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  align-items: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.pagination-item.scroll-prev {
+  margin-right: auto;
+}
+
+.pagination-item.scroll-next {
+  margin-left: auto;
+}
