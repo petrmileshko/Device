@@ -356,6 +356,7 @@ body {
 /* Секция newsletter-subscribe - Подпишитесь на рассылку */
 .newsletter-subscribe {
   display: block;
+  background-color: #F0F0F0;
 }
 
 .subscribe-form .subscribe-input::placeholder {
