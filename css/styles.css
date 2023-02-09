@@ -355,14 +355,16 @@ body {
 .slider-categories-best {
   position: relative;
   outline-offset: -1px;
-  padding-right: 49px;
   background-image: linear-gradient(to bottom, #ffe17f 152px, #ffffff 152px 100%);
 }
 
 .slider-navigation {
   position: absolute;
   top: 241px;
-  left: 0;
+  left: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 530px;
   z-index: 1;
 }
 
@@ -372,12 +374,17 @@ body {
 
 .slide {
   position: relative;
+  display: none;
+}
+
+.slide.slide-active {
+  display: flex;
 }
 
 .slide-number {
   position: absolute;
   top: 29px;
-  right: 0;
+  right: 49px;
   font-weight: 700;
   font-size: 180px;
   line-height: 135px;
@@ -393,6 +400,7 @@ body {
   position: absolute;
   top: 123px;
   right: 0;
+  width: 560px;
 }
 
 .data-value b {
