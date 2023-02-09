@@ -416,6 +416,35 @@ body {
   line-height: 30px;
 }
 
+.slide-indicators {
+  position: absolute;
+  top: 337px;
+  right: 0;
+  display: flex;
+}
+
+.slide-indicator {
+  display: flex;
+}
+
+.slide-indicators .slide-indicator:not(:last-child) {
+  margin-right: 20px;
+}
+
+.slide-indicator .indicator-toggle {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.indicator-toggle.indicator-active {
+  background-color: #000000;
+}
+
 /* Секция categories - Категории товаров */
 .categories-list {
   display: flex;
