@@ -448,7 +448,29 @@ body {
 /* Секция categories - Категории товаров */
 .categories-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.category {
+  position: relative;
+  width: 160px;
+}
+
+.category-icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 160px;                /* необходимо задать высоту для контейнера с иконкой для придания квадратной формы */
+  background-color: #ffe17f;
+}
+
+.category-image {   /* паттерн для центрирования svg иконки внутри контейнера .category-icon*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .category-name {
@@ -461,13 +483,27 @@ body {
   color: #000000;
 }
 
+.category-name::after { /* паттерн для создания кликабельной зоны на всю область <li> */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+}
+
 /* Секция services - Дополнительные услуги */
 .services {
   background-image: linear-gradient(to bottom, #ffffff 102px, #f0f0f0 102px 100%);
 }
 
 .services > .container-center {
-  padding: 64px 63px 72px 0;
+  display: flex;
+  padding: 64px 0 72px 0;
+}
+
+.service-info-list {
+  padding-left: 116px;
 }
 
 .service-description {  /* Изначально описание услуг скрыто */
@@ -475,9 +511,20 @@ body {
 }
 
 .service-link.service-current {   /* Выделяем в меню пункт текущей услуги */
+  display: block;
+  width: 287px;
+  text-align: left;
   color: #ffe17f;
   background-color: #000000;
   background-image: none;
+}
+
+.service-info-list .service-description:not(:first-of-type) {
+  padding-right: 282px;
+}
+
+.service-info-list .service-description:first-of-type {
+  padding-right: 309px;
 }
 
 .service-description.description-current {  /* Показываем описание выбранной услуги */
@@ -492,6 +539,7 @@ body {
 
 .delivery-button {
   display: flex;
+  justify-content: space-between;
 }
 
 .delivery-order .button-icon {
@@ -513,6 +561,12 @@ body {
 }
 
 /* Подраздел секции shop-info - О нас */
+.about-us {
+  width: 520px;
+  margin-right: 108px;
+  padding-right: 23px;
+}
+
 .about-us .courier-services {
   font-size: 18px;
   line-height: 20px;
@@ -525,15 +579,46 @@ body {
 }
 
 /* Подраздел секции shop-info - Контакты */
+.contacts {
+  width: 532px;
+}
+
 .contacts .contacts-subtitle {
   font-size: 24px;
   line-height: 30px;
 }
 
+.contacts .contacts-text {
+  width: 496px;
+}
+
 /* Секция newsletter-subscribe - Подпишитесь на рассылку */
 .newsletter-subscribe {
   display: block;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
+}
+
+.newsletter-subscribe > .container-center {
+  display: grid;
+  grid-template-columns: 365px 1fr 560px;
+}
+
+.newsletter-subscribe .newsletter-text {
+  grid-column: 3/-1;
+}
+
+.newsletter-subscribe .subscribe-form {
+  display: flex;
+  grid-column: 1/-1;
+  justify-self: stretch;
+}
+
+.subscribe-form .subscribe-input {
+  width: 557px;
+}
+
+.subscribe-form .checkbox-label {
+  margin-left: auto;
 }
 
 .subscribe-form .subscribe-input::placeholder {
