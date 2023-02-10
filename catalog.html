@@ -139,7 +139,7 @@
     <div class="container-center">
       <h2 class="content-title">Моноподы для селфи</h2>
 
-      <header class="content-header container-center">
+      <header class="content-header">
         <h3 class="visually-hidden">Маршрут к странице</h3>
         <ul class="breadcramps-list">
           <li class="breadcramps-item">
@@ -156,8 +156,10 @@
           </li>
         </ul>
       </header>
+    </div>
 
-      <section class="container-catalog">
+    <div class="container-catalog">
+      <section class="catalog-body container-center">
         <h2 class="visually-hidden">Каталог </h2>
 
         <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="post">
@@ -249,44 +251,41 @@
           <button class="button" type="submit">Показать</button>
         </form>
 
-        <form class="catalog-sorting" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="sorting-label" for="sorting">сортировка:</label>
-
-          <!-- у поля селект вставим кастомный указатель в svg формате -->
-
-          <select class="sorting-select" name="sorting" id="sorting">
-            <option class="sorting-type" value="popular" selected>Популярные</option>
-            <option class="sorting-type" value="cheap">Дешевые</option>
-            <option class="sorting-type" value="expensive">Дорогие</option>
-            <option class="sorting-type" value="chinese">Китайские</option>
-          </select>
-          <button class="visually-hidden" type="submit">Отсортировать по критерию</button>
-
-          <div class="container-sorting-buttons">
-            <a class="sorting-button-ascending" href="#">
-              <span class="visually-hidden">Отсортировать по возрастанию</span>
-              <!-- <svg class="button-sort"> Тут втставим картинку кнопки в формате svg  </svg>-->
-              <svg class="button-sort" aria-hidden="true" focusable="flase" width="12" height="10"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="m6 0 5.5 10H.5">
-              </svg>
-            </a>
-
-            <a class="sorting-button-descending" href="#">
-              <span class="visually-hidden">Отсортировать по убыванию</span>
-              <!-- <svg class="button-sort"> Тут втставим картинку кнопки в формате svg  </svg>-->
-              <svg class="button-sort" aria-hidden="true" focusable="flase" width="12" height="10"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="m6 0 5.5 10H.5">
-              </svg>
-            </a>
-          </div>
-
-        </form>
-
-
-
         <div class="catalog-wrapper">
+          <form class="catalog-sorting" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="sorting-label" for="sorting">сортировка:</label>
+
+            <!-- у поля селект вставим кастомный указатель в svg формате -->
+
+            <select class="sorting-select" name="sorting" id="sorting">
+              <option class="sorting-type" value="popular" selected>Популярные</option>
+              <option class="sorting-type" value="cheap">Дешевые</option>
+              <option class="sorting-type" value="expensive">Дорогие</option>
+              <option class="sorting-type" value="chinese">Китайские</option>
+            </select>
+            <button class="visually-hidden" type="submit">Отсортировать по критерию</button>
+
+            <div class="container-sorting-buttons">
+              <a class="sorting-button-ascending" href="#">
+                <span class="visually-hidden">Отсортировать по возрастанию</span>
+                <!-- <svg class="button-sort"> Тут втставим картинку кнопки в формате svg  </svg>-->
+                <svg class="button-sort" aria-hidden="true" focusable="flase" width="12" height="10"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="m6 0 5.5 10H.5">
+                </svg>
+              </a>
+
+              <a class="sorting-button-descending" href="#">
+                <span class="visually-hidden">Отсортировать по убыванию</span>
+                <!-- <svg class="button-sort"> Тут втставим картинку кнопки в формате svg  </svg>-->
+                <svg class="button-sort" aria-hidden="true" focusable="flase" width="12" height="10"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="m6 0 5.5 10H.5">
+                </svg>
+              </a>
+            </div>
+
+          </form>
 
           <ul class="products-list">
             <li class="products-item">
@@ -315,22 +314,23 @@
               <p class="product-price">1 500 ₽</p>
             </li>
           </ul>
+          <div class="catalog-footer">
+            <button class="catalog-more">Загрузить ещЁ</button>
+            <ul class="pagination-list">
+              <!-- С помощью класса  scroll-available реализуем появление/скрытие подписей кнопок прокрутки -->
+              <!-- С помощью классов  scroll-prev и scroll-next зададим стили и реализуем прокурутку списка страниц -->
+              <li class="pagination-item scroll-prev scroll-available"><a class="pagination-link scroll"
+                  href="#">Назад</a></li>
+              <li class="pagination-item"><a class="pagination-link" href="#">1</a></li>
+              <li class="pagination-item"><a class="pagination-link" href="#">2</a></li>
+              <li class="pagination-item"><a class="pagination-link" href="#">3</a></li>
+              <li class="pagination-item"><a class="pagination-link" href="#">...</a></li>
+              <li class="pagination-item"><a class="pagination-link" href="#">15</a></li>
+              <li class="pagination-item scroll-next scroll-available"><a class="pagination-link scroll"
+                  href="#">Вперёд</a></li>
+            </ul>
+          </div>
 
-          <button class="catalog-more">Загрузить ещЁ</button>
-
-          <ul class="pagination-list">
-            <!-- С помощью класса  scroll-available реализуем появление/скрытие подписей кнопок прокрутки -->
-            <!-- С помощью классов  scroll-prev и scroll-next зададим стили и реализуем прокурутку списка страниц -->
-            <li class="pagination-item scroll-prev scroll-available"><a class="pagination-link scroll"
-                href="#">Назад</a></li>
-            <li class="pagination-item"><a class="pagination-link" href="#">1</a></li>
-            <li class="pagination-item"><a class="pagination-link" href="#">2</a></li>
-            <li class="pagination-item"><a class="pagination-link" href="#">3</a></li>
-            <li class="pagination-item"><a class="pagination-link" href="#">...</a></li>
-            <li class="pagination-item"><a class="pagination-link" href="#">15</a></li>
-            <li class="pagination-item scroll-next scroll-available"><a class="pagination-link scroll"
-                href="#">Вперёд</a></li>
-          </ul>
 
         </div>
 
