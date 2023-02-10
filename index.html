@@ -163,117 +163,141 @@
       <ol class="slider-list">
         <!-- Список слайдов предложений продукции/товаров по одному из каждой категории -->
         <li class="slide slide-active" id="category-1" data-slide="1">
-          <!-- Вместо "category-1" будет подставляться alias категории или его id-номер -->
+          <!-- Вместо "category-1" будет подставляться alias категории или его id-номер
+                Нумерация слайдов с помощью псевдоэлемента .slide:nth-child(n)::before -->
           <!-- Слайд предложения номер 1  активный -->
           <h3 class="visually-hidden">Квадрокоптер</h3>
 
-          <img class="slide-image" src="images/index/slider/product-1.png" alt="Квадрокоптер c мощным лазером.">
+          <img class="slide-image" src="images/index/slider/product-1.png" width="560" height="560" alt="Квадрокоптер c мощным лазером.">
 
-          <p class="slide-number"><span class="visually-hidden">предложение номер </span>01</p>
 
-          <div class="slide-information">
-            <p class="slide-title"><strong>Порхает как бабочка, жалит как пчела!</strong></p>
+          <p class="slide-title"><strong>Порхает как бабочка, жалит как пчела!</strong></p>
 
-            <p class="slide-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
-              замаскированным под стандартную камеру.</p>
+          <p class="slide-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
+            замаскированным под стандартную камеру.</p>
 
-            <a class="button" href="catalog.html">Подробнее</a>
+          <a class="button" href="catalog.html">Подробнее</a>
 
-            <table class="slider-table">
-              <!-- Таблица основных характеристик/параметров продукта-->
-              <caption class="visually-hidden">Основные характеристики товара</caption>
-              <tr class="table-data">
-                <td class="data-value"><b>800 м</b></td>
-                <td class="data-value"><b>50 м</b></td>
-              </tr>
-              <tr class="table-heading">
-                <th class="heading-name">Дальность полета</th>
-                <th class="heading-name">Радиус поражения</th>
-              </tr>
-            </table>
-          </div>
-
+          <table class="slider-table">
+            <!-- Таблица основных характеристик/параметров продукта-->
+            <caption class="visually-hidden">Основные характеристики товара</caption>
+            <tr class="table-data">
+              <td class="data-value"><b>800 м</b></td>
+              <td class="data-value"><b>50 м</b></td>
+            </tr>
+            <tr class="table-heading">
+              <th class="heading-name">Дальность полета</th>
+              <th class="heading-name">Радиус поражения</th>
+            </tr>
+          </table>
+          <!-- Список интерактивных индикаторов-кнопок навигации по слайдам -->
+          <ol class="slide-indicators">
+            <li class="slide-indicator">
+              <button class="indicator-toggle indicator-active" data-toggle="1">
+                <span class="visually-hidden">Квадрокоптер.</span>
+              </button>
+            </li>
+            <li class="slide-indicator">
+              <button class="indicator-toggle" data-toggle="2">
+                <span class="visually-hidden">Фитнес-браслеты.</span>
+              </button>
+            </li>
+            <li class="slide-indicator">
+              <button class="indicator-toggle" data-toggle="3">
+                <span class="visually-hidden">Палка для селфи.</span>
+              </button>
+            </li>
+          </ol>
         </li>
         <li class="slide" id="category-2" data-slide="2">
           <!-- Слайд предложения номер 2  неактивный -->
           <h3 class="visually-hidden">Фитнес-браслет</h3>
 
-          <img class="slide-image" src="images/index/slider/product-2.png" alt="Спортивный фитнес-браслет.">
+          <img class="slide-image" src="images/index/slider/product-2.png" width="560" height="560" alt="Спортивный фитнес-браслет.">
 
-          <p class="slide-number"><span class="visually-hidden">предложение номер </span>02</p>
+          <p class="slide-title"><strong>Худеем правильно!</strong></p>
 
-          <div class="slide-information">
-            <p class="slide-title"><strong>Худеем правильно!</strong></p>
+          <p class="slide-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и
+            соблюдать диету.</p>
 
-            <p class="slide-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и
-              соблюдать диету.</p>
+          <a class="button" href="catalog.html">Подробнее</a>
 
-            <a class="button" href="catalog.html">Подробнее</a>
+          <table class="slider-table">
+            <!-- Таблица основных характеристик/параметров продукта-->
+            <caption class="visually-hidden">Основные характеристики товара</caption>
+            <tr class="table-data">
+              <td class="data-value"><b>48 часов</b></td>
+            </tr>
+            <tr class="table-heading">
+              <th class="heading-name">Без подзарядки</th>
+            </tr>
+          </table>
 
-            <table class="slider-table">
-              <!-- Таблица основных характеристик/параметров продукта-->
-              <caption class="visually-hidden">Основные характеристики товара</caption>
-              <tr class="table-data">
-                <td class="data-value"><b>48 часов</b></td>
-              </tr>
-              <tr class="table-heading">
-                <th class="heading-name">Без подзарядки</th>
-              </tr>
-            </table>
-          </div>
-
+          <!-- Список интерактивных индикаторов-кнопок навигации по слайдам -->
+          <ol class="slide-indicators">
+            <li class="slide-indicator">
+              <button class="indicator-toggle indicator-active" data-toggle="1">
+                <span class="visually-hidden">Квадрокоптер.</span>
+              </button>
+            </li>
+            <li class="slide-indicator">
+              <button class="indicator-toggle" data-toggle="2">
+                <span class="visually-hidden">Фитнес-браслеты.</span>
+              </button>
+            </li>
+            <li class="slide-indicator">
+              <button class="indicator-toggle" data-toggle="3">
+                <span class="visually-hidden">Палка для селфи.</span>
+              </button>
+            </li>
+          </ol>
         </li>
         <li class="slide" id="category-3" data-slide="3">
           <!-- Слайд предложения номер 3 неактивный -->
           <h3 class="visually-hidden">Палка для селфи</h3>
 
-          <img class="slide-image" src="images/index/slider/product-3.png" alt="Длинная палка для селфи.">
+          <img class="slide-image" src="images/index/slider/product-3.png" width="560" height="560" alt="Длинная палка для селфи.">
 
-          <p class="slide-number"><span class="visually-hidden">предложение номер </span>03</p>
+          <p class="slide-title"><strong>Делай селфи, как Бен Стиллер!</strong></p>
 
-          <div class="slide-information">
-            <p class="slide-title"><strong>Делай селфи, как Бен Стиллер!</strong></p>
+          <p class="slide-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!)
+            метров длиной и весом всего 5 кг.</p>
 
-            <p class="slide-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!)
-              метров длиной и весом всего 5 кг.</p>
+          <a class="button" href="catalog.html">Подробнее</a>
 
-            <a class="button" href="catalog.html">Подробнее</a>
+          <table class="slider-table">
+            <!-- Таблица основных характеристик/параметров продукта-->
+            <caption class="visually-hidden">Основные характеристики товара</caption>
+            <tr class="table-data">
+              <td class="data-value"><b>8,5 м</b></td>
+              <td class="data-value"><b>5 кг</b></td>
+              <td class="data-value"><b>Карбон</b></td>
+            </tr>
+            <tr class="table-heading">
+              <th class="heading-name">Длина палки</th>
+              <th class="heading-name">Вес палки</th>
+              <th class="heading-name">Материал</th>
+            </tr>
+          </table>
 
-            <table class="slider-table">
-              <!-- Таблица основных характеристик/параметров продукта-->
-              <caption class="visually-hidden">Основные характеристики товара</caption>
-              <tr class="table-data">
-                <td class="data-value"><b>8,5 м</b></td>
-                <td class="data-value"><b>5 кг</b></td>
-                <td class="data-value"><b>Карбон</b></td>
-              </tr>
-              <tr class="table-heading">
-                <th class="heading-name">Длина палки</th>
-                <th class="heading-name">Вес палки</th>
-                <th class="heading-name">Материал</th>
-              </tr>
-            </table>
-          </div>
-
-        </li>
-      </ol>
-
-      <!-- Список интерактивных индикаторов-кнопок навигации по слайдам -->
-      <ol class="slide-indicators">
-        <li class="slide-indicator">
-          <button class="indicator-toggle indicator-active" data-toggle="1">
-            <span class="visually-hidden">Квадрокоптер.</span>
-          </button>
-        </li>
-        <li class="slide-indicator">
-          <button class="indicator-toggle" data-toggle="2">
-            <span class="visually-hidden">Фитнес-браслеты.</span>
-          </button>
-        </li>
-        <li class="slide-indicator">
-          <button class="indicator-toggle" data-toggle="3">
-            <span class="visually-hidden">Палка для селфи.</span>
-          </button>
+          <!-- Список интерактивных индикаторов-кнопок навигации по слайдам -->
+          <ol class="slide-indicators">
+            <li class="slide-indicator">
+              <button class="indicator-toggle indicator-active" data-toggle="1">
+                <span class="visually-hidden">Квадрокоптер.</span>
+              </button>
+            </li>
+            <li class="slide-indicator">
+              <button class="indicator-toggle" data-toggle="2">
+                <span class="visually-hidden">Фитнес-браслеты.</span>
+              </button>
+            </li>
+            <li class="slide-indicator">
+              <button class="indicator-toggle" data-toggle="3">
+                <span class="visually-hidden">Палка для селфи.</span>
+              </button>
+            </li>
+          </ol>
         </li>
       </ol>
 
