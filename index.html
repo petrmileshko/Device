@@ -16,13 +16,13 @@
     <nav class="navigation">
       <h2 class="visually-hidden">Навигация по магазиу</h2>
 
-      <a class="footer-about-logo" href="">
+      <a class="header-logo" href="">
         <img class="logo-image" src="images/logo-header.svg" width="145" height="37" alt="Логотип магазина.">
       </a>
 
       <div class="utilits-wrapper">
         <form class="navigation-search" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="search-label" for="search">
+          <label class="search-label">
             <span class="visually-hidden">Иконка поиска</span>
             <!-- <svg class="search-icon"> Тут втставим картинку иконки формате svg  </svg>-->
             <svg class="search-icon" aria-hidden="true" focusable="false" width="16" height="17" viewBox="0 0 16 17"
@@ -33,15 +33,15 @@
                   fill="#000" />
               </g>
             </svg>
+            <input class="search-input" type="text" name="search" placeholder="Текст поиска">
           </label>
-          <input class="search-input" type="text" id="search" name="search" placeholder="Текст поиска">
           <button class="button-submit" type="submit">Найти</button>
         </form>
 
         <ul class="navigtion-menu user-menu">
           <li class="menu-item">
             <a class="menu-link" href="#">
-              <span class="menu-icon">
+              <span class="menu-icon icon-login">
                 <!-- <svg class="enter-icon"> Тут втставим иконку в формате svg  </svg>-->
                 <svg class="enter-icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13"
                   xmlns="http://www.w3.org/2000/svg">
@@ -100,8 +100,8 @@
             <p class="button-toggle">
               <!-- <svg class="button-icon"> Тут втставим иконку в формате svg  </svg>-->
               <svg class="button-icon" aria-hidden="true" focusable="false" width="16" height="17"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M16 7.39H9v-7H7v7H0v2h7v7h2v-7h7v-2Z" fill="#000" /></svg>
+                viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 7.39H9v-7H7v7H0v2h7v7h2v-7h7v-2Z"/></svg>
             </p>
           </a>
           <ul class="submenu-categories submenu-active" id="submenu">

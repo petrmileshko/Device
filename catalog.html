@@ -9,22 +9,23 @@
 </head>
 
 <body>
-  <h1 class="visually-hidden">Каталог магазина электроники Device</h1>
+  <h1 class="visually-hidden">Магазин электроники Device</h1>
+
   <header class="site-header container-center">
     <!-- Шапка сайта, повторяется на всех страницах -->
     <nav class="navigation">
       <h2 class="visually-hidden">Навигация по магазиу</h2>
 
-      <a class="footer-about-logo" href="index.html">
+      <a class="header-logo" href="index.html">
         <img class="logo-image" src="images/logo-header.svg" width="145" height="37" alt="Логотип магазина.">
       </a>
 
       <div class="utilits-wrapper">
         <form class="navigation-search" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="search-label" for="search">
+          <label class="search-label">
             <span class="visually-hidden">Иконка поиска</span>
             <!-- <svg class="search-icon"> Тут втставим картинку иконки формате svg  </svg>-->
-            <svg class="search-icon" aria-hidden="true" focusable="false" width="16" height="17"
+            <svg class="search-icon" aria-hidden="true" focusable="false" width="16" height="17" viewBox="0 0 16 17"
               xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#a)">
                 <path
@@ -32,17 +33,17 @@
                   fill="#000" />
               </g>
             </svg>
+            <input class="search-input" type="text" name="search" placeholder="Текст поиска">
           </label>
-          <input class="search-input" type="text" id="search" name="search" placeholder="Текст поиска">
           <button class="button-submit" type="submit">Найти</button>
         </form>
 
         <ul class="navigtion-menu user-menu">
           <li class="menu-item">
             <a class="menu-link" href="#">
-              <span class="menu-icon">
+              <span class="menu-icon icon-login">
                 <!-- <svg class="enter-icon"> Тут втставим иконку в формате svg  </svg>-->
-                <svg class="enter-icon" aria-hidden="true" focusable="false" width="13" height="13"
+                <svg class="enter-icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M0 12.39h13c-.2-2.6-2.1-4.8-4.7-5.5 1-.6 1.7-1.7 1.7-3 0-1.9-1.6-3.5-3.5-3.5S3 1.99 3 3.89c0 1.3.7 2.4 1.7 3-2.6.7-4.5 2.9-4.7 5.5Z"
@@ -99,8 +100,8 @@
             <p class="button-toggle">
               <!-- <svg class="button-icon"> Тут втставим иконку в формате svg  </svg>-->
               <svg class="button-icon" aria-hidden="true" focusable="false" width="16" height="17"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M16 7.39H9v-7H7v7H0v2h7v7h2v-7h7v-2Z" fill="#000" /></svg>
+                viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 7.39H9v-7H7v7H0v2h7v7h2v-7h7v-2Z"/></svg>
             </p>
           </a>
           <ul class="submenu-categories" id="submenu">
@@ -133,7 +134,6 @@
     </nav>
 
   </header>
-
   <main class="catalog-content">
     <!-- Основное содержимое страницы Каталога -->
     <div class="container-center">

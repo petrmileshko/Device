@@ -69,6 +69,7 @@ body {
 .menu-button,
 .category-name,
 .delivery-button,
+.footer-about-logo,
 .contacts-phone {
   color: inherit;
   text-decoration: none;
@@ -124,6 +125,15 @@ body {
   border: none;
 }
 
+.button-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
 .container-center {
   width: 1160px;
   margin: 0 auto;
@@ -139,6 +149,11 @@ body {
   background-image: linear-gradient(to bottom, #ffffff 40px, #ffe17f 40px 100%);
 }
 
+.header-logo {
+  display: block;
+  margin-bottom: 30px;
+}
+
 .navigation {
   display: flex;
   flex-direction: column;
@@ -148,16 +163,32 @@ body {
 .utilits-wrapper {  /* Оболочка для формы поиска и списка пользовательского меню*/
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 30px;
 }
 
 .navigation-search {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  align-self: center;
   min-width: 518px;
   margin-right: 26px;
+  padding: 0;
   font-size: 16px;
   line-height: 20px;
+}
+
+.navigation-search .search-label {
+  display: flex;
+  align-items: stretch;
+  width: 359px;
+  padding: 0 0 0 16px;
+  border: 2px solid #000000;
+  border-radius: 20px 0 0 20px;
+}
+
+.search-label .search-icon {
+  align-self: center;
 }
 
 .search-input::placeholder {
@@ -167,10 +198,20 @@ body {
 }
 
 .navigation-search .search-input {
-  flex-grow: 1;
+  width: 100%;
+  padding: 8px 0 8px 16px;
 }
 
-.navigation-search .button-submit,
+.navigation-search .button-submit {
+  width: 159px;
+  padding: 8px 0;
+  text-transform: none;
+  background-color: transparent;
+  border: 2px solid #000000;
+  border-left: none;
+  border-radius: 0 20px 20px 0;
+}
+
 .navigation-search .search-input,
 .navigation-button {
   background-color: transparent;
@@ -181,6 +222,7 @@ body {
 .navigtion-menu.user-menu {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: flex-end;
   width: 496px;
 }
@@ -198,8 +240,17 @@ body {
   margin-right: auto;
 }
 
-.menu-item .menu-icon {
-  margin-right: 8px;
+.navigtion-menu.user-menu .menu-icon.icon-login {
+  margin-right: 13px;
+}
+
+.navigtion-menu.user-menu .menu-icon {
+  margin-right: 10px;
+}
+
+.menu-item .menu-link {
+  display: flex;
+  padding: 5px 0;
 }
 
 .menu-item .cart-goods {
@@ -211,7 +262,7 @@ body {
   align-items: center;
   width: 21px;
   height: 21px;
-  margin-left: -15px;
+  margin-left: -18px;
   background-color: #ffffff;
   border-radius: 50%;
   transform: translateY(-50%);
@@ -243,6 +294,7 @@ body {
 
 .submenu-categories.submenu-active {
   display: flex;
+  padding-top: 14px;
 }
 
 
@@ -253,10 +305,26 @@ body {
   width: 211px;
 }
 
+.submenu-categories .category-group:first-child {
+  margin-right: 40px;
+}
+
+.category-group .category-link:not(:last-child) {
+  margin-bottom: 17px;
+}
+
 .navigtion-menu.user-menu .user-name,
 .log-in-text,
 .log-out-text { /* Изначально имя пользователя и названия кнопок авторизации скрыто */
   display: none;
+}
+
+.navigtion-menu.user-menu .user-name.switch-on {
+  margin-right: 28px;
+}
+
+.navigtion-menu.user-menu .log-out-text.switch-on {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .navigtion-menu.user-menu .switch-on { /* Этот класс вкл/откл Имя пользователя и меняет название кнопки авторизации */
@@ -267,6 +335,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .navigation-menu:not(.navigtion-menu.user-menu) .menu-item {
@@ -285,13 +354,24 @@ body {
   left: 0.2em;
 }
 
-.navigation-menu:not(.navigtion-menu.user-menu) .menu-button {
+.navigation-menu .menu-button {
   display: flex;
+  align-items: center;
 }
 
-.menu-item .menu-link {
-  display: block;
+.menu-button .button-text {
+  margin-right: 17px;
 }
+
+.menu-button .button-toggle {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  fill: rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
 /* Подвал сайта */
 .site-footer {
   font-weight: 400;
@@ -597,6 +677,7 @@ body {
 }
 
 .delivery-button {
+  position: relative;
   display: flex;
   justify-content: space-between;
 }
