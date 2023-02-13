@@ -116,6 +116,10 @@ body {
 }
 
 .button {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 38px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -151,6 +155,7 @@ body {
 
 .header-logo {
   display: block;
+  width: fit-content;
   margin-bottom: 30px;
 }
 
@@ -169,7 +174,6 @@ body {
 
 .navigation-search {
   display: flex;
-  align-items: center;
   align-self: center;
   min-width: 518px;
   margin-right: 26px;
@@ -189,6 +193,11 @@ body {
 
 .search-label .search-icon {
   align-self: center;
+  cursor: pointer;
+}
+
+.search-label {
+
 }
 
 .search-input::placeholder {
@@ -200,6 +209,10 @@ body {
 .navigation-search .search-input {
   width: 100%;
   padding: 8px 0 8px 16px;
+}
+
+.navigation-search .search-input:focus {
+  outline: none;
 }
 
 .navigation-search .button-submit {
@@ -216,7 +229,6 @@ body {
 .navigation-button {
   background-color: transparent;
   border: none;
-  cursor: pointer;
 }
 
 .navigtion-menu.user-menu {
@@ -263,9 +275,12 @@ body {
   width: 21px;
   height: 21px;
   margin-left: -18px;
+  font-size: 14px;
+  line-height: 17px;
   background-color: #ffffff;
   border-radius: 50%;
   transform: translateY(-50%);
+  overflow: hidden;
 }
 
 .navigation-menu:not(.navigtion-menu.user-menu),
@@ -365,6 +380,7 @@ body {
 
 .menu-button .button-toggle {
   position: relative;
+  flex-shrink: 0;
   width: 50px;
   height: 50px;
   fill: rgba(0, 0, 0, 0.3);
@@ -441,12 +457,12 @@ body {
 
 .slider-categories-best {
   position: relative;
-  background-image: linear-gradient(to bottom, #ffe17f 152px, #ffffff 152px 100%);
+  background-image: linear-gradient(to bottom, #ffe17f 136px, #ffffff 136px 100%);
 }
 
 .slider-navigation {
   position: absolute;
-  top: 241px;
+  top: 197px;
   left: 30px;
   display: flex;
   justify-content: space-between;
@@ -465,8 +481,8 @@ body {
 
 .slide:nth-child(1)::before {
   position: absolute;
-  top: 23px;
-  right: 49px;
+  top: 16px;
+  right: 48px;
   font-weight: 700;
   font-size: 180px;
   line-height: 135px;
@@ -478,8 +494,8 @@ body {
 
 .slide:nth-child(2)::before {
   position: absolute;
-  top: 23px;
-  right: 49px;
+  top: 16px;
+  right: 48px;
   font-weight: 700;
   font-size: 180px;
   line-height: 135px;
@@ -490,8 +506,8 @@ body {
 
 .slide:nth-child(3)::before {
   position: absolute;
-  top: 23px;
-  right: 49px;
+  top: 16px;
+  right: 48px;
   font-weight: 700;
   font-size: 180px;
   line-height: 135px;
@@ -501,63 +517,40 @@ body {
 }
 
 .slide.slide-active {
-  display: grid;
-  grid-template-columns: 600px 220px 1fr;
-  grid-template-rows: 123px min-content min-content auto auto;
-  grid-template-areas:
-    "image .       ."
-    "image heading heading"
-    "image descr   descr"
-    "image more    indicators"
-    "image table   table";
+  display: flex;
 }
 
-.slide-image {
-  grid-area: image;
-}
-
-.slide-title {
-  grid-area: heading;
+.container-slide {
+  padding-top: 108px;
   z-index: 1;
 }
 
-.slide-description {
-  grid-area: descr;
+.slide-image {
+  margin-right: 40px;
+  transform: translateY(-15px);
 }
 
-.slide > .button {
-  display: flex;
-  align-self: flex-start;
-  justify-self: stretch;
-  justify-content: center;
-  grid-area: more;
+.slide-title {
+  margin-bottom: 29px;
 }
 
 .slide-title strong {
   font-weight: 800;
 }
 
-.slider-table {
-  width: fit-content;
-  grid-area: table;
+.slide-description {
+  margin-bottom: 51px;
 }
 
-.data-value b {
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 30px;
-  color: #000000;
-}
-
-.heading-name {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 30px;
+.slide-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 49px;
 }
 
 .slide-indicators {
   display: flex;
-  grid-area: indicators;
   justify-self: flex-end;
 }
 
@@ -581,6 +574,40 @@ body {
 
 .indicator-toggle.indicator-active {
   background-color: #000000;
+}
+
+.slide-parameters {
+  display: flex;
+}
+
+.param-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.param-wrapper:not(:last-child) {
+  margin-right: 40px;
+}
+
+.slide-parameters .data-value {
+  margin: 0;
+}
+
+.slide-parameters .heading-name {
+  margin-top: 5px;
+}
+
+.data-value b {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.heading-name {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
 }
 
 /* Секция categories - Категории товаров */
