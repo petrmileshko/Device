@@ -157,7 +157,7 @@ body {
 .navigation {
   display: flex;
   flex-direction: column;
-  padding: 17px 60px 23px 60px;
+  padding: 17px 60px 0 60px;
 }
 
 .utilits-wrapper {  /* Оболочка для формы поиска и списка пользовательского меню*/
@@ -441,7 +441,6 @@ body {
 
 .slider-categories-best {
   position: relative;
-  outline-offset: -1px;
   background-image: linear-gradient(to bottom, #ffe17f 152px, #ffffff 152px 100%);
 }
 
