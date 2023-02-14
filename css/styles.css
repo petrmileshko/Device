@@ -682,9 +682,9 @@ body {
 .services > .container-center::before {   /* Делаем всю область текущего пункта меню кликабельной */
   position: absolute;
   top: 12px;
+  bottom: 42px;
   left: 280px;
   width: 7px;
-  height: 319px;
   background-color: #000000;
   content: "";
 }
@@ -693,6 +693,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  flex-basis: 280px;
 }
 
 .service {
