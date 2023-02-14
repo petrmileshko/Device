@@ -457,6 +457,7 @@ body {
 
 .slider-categories-best {
   position: relative;
+  margin-bottom: 56px;
   background-image: linear-gradient(to bottom, #ffe17f 136px, #ffffff 136px 100%);
 }
 
@@ -611,6 +612,10 @@ body {
 }
 
 /* Секция categories - Категории товаров */
+.categories {
+  margin-bottom: 70px;
+}
+
 .categories-list {
   display: flex;
   justify-content: space-between;
@@ -626,6 +631,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 160px;                /* необходимо задать высоту для контейнера с иконкой для придания квадратной формы */
+  margin-bottom: 33px;
   background-color: #ffe17f;
 }
 
@@ -638,7 +644,12 @@ body {
   margin: auto;
 }
 
+.category-icon[aria-describedby="monopods"] .category-image {
+  margin-top: 43px;
+}
+
 .category-name {
+  display: block;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -659,37 +670,78 @@ body {
 
 /* Секция services - Дополнительные услуги */
 .services {
-  background-image: linear-gradient(to bottom, #ffffff 102px, #f0f0f0 102px 100%);
+  background-image: linear-gradient(to bottom, #ffffff 114px, #f0f0f0 114px 100%);
 }
 
 .services > .container-center {
+  position: relative;
   display: flex;
-  padding: 64px 0 72px 0;
+  padding: 76px 0 72px 0;
+}
+
+.services > .container-center::before {   /* Делаем всю область текущего пункта меню кликабельной */
+  position: absolute;
+  top: 12px;
+  left: 280px;
+  width: 7px;
+  height: 319px;
+  background-color: #000000;
+  content: "";
+}
+
+.services-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.service {
+  margin-bottom: 35px;
+}
+
+.service .service-link.button {
+  display: block;
+  min-width: 160px;
+  padding: 9px 0;
+  text-align: center;
 }
 
 .service-info-list {
-  padding-left: 116px;
+  padding-left: 124px;
+}
+
+.service-title {
+  margin-bottom: 34px;
 }
 
 .service-description {  /* Изначально описание услуг скрыто */
   display: none;
 }
 
-.service-link.service-current {   /* Выделяем в меню пункт текущей услуги */
-  display: block;
-  width: 287px;
-  text-align: left;
+.service.service-current {    /* Задаем цветовые стили для текущего пункта меню */
+  position: relative;
+  min-width: 280px;
   color: #ffe17f;
   background-color: #000000;
+}
+
+.service.service-current .service-link {
+  width: 160px;
+  color: inherit;
   background-image: none;
 }
 
-.service-info-list .service-description:not(:first-of-type) {
-  padding-right: 282px;
+.service.service-current .service-link::before {   /* Делаем всю область текущего пункта меню кликабельной */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
 }
 
-.service-info-list .service-description:first-of-type {
-  padding-right: 309px;
+.service-info-list .service-description {
+  padding-top: 8px;
 }
 
 .service-description.description-current {  /* Показываем описание выбранной услуги */
