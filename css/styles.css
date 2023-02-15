@@ -753,6 +753,7 @@ body {
 
 /* Секция delivery-order - Заказ доставки */
 .delivery-order {
+  margin-bottom: 70px;
   background-color: #f0f0f0;
 }
 
@@ -809,6 +810,8 @@ body {
 /* Секция shop-info - Информация о магазине */
 .shop-info {
   display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 70px;
 }
 
 /* Подраздел секции shop-info - О нас */
@@ -818,34 +821,102 @@ body {
   padding-right: 23px;
 }
 
+.about-title,
+.contacts-title {
+  margin-bottom: 48px;
+}
+
+.shop-info .about-text,
+.shop-info .contacts-text,
+.shop-info .contacts-address,
+.shop-info .working-hours-list {
+  margin-bottom: 30px;
+}
+
+.shop-info .button {
+  padding: 0 28px;
+}
+
 .about-us .courier-services {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 11px 0;
+  padding: 0;
   font-size: 18px;
   line-height: 20px;
   letter-spacing: -0.02em;
   color: #000000;
+  list-style-type: none;
 }
 
-.courier-services .courier-name::marker {
-  color: #ffe17f;
+.courier-services .courier-name {
+  display: flex;
+  align-items: center;
+  /* position: relative; */
+  margin-bottom: 19px;
+  padding-left: 4px;
 }
+
+.courier-services .courier-name::before {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  width: 8px;
+  height: 8px;
+  margin-right: 26px;
+  background-color: #ffe17f;
+  border-radius: 50%;
+  content: "";
+}
+
+.about-us .button {
+  padding: 0 22px;
+}
+
 
 /* Подраздел секции shop-info - Контакты */
 .contacts {
   width: 532px;
 }
 
+.about-us,
+.contacts {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 47px;
+}
+
+.about-us::before,
+.contacts::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 84px;
+  height: 7px;
+  background-color: #000000;
+  content: "";
+}
+
 .contacts .contacts-subtitle {
+  margin: 0 0 15px 0;
   font-size: 24px;
   line-height: 30px;
 }
 
 .contacts .contacts-text {
-  width: 496px;
+  width: 497px;
+}
+
+.contacts .button {
+  padding: 0 33px;
 }
 
 /* Секция newsletter-subscribe - Подпишитесь на рассылку */
 .newsletter-subscribe {
   display: block;
+  padding-top: 64px;
   background-color: #f0f0f0;
 }
 
@@ -854,8 +925,13 @@ body {
   grid-template-columns: 365px 1fr 560px;
 }
 
+.newsletter-subscribe .newsletter-title {
+  margin-left: 8px;
+}
+
 .newsletter-subscribe .newsletter-text {
   grid-column: 3/-1;
+  padding: 10px 0 0 7px;
 }
 
 .newsletter-subscribe .subscribe-form {
