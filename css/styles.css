@@ -916,13 +916,14 @@ body {
 /* Секция newsletter-subscribe - Подпишитесь на рассылку */
 .newsletter-subscribe {
   display: block;
-  padding-top: 64px;
+  padding: 64px 0 56px 0;
   background-color: #f0f0f0;
 }
 
 .newsletter-subscribe > .container-center {
   display: grid;
   grid-template-columns: 365px 1fr 560px;
+  row-gap: 144px;
 }
 
 .newsletter-subscribe .newsletter-title {
@@ -942,9 +943,15 @@ body {
 
 .subscribe-form .subscribe-input {
   width: 557px;
+  padding-left: 16px;
+  border: none;
+  border-bottom: 3px solid #cecece;
 }
 
 .subscribe-form .checkbox-label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   margin-left: auto;
 }
 
@@ -953,6 +960,7 @@ body {
 }
 
 .subscribe-form .subscribe-button {
+  padding: 15px 35px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
