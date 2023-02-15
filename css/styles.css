@@ -670,19 +670,20 @@ body {
 
 /* Секция services - Дополнительные услуги */
 .services {
+  margin-bottom: 70px;
   background-image: linear-gradient(to bottom, #ffffff 114px, #f0f0f0 114px 100%);
 }
 
 .services > .container-center {
   position: relative;
   display: flex;
-  padding: 76px 0 72px 0;
+  padding: 76px 0 102px 0;
 }
 
 .services > .container-center::before {   /* Делаем всю область текущего пункта меню кликабельной */
   position: absolute;
   top: 12px;
-  bottom: 42px;
+  bottom: 72px;
   left: 280px;
   width: 7px;
   background-color: #000000;
@@ -756,22 +757,53 @@ body {
 }
 
 .delivery-button {
-  position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.delivery-order .button-icon {
+.delivery-order .delivery-icon {
+  position: relative;
   display: block;
+  width: 125px;
+  height: 100px;
   background-color: #ffe17f;
 }
 
-.delivery-button .button-text {
+.delivery-icon .delivery-icon-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.delivery-button .delivery-text {
+  width: 910px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 20px;
   line-height: 23px;
   letter-spacing: 0.2em;
+}
+
+.delivery-button .delivery-info-icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  background-color: rgba(220, 220, 220, 0.5);
+  border-radius: 50%;
+}
+
+.delivery-info-icon .info-icon-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 /* Секция shop-info - Информация о магазине */
