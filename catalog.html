@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body class="catalog-page">
   <h1 class="visually-hidden">Магазин электроники Device</h1>
 
   <header class="site-header container-center">
@@ -165,30 +165,33 @@
         <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="post">
           <p class="filters-groups-label">фильтр:</p>
           <fieldset class="filters-group">
-            <legend class="group-name">Стоимость</legend>
+            <p class="group-name">Стоимость</p>
+            <div class="range-slider">
+              <div class="range-bar" style="left: 0; right: 81px;">
+                <button class="min-pin" type="button">
+                  <span class="visually-hidden">Изментить минимальную цену</span>
+                </button>
+                <button class="max-pin" type="button">
+                  <span class="visually-hidden">Изментить максимальную цену</span>
+                </button>
+              </div>
+            </div>
+            <div class="range-inputs-wrapper">
+              <label class="input-label">
+                <span class="visually-hidden">Минимальная цена </span> От
+                <input class="input-price" type="number" name="min-price" value="0">
+              </label>
+              <label class="input-label">
+                <span class="visually-hidden">Максимальная цена </span>До
+                <input class="input-price" type="number" name="max-price" value="50000">
+              </label>
+            </div>
 
-            <button class="min-pin" type="button">
-              <span class="visually-hidden">Изментить минимальную цену</span>
-            </button>
-            <button class="max-pin" type="button">
-              <span class="visually-hidden">Изментить максимальную цену</span>
-            </button>
 
-            <label class="input-label">
-              <span class="visually-hidden">Минимальная цена </span> От
-              <input class="input-price" type="number" name="min-price" value="0">
-
-            </label>
-
-            <label class="input-label">
-              <span class="visually-hidden">Максимальная цена </span>До
-              <input class="input-price" type="number" name="max-price" value="50000">
-
-            </label>
           </fieldset>
 
           <fieldset class="filters-group">
-            <legend class="group-name">Цвет</legend>
+            <p class="group-name">Цвет</p>
             <ul class="filters-list">
               <li class="filters-item">
                 <label class="item-label">
@@ -229,7 +232,7 @@
           </fieldset>
 
           <fieldset class="filters-group">
-            <legend class="group-name">Bluetooth</legend>
+            <p class="group-name">Bluetooth</p>
             <ul class="filters-list">
               <li class="filters-item">
                 <label class="item-label">

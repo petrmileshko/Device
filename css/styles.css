@@ -153,6 +153,10 @@ body {
   background-image: linear-gradient(to bottom, #ffffff 40px, #ffe17f 40px 100%);
 }
 
+.catalog-page .site-header {
+  margin-bottom: 35px;
+}
+
 .header-logo {
   display: block;
   width: fit-content;
@@ -163,6 +167,10 @@ body {
   display: flex;
   flex-direction: column;
   padding: 17px 60px 0 60px;
+}
+
+.catalog-page .navigation {
+  padding-bottom: 22px;
 }
 
 .utilits-wrapper {  /* Оболочка для формы поиска и списка пользовательского меню*/
@@ -1009,9 +1017,14 @@ body {
   background-color: #f0f0f0;
 }
 
+.catalog-content .content-title {
+  margin-bottom: 16px;
+}
+
 .content-header .breadcramps-list {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 35px;
 }
 
 .breadcramps-list .breadcramps-item {
@@ -1044,18 +1057,62 @@ body {
 
 .catalog-filters {
   width: 260px;
+  padding-top: 25px;
 }
 
+.catalog-filters .filters-groups-label {
+  margin-bottom: 58px;
+}
+
+
 .catalog-filters .filters-group {
+  padding: 12px 0 0 0;
+  margin: 0;
   width: 200px;
+  border: none;
+  border-top: 2px solid #000000;
 }
 
 .filters-group .group-name {
+  margin: 0 0 28px 0;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.02em;
   color: #000000;
 }
+
+.range-slider {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: #dcdcdc;
+}
+
+.range-bar {
+  position: absolute;
+  height: 2px;
+  background-color: #000000;
+}
+
+.min-pin,
+.max-pin {
+  position: absolute;
+  top: -9px;
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 50%;
+}
+
+.min-pin {
+  left: -9px;
+}
+
+.max-pin {
+  right: -9px;
+}
+
 
 .filters-group .input-price {
   width: 100%;
@@ -1080,11 +1137,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 23px 40px;
+  padding: 21px 40px;
   background-color: #f0f0f0;
 }
 
 .catalog-sorting .sorting-select {
+  width: 166px;
   font-family: inherit;
   font-size: 18px;
   line-height: 30px;
