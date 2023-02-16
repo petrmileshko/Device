@@ -55,7 +55,8 @@ body {
   overflow-wrap: anywhere;
 }
 
-*[class$="-title"] {
+*[class$="-title"],
+.product-name {
   padding: 0;
   margin: 0;
   font-family: "Raleway", sans-serif;
@@ -1055,6 +1056,7 @@ body {
   color: #000000;
 }
 
+/* Фильтры */
 .catalog-filters {
   width: 260px;
   padding-top: 25px;
@@ -1064,16 +1066,23 @@ body {
   margin-bottom: 58px;
 }
 
-
 .catalog-filters .filters-group {
   padding: 12px 0 0 0;
-  margin: 0;
+  margin: 0 0 30px 0;
   width: 200px;
   border: none;
   border-top: 2px solid #000000;
 }
 
 .filters-group .group-name {
+  margin: 0 0 15px 0;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+.filters-group:first-of-type .group-name {
   margin: 0 0 28px 0;
   font-weight: 700;
   line-height: 20px;
@@ -1085,6 +1094,7 @@ body {
   position: relative;
   width: 100%;
   height: 2px;
+  margin-bottom: 15px;
   background-color: #dcdcdc;
 }
 
@@ -1113,9 +1123,29 @@ body {
   right: -9px;
 }
 
+.range-inputs-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .filters-group .input-price {
-  width: 100%;
+  width: 50px;
+  appearance: textfield;
+}
+
+.filters-group .input-price::-webkit-outer-spin-button,
+.filters-group .input-price::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.filters-group .input-price:focus {
+  outline: none;
+}
+
+.range-inputs-wrapper > .input-label:first-of-type {
+  position: relative;
+  left: -12px;
 }
 
 .filters-group .input-label,
@@ -1133,11 +1163,34 @@ body {
   color: #000000;
 }
 
+.filters-group .filters-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.filters-group .filters-item {
+  padding-left: 36px;
+}
+
+.filters-group .filters-item:not(:last-of-type) {
+  margin-bottom: 7px;
+}
+
+.catalog-filters .button {
+  position: relative;
+  top: 2px;
+  display: block;
+  width: 220px;
+  padding: 10px 0 10px 0;
+  background-image: linear-gradient(to bottom, transparent 16px, #ffe17f 16px 24px, transparent 24px 100%);
+}
+
+/* Сортировка*/
 .catalog-sorting {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 21px 40px;
+  padding: 20px 40px;
   background-color: #f0f0f0;
 }
 
@@ -1169,44 +1222,53 @@ body {
 
 .catalog-footer {
   padding: 0 40px;
+  margin-bottom: 78px;
 }
 
 .products-list {
   display: grid;
   grid-template-columns: repeat(2, 360px);
-  gap: 40px 44px;
-  padding: 70px 40px;
+  gap: 44px 40px;
+  padding: 70px 40px 44px 40px;
   font-size: 18px;
   line-height: 21px;
   color: #444444;
 }
 
 .products-list .products-item {
-  position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 226px 1fr;
+}
+
+.products-item .product-wrapper {
+  position: relative;
+  grid-column: 1/-1;
+  margin-bottom: 32px;
 }
 
 .products-item .product-image {
-  grid-column: 1/-1;
+  display: block;
 }
 
 .products-item .product-name {
+  display: block;
   font-size: 18px;
   line-height: 20px;
   letter-spacing: -0.02em;
 }
 
 .products-item .product-price {
+  margin: 0;
+  padding: 0;
   margin-left: auto;
 }
 
 .product-link.button {
   position: absolute;
-  top: 50%;
+  top: 170px;
   left: 50%;
   display: none;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 }
 
 .products-item:hover .product-image {
@@ -1215,11 +1277,14 @@ body {
 
 .products-item:hover .product-link.button {
   display: block;
+  width: 220px;
+  padding: 10px 0 9px 0;
 }
 
 .catalog-more {
   width: 100%;
-  padding: 18px 0;
+  padding: 15px 0;
+  margin-bottom: 44px;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -1234,7 +1299,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 25px;
+  padding: 15px 21px 16px 25px;
   background-color: #f0f0f0;
 }
 
