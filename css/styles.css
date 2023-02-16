@@ -919,15 +919,11 @@ body {
 .courier-services .courier-name {
   display: flex;
   align-items: center;
-  /* position: relative; */
   margin-bottom: 19px;
   padding-left: 4px;
 }
 
 .courier-services .courier-name::before {
-  /* position: absolute;
-  top: 0;
-  left: 0; */
   width: 8px;
   height: 8px;
   margin-right: 26px;
@@ -1008,6 +1004,10 @@ body {
   justify-self: stretch;
 }
 
+.subscribe-form {
+  position: relative;
+}
+
 .subscribe-form .subscribe-input {
   width: 557px;
   padding-left: 16px;
@@ -1016,10 +1016,30 @@ body {
 }
 
 .subscribe-form .checkbox-label {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin-left: auto;
+  cursor: pointer;
+}
+
+.subscribe-form .input-control {
+  top: 50%;
+  right: 10%;
+}
+
+.input-control:checked + .checkbox-label::before {
+  position: absolute;
+  top: 50%;
+  left: -33px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/index/tick-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateY(-53%);
+  content: "";
 }
 
 .subscribe-form .subscribe-input::placeholder {
@@ -1027,7 +1047,7 @@ body {
 }
 
 .subscribe-form .subscribe-button {
-  padding: 15px 35px;
+  padding: 15px 33.52px 15px 36px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
