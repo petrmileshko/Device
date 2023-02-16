@@ -1101,7 +1101,22 @@ body {
 }
 
 .breadcramps-list .breadcramps-item:not(:last-of-type) {
+  position: relative;
   margin-right: 36px;
+}
+
+.breadcramps-list .breadcramps-item:not(:last-of-type)::after {
+  position: absolute;
+  top: 50%;
+  right: -23px;
+  width: 4px;
+  height: 7px;
+  background-image: url("../images/catalog/breadcramps-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateY(-50%);
+  opacity: 0.2;
+  content: "";
 }
 
 /* Секция container-catalog - тело/контейнер каталога */
