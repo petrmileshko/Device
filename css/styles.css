@@ -412,12 +412,23 @@ body {
 }
 
 .footer-about {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 240px;
   margin-right: 112px;
   padding-bottom: 71px;
   margin-bottom: 20px;
+}
+
+.footer-about::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  height: 7px;
+  background-color: #ffc700;
+  content: "";
 }
 
 .footer-about-logo {
@@ -722,6 +733,7 @@ body {
   content: "";
 }
 
+
 .services-menu {
   display: flex;
   flex-direction: column;
@@ -741,6 +753,7 @@ body {
 }
 
 .service-info-list {
+  margin-top: 9px;
   padding-left: 124px;
 }
 
@@ -749,7 +762,44 @@ body {
 }
 
 .service-description {  /* Изначально описание услуг скрыто */
+  position: relative;
   display: none;
+}
+
+.service-description:first-child::after {
+  position: absolute;
+  top: 4px;
+  right: -244px;
+  width: 136px;
+  height: 164px;
+  background-image: url("../images/index/delivery-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+}
+
+.service-description:nth-child(2)::after {
+  position: absolute;
+  top: -11px;
+  right: -253px;
+  width: 171px;
+  height: 195px;
+  background-image: url("../images/index/warranty-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+}
+
+.service-description:nth-child(3)::after {
+  position: absolute;
+  top: -8px;
+  right: -274px;
+  width: 156px;
+  height: 188px;
+  background-image: url("../images/index/credit-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
 }
 
 .service.service-current {    /* Задаем цветовые стили для текущего пункта меню */
@@ -772,10 +822,6 @@ body {
   left: 0;
   right: 0;
   content: "";
-}
-
-.service-info-list .service-description {
-  padding-top: 8px;
 }
 
 .service-description.description-current {  /* Показываем описание выбранной услуги */
@@ -884,15 +930,11 @@ body {
 .courier-services .courier-name {
   display: flex;
   align-items: center;
-  /* position: relative; */
   margin-bottom: 19px;
   padding-left: 4px;
 }
 
 .courier-services .courier-name::before {
-  /* position: absolute;
-  top: 0;
-  left: 0; */
   width: 8px;
   height: 8px;
   margin-right: 26px;
@@ -973,6 +1015,10 @@ body {
   justify-self: stretch;
 }
 
+.subscribe-form {
+  position: relative;
+}
+
 .subscribe-form .subscribe-input {
   width: 557px;
   padding-left: 16px;
@@ -981,10 +1027,30 @@ body {
 }
 
 .subscribe-form .checkbox-label {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin-left: auto;
+  cursor: pointer;
+}
+
+.subscribe-form .input-control {
+  top: 50%;
+  right: 10%;
+}
+
+.input-control:checked + .checkbox-label::before {
+  position: absolute;
+  top: 50%;
+  left: -33px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/index/tick-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateY(-53%);
+  content: "";
 }
 
 .subscribe-form .subscribe-input::placeholder {
@@ -992,7 +1058,7 @@ body {
 }
 
 .subscribe-form .subscribe-button {
-  padding: 15px 35px;
+  padding: 15px 33.52px 15px 36px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -1187,6 +1253,7 @@ body {
 
 /* Сортировка*/
 .catalog-sorting {
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1194,24 +1261,63 @@ body {
   background-color: #f0f0f0;
 }
 
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  position: absolute;
+  right: 4px;
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/catalog/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+}
+
 .catalog-sorting .sorting-select {
   width: 166px;
+  padding-right: 0;
   font-family: inherit;
   font-size: 18px;
   line-height: 30px;
   background-color: transparent;
   border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
+/* .catalog-sorting .sorting-select::-ms-expand {
+  display: none;
+} */
+
 .container-sorting-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   width: 60px;
 }
 
-.button-sort {
+.sorting-button-ascending,
+.sorting-button-descending {
+  position: relative;
+  width: 11px;
+  height: 10px;
+}
+
+.icon-sort {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   fill: rgba(0, 0, 0, 0.2);
 }
 
-.sorting-button-descending .button-sort {
+.sorting-button-descending .icon-sort {
   transform: rotate(180deg);
 }
 

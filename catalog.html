@@ -258,27 +258,28 @@
           <form class="catalog-sorting" action="https://echo.htmlacademy.ru/" method="post">
             <label class="sorting-label" for="sorting">сортировка:</label>
 
-            <!-- у поля селект вставим кастомный указатель в svg формате -->
+            <div class="select-wrapper">
+              <select class="sorting-select" name="sorting" id="sorting">
+                <option class="sorting-type" value="popular" selected>Популярные</option>
+                <option class="sorting-type" value="cheap">Дешевые</option>
+                <option class="sorting-type" value="expensive">Дорогие</option>
+                <option class="sorting-type" value="chinese">Китайские</option>
+              </select>
+            </div>
 
-            <select class="sorting-select" name="sorting" id="sorting">
-              <option class="sorting-type" value="popular" selected>Популярные</option>
-              <option class="sorting-type" value="cheap">Дешевые</option>
-              <option class="sorting-type" value="expensive">Дорогие</option>
-              <option class="sorting-type" value="chinese">Китайские</option>
-            </select>
             <button class="visually-hidden" type="submit">Отсортировать по критерию</button>
 
             <div class="container-sorting-buttons">
               <a class="sorting-button-ascending" href="#">
                 <span class="visually-hidden">Отсортировать по возрастанию</span>
-                <svg class="button-sort" aria-hidden="true" focusable="false" width="12" height="10"
+                <svg class="icon-sort" aria-hidden="true" focusable="false" width="12" height="10"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="m6 0 5.5 10H.5" /></svg>
               </a>
 
               <a class="sorting-button-descending" href="#">
                 <span class="visually-hidden">Отсортировать по убыванию</span>
-                <svg class="button-sort" aria-hidden="true" focusable="false" width="12" height="10"
+                <svg class="icon-sort" aria-hidden="true" focusable="false" width="12" height="10"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="m6 0 5.5 10H.5" /></svg>
               </a>
