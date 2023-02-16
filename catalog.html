@@ -8,23 +8,24 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
-  <h1 class="visually-hidden">Каталог магазина электроники Device</h1>
+<body class="catalog-page">
+  <h1 class="visually-hidden">Магазин электроники Device</h1>
+
   <header class="site-header container-center">
     <!-- Шапка сайта, повторяется на всех страницах -->
     <nav class="navigation">
       <h2 class="visually-hidden">Навигация по магазиу</h2>
 
-      <a class="footer-about-logo" href="index.html">
+      <a class="header-logo" href="index.html">
         <img class="logo-image" src="images/logo-header.svg" width="145" height="37" alt="Логотип магазина.">
       </a>
 
       <div class="utilits-wrapper">
         <form class="navigation-search" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="search-label" for="search">
+          <label class="search-label">
             <span class="visually-hidden">Иконка поиска</span>
             <!-- <svg class="search-icon"> Тут втставим картинку иконки формате svg  </svg>-->
-            <svg class="search-icon" aria-hidden="true" focusable="false" width="16" height="17"
+            <svg class="search-icon" aria-hidden="true" focusable="false" width="16" height="17" viewBox="0 0 16 17"
               xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#a)">
                 <path
@@ -32,17 +33,17 @@
                   fill="#000" />
               </g>
             </svg>
+            <input class="search-input" type="text" name="search" placeholder="Текст поиска">
           </label>
-          <input class="search-input" type="text" id="search" name="search" placeholder="Текст поиска">
           <button class="button-submit" type="submit">Найти</button>
         </form>
 
         <ul class="navigtion-menu user-menu">
           <li class="menu-item">
             <a class="menu-link" href="#">
-              <span class="menu-icon">
+              <span class="menu-icon icon-login">
                 <!-- <svg class="enter-icon"> Тут втставим иконку в формате svg  </svg>-->
-                <svg class="enter-icon" aria-hidden="true" focusable="false" width="13" height="13"
+                <svg class="enter-icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M0 12.39h13c-.2-2.6-2.1-4.8-4.7-5.5 1-.6 1.7-1.7 1.7-3 0-1.9-1.6-3.5-3.5-3.5S3 1.99 3 3.89c0 1.3.7 2.4 1.7 3-2.6.7-4.5 2.9-4.7 5.5Z"
@@ -98,9 +99,9 @@
             <span class="button-text">Каталог товаров</span>
             <p class="button-toggle">
               <!-- <svg class="button-icon"> Тут втставим иконку в формате svg  </svg>-->
-              <svg class="button-icon" aria-hidden="true" focusable="false" width="16" height="17"
+              <svg class="button-icon" aria-hidden="true" focusable="false" width="16" height="17" viewBox="0 0 16 17"
                 xmlns="http://www.w3.org/2000/svg">
-                <path d="M16 7.39H9v-7H7v7H0v2h7v7h2v-7h7v-2Z" fill="#000" /></svg>
+                <path d="M16 7.39H9v-7H7v7H0v2h7v7h2v-7h7v-2Z" /></svg>
             </p>
           </a>
           <ul class="submenu-categories" id="submenu">
@@ -133,7 +134,6 @@
     </nav>
 
   </header>
-
   <main class="catalog-content">
     <!-- Основное содержимое страницы Каталога -->
     <div class="container-center">
@@ -165,30 +165,33 @@
         <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="post">
           <p class="filters-groups-label">фильтр:</p>
           <fieldset class="filters-group">
-            <legend class="group-name">Стоимость</legend>
+            <p class="group-name">Стоимость</p>
+            <div class="range-slider">
+              <div class="range-bar" style="left: 0; right: 81px;">
+                <button class="min-pin" type="button">
+                  <span class="visually-hidden">Изментить минимальную цену</span>
+                </button>
+                <button class="max-pin" type="button">
+                  <span class="visually-hidden">Изментить максимальную цену</span>
+                </button>
+              </div>
+            </div>
+            <div class="range-inputs-wrapper">
+              <label class="input-label">
+                <span class="visually-hidden">Минимальная цена </span> от
+                <input class="input-price" type="number" name="min-price" value="0">
+              </label>
+              <label class="input-label">
+                <span class="visually-hidden">Максимальная цена </span>До
+                <input class="input-price" type="number" name="max-price" value="50000">
+              </label>
+            </div>
 
-            <button class="min-pin" type="button">
-              <span class="visually-hidden">Изментить минимальную цену</span>
-            </button>
-            <button class="max-pin" type="button">
-              <span class="visually-hidden">Изментить максимальную цену</span>
-            </button>
 
-            <label class="input-label">
-              <span class="visually-hidden">Минимальная цена </span> От
-              <input class="input-price" type="number" name="min-price" value="0">
-
-            </label>
-
-            <label class="input-label">
-              <span class="visually-hidden">Максимальная цена </span>До
-              <input class="input-price" type="number" name="max-price" value="50000">
-
-            </label>
           </fieldset>
 
           <fieldset class="filters-group">
-            <legend class="group-name">Цвет</legend>
+            <p class="group-name">Цвет</p>
             <ul class="filters-list">
               <li class="filters-item">
                 <label class="item-label">
@@ -229,7 +232,7 @@
           </fieldset>
 
           <fieldset class="filters-group">
-            <legend class="group-name">Bluetooth</legend>
+            <p class="group-name">Bluetooth</p>
             <ul class="filters-list">
               <li class="filters-item">
                 <label class="item-label">
@@ -270,14 +273,14 @@
                 <span class="visually-hidden">Отсортировать по возрастанию</span>
                 <svg class="button-sort" aria-hidden="true" focusable="false" width="12" height="10"
                   xmlns="http://www.w3.org/2000/svg">
-                  <path d="m6 0 5.5 10H.5"/></svg>
+                  <path d="m6 0 5.5 10H.5" /></svg>
               </a>
 
               <a class="sorting-button-descending" href="#">
                 <span class="visually-hidden">Отсортировать по убыванию</span>
                 <svg class="button-sort" aria-hidden="true" focusable="false" width="12" height="10"
                   xmlns="http://www.w3.org/2000/svg">
-                  <path d="m6 0 5.5 10H.5"/></svg>
+                  <path d="m6 0 5.5 10H.5" /></svg>
               </a>
             </div>
 
@@ -285,27 +288,39 @@
 
           <ul class="products-list">
             <li class="products-item">
-              <img class="product-image" src="images/catalog/product-1.jpg" width="360" height="380" alt="Любительская селфи-палка.">
-              <!-- Реализация кликабельной области с помощью псевдо-элемента product-link::before и появление кнопки Подробнее с помощью  product-link::before:hover -->
-              <a href="" class="product-link button">Подробнее</a>
-              <h3 class="product-name">Любительская селфи-палка</h3>
+              <div class="product-wrapper">
+                <img class="product-image" src="images/catalog/product-1.jpg" width="360" height="380"
+                  alt="Любительская селфи-палка.">
+                <!-- Реализация кликабельной области с помощью псевдо-элемента product-link::before и появление кнопки Подробнее с помощью  product-link::before:hover -->
+                <a href="" class="product-link button">Подробнее</a>
+              </div>
+              <h3 class="product-name">Любительская<br> селфи-палка</h3>
               <p class="product-price">500 ₽</p>
             </li>
             <li class="products-item">
-              <img class="product-image" src="images/catalog/product-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка.">
-              <a href="" class="product-link button">Подробнее</a>
+              <div class="product-wrapper">
+                <img class="product-image" src="images/catalog/product-2.jpg" width="360" height="380"
+                  alt="Профессиональная селфи-палка.">
+                <a href="" class="product-link button">Подробнее</a>
+              </div>
               <h3 class="product-name">Профессиональная селфи-палка</h3>
               <p class="product-price">1 500 ₽</p>
             </li>
             <li class="products-item">
-              <img class="product-image" src="images/catalog/product-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка.">
-              <a href="" class="product-link button">Подробнее</a>
-              <h3 class="product-name">Непотопляемая селфи-палка</h3>
+              <div class="product-wrapper">
+                <img class="product-image" src="images/catalog/product-3.jpg" width="360" height="380"
+                  alt="Непотопляемая селфи-палка.">
+                <a href="" class="product-link button">Подробнее</a>
+              </div>
+              <h3 class="product-name">Непотопляемая<br> селфи-палка</h3>
               <p class="product-price">2 500 ₽</p>
             </li>
             <li class="products-item">
-              <img class="product-image" src="images/catalog/product-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной».">
-              <a href="" class="product-link button">Подробнее</a>
+              <div class="product-wrapper">
+                <img class="product-image" src="images/catalog/product-4.jpg" width="360" height="380"
+                  alt="Селфи-палка «Следуй за мной».">
+                <a href="" class="product-link button">Подробнее</a>
+              </div>
               <h3 class="product-name">Селфи-палка «Следуй за мной»</h3>
               <p class="product-price">1 500 ₽</p>
             </li>
@@ -417,7 +432,7 @@
         </section>
       </div>
       <div class="info-wrapper">
-        <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        <a class="contacts-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
 
         <section class="footer-developers">
           <!-- Секция о разработчиках проекта -->
