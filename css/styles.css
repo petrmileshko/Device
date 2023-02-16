@@ -1231,6 +1231,7 @@ body {
 
 .filters-group .input-label,
 .filters-group .input-price {
+  font-family: inherit;
   font-size: 15px;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
