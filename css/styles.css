@@ -1261,21 +1261,6 @@ body {
   background-color: #f0f0f0;
 }
 
-.select-wrapper {
-  position: relative;
-}
-
-.select-wrapper::after {
-  position: absolute;
-  right: 4px;
-  width: 30px;
-  height: 30px;
-  background-image: url("../images/catalog/select-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  content: "";
-}
-
 .catalog-sorting .sorting-select {
   width: 166px;
   padding-right: 0;
@@ -1283,15 +1268,12 @@ body {
   font-size: 18px;
   line-height: 30px;
   background-color: transparent;
+  background-image: url("../images/catalog/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
   border: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
-
-/* .catalog-sorting .sorting-select::-ms-expand {
-  display: none;
-} */
 
 .container-sorting-buttons {
   display: flex;
