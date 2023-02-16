@@ -722,6 +722,7 @@ body {
   content: "";
 }
 
+
 .services-menu {
   display: flex;
   flex-direction: column;
@@ -741,6 +742,7 @@ body {
 }
 
 .service-info-list {
+  margin-top: 9px;
   padding-left: 124px;
 }
 
@@ -749,7 +751,44 @@ body {
 }
 
 .service-description {  /* Изначально описание услуг скрыто */
+  position: relative;
   display: none;
+}
+
+.service-description:first-child::after {
+  position: absolute;
+  top: 4px;
+  right: -244px;
+  width: 136px;
+  height: 164px;
+  background-image: url("../images/index/delivery-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+}
+
+.service-description:nth-child(2)::after {
+  position: absolute;
+  top: -11px;
+  right: -253px;
+  width: 171px;
+  height: 195px;
+  background-image: url("../images/index/warranty-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+}
+
+.service-description:nth-child(3)::after {
+  position: absolute;
+  top: -8px;
+  right: -274px;
+  width: 156px;
+  height: 188px;
+  background-image: url("../images/index/credit-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
 }
 
 .service.service-current {    /* Задаем цветовые стили для текущего пункта меню */
@@ -772,10 +811,6 @@ body {
   left: 0;
   right: 0;
   content: "";
-}
-
-.service-info-list .service-description {
-  padding-top: 8px;
 }
 
 .service-description.description-current {  /* Показываем описание выбранной услуги */
