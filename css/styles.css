@@ -191,40 +191,25 @@ body {
   line-height: 20px;
 }
 
-.navigation-search .search-label {
-  display: flex;
-  align-items: stretch;
+.navigation-search .search-input {
   width: 359px;
-  padding: 0 0 0 16px;
+  padding: 8px 8px 8px 46px;
+  background-color: transparent;
   border: 2px solid #000000;
   border-radius: 20px 0 0 20px;
+  background-image: url("../images/search-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 16px center;
 }
 
-.search-label .search-icon {
-  align-self: center;
-  cursor: pointer;
-}
-
-.search-label {
-
-}
-
-.search-input::placeholder {
+.navigation-search .search-input::placeholder {
   font-size: 16px;
   line-height: 20px;
-  color: #000000;
-}
-
-.navigation-search .search-input {
-  width: 100%;
-  padding: 8px 0 8px 16px;
-}
-
-.navigation-search .search-input:focus {
-  outline: none;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .navigation-search .button-submit {
+  position: relative;
   width: 159px;
   padding: 8px 0;
   text-transform: none;
@@ -234,10 +219,45 @@ body {
   border-radius: 0 20px 20px 0;
 }
 
-.navigation-search .search-input,
-.navigation-button {
-  background-color: transparent;
-  border: none;
+.navigation-search .button-submit::before {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  left: -4px;
+  right: -4px;
+  content: "";
+}
+
+.navigation-search .search-label:focus-within {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.button-submit:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.button-submit:focus {
+  outline: none;
+}
+
+.button-submit:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-submit:focus::before {
+  outline: 2px solid #af4fff;
+}
+
+.navigation-search .search-input:focus {
+  outline: none;
+}
+
+.navigation-search .search-input:disabled,
+.navigation-search .button-submit:disabled {
+  opacity: 0.3;
+  cursor: auto;
 }
 
 .navigtion-menu.user-menu {
@@ -514,6 +534,12 @@ body {
 }
 
 .navigation-button {
+  border: none;
+  background-color: transparent;
+}
+
+.navigation-button .slide-prev,
+.navigation-button .slide-next {
   fill: #000000;
 }
 
@@ -1058,7 +1084,7 @@ body {
 }
 
 .subscribe-form .subscribe-button {
-  padding: 15px 33.52px 15px 36px;
+  padding: 15px 32px 15px 36px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
