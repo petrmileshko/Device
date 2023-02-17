@@ -254,10 +254,10 @@ body {
   outline: none;
 }
 
-.navigation-search .search-input:disabled,
-.navigation-search .button-submit:disabled {
+.navigation-search *:disabled {
   opacity: 0.3;
   cursor: auto;
+  pointer-events: none;
 }
 
 .navigtion-menu.user-menu {
