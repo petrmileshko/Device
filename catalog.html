@@ -33,7 +33,6 @@
           <li class="menu-item">
             <a class="menu-link" href="#">
               <span class="menu-icon icon-login">
-                <!-- <svg class="enter-icon"> Тут втставим иконку в формате svg  </svg>-->
                 <svg class="enter-icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -54,7 +53,6 @@
           <li class="menu-item">
             <a class="menu-link" href="#">
               <span class="menu-icon">
-                <!-- <svg class="compare-icon"> Тут втставим иконку в формате svg  </svg>-->
                 <svg class="compare-icon" aria-hidden="true" focusable="false" width="10" height="13" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M6 .39H4v12h2v-12ZM2 4.39H0v8h2v-8ZM10 3.39H8v9h2v-9Z" fill="#000" /></svg>
@@ -68,7 +66,6 @@
                 2
               </span>
               <span class="menu-icon">
-                <!-- <svg class="cart-icon"> Тут втставим иконку в формате svg  </svg>-->
                 <svg class="cart-icon" aria-hidden="true" focusable="false" width="16" height="15"
                   xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#a)">
@@ -85,17 +82,15 @@
       </div>
 
       <ul class="navigation-menu">
-        <li class="menu-item">
-          <a class="menu-button" href="#submenu">
+        <li class="menu-item submenu-inside">
+          <a class="menu-button" href="#">
             <span class="button-text">Каталог товаров</span>
             <p class="button-toggle">
-              <!-- <svg class="button-icon"> Тут втставим иконку в формате svg  </svg>-->
-              <svg class="button-icon" aria-hidden="true" focusable="false" width="16" height="17" viewBox="0 0 16 17"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M16 7.39H9v-7H7v7H0v2h7v7h2v-7h7v-2Z" /></svg>
+              <span class="visually-hidden">Подменю категорий</span>
             </p>
           </a>
           <ul class="submenu-categories" id="submenu">
+            <!-- Вкл/выкл классом .submenu-active -->
             <li class="category-group" data-category="category-group-1">
               <!-- Вместо "category-group-1" будет подставляться alias группы категорий или ее id-номер -->
               <a class="category-link" href="catalog.html">Виртуальная реальность</a>
