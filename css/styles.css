@@ -242,12 +242,12 @@ body {
   outline: none;
 }
 
-.button-submit:active {
-  color: rgba(255, 255, 255, 0.3);
+.button-submit:focus:not(:active)::before {
+  outline: 2px solid #af4fff;
 }
 
-.button-submit:focus::before {
-  outline: 2px solid #af4fff;
+.button-submit:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .navigation-search .search-input:focus {
