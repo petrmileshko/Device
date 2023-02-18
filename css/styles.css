@@ -299,7 +299,7 @@ body {
 }
 
 .menu-item .menu-link:hover:not(:focus),
-.category-link:hover:not(:focus) {
+.category-link:hover:not() {
   opacity: 0.6;
 }
 
