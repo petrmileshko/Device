@@ -1128,7 +1128,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  max-width: 125px;
+  max-width: 135px;
   margin-left: auto;
   cursor: pointer;
 }
