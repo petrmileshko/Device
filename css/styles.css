@@ -626,13 +626,18 @@ body {
 .footer-socials {
   display: flex;
   justify-content: center;
-  padding-left: 9px;
+  padding-left: 12px;
+  margin-bottom: 6px;
 }
 
 .footer-menu-list {
   display: flex;
   max-width: 500px;
   flex-wrap: wrap;
+}
+
+.footer-menu-list .footer-menu-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .footer-socials .socials-list {
@@ -642,20 +647,65 @@ body {
   column-gap: 15px;
 }
 
-.footer-menu-list .footer-menu-item:not(:last-child) {
-  margin-right: 30px;
+.footer-menu-list .footer-menu-link:hover {
+  color: #ffc700;
+  border-bottom: 2px solid #ffc700;
+}
+
+.footer-menu-list .footer-menu-link:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+.footer-menu-list .footer-menu-link:focus:not(:active) {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .socials-item .socials-button {
   display: block;
 }
 
+.socials-button svg {
+  display: block;
+  fill: #444444;
+}
+
+.icon-facebook > circle,
+.icon-instagramm > circle,
+.icon-twitter > circle {
+  fill: #ffffff;
+  fill-opacity: 0.3;
+}
+
+.icon-facebook:hover > circle,
+.icon-instagramm:hover > circle,
+.icon-twitter:hover > circle {
+  fill: #ffc700;
+  fill-opacity: 1;
+}
+
+.socials-button:active > svg {
+  fill: #444444;
+  fill-opacity: 0.3;
+}
+
+.socials-button:active {
+  outline: none;
+}
+
+.socials-button:focus:not(:active) {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+
 .info-wrapper {
   max-width: 180px;
   flex-wrap: wrap;
   align-items: flex-end;
   margin-left: auto;
-  padding-bottom: 5px;
+  padding-bottom: 9px;
 }
 
 .contacts-phone {
@@ -663,12 +713,54 @@ body {
 }
 
 .site-footer .contacts-phone {
+  display: block;
   margin-bottom: 63px;
+}
+
+.site-footer .contacts-phone:hover {
+  color: #ffc700;
+}
+
+.site-footer .contacts-phone:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+.site-footer .contacts-phone:focus:not(:active) {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .footer-about-address,
 .contacts-address {
   font-style: normal;
+}
+
+.developers-link {
+  display: block;
+}
+
+.developers-link .developer-logo {
+  display: block;
+  fill: #ffc700;
+}
+
+.developers-link:hover .developer-logo {
+  fill: #ffffff;
+}
+
+.developers-link:active .developer-logo {
+  fill: #ffffff;
+  fill-opacity: 0.3;
+}
+
+.developers-link:active {
+  outline: none;
+}
+
+.developers-link:focus:not(:active) {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 /* Главная страница основное содержимое */
@@ -1057,14 +1149,25 @@ body {
   position: relative;
   min-width: 280px;
   color: #ffe17f;
-  background-color: #000000;
 }
 
-.service.service-current .service-link {
-  width: 160px;
+.service.service-current .service-link.button {
+  min-width: 280px;
+  padding-left: 18px;
   color: inherit;
+  background-color: #000000;
   background-image: none;
+  text-align: left;
 }
+
+.service.service-current .service-link.button:hover {
+  color: rgba(255, 225, 127, 0.5);
+}
+
+.service.service-current .service-link.button:active {
+  color: rgba(255, 225, 127, 0.3);
+}
+
 
 .service.service-current .service-link::before {   /* Делаем всю область текущего пункта меню кликабельной */
   position: absolute;
@@ -1092,21 +1195,14 @@ body {
   align-items: center;
 }
 
-.delivery-order .delivery-icon {
-  position: relative;
-  display: block;
+.delivery-button::before {
   width: 125px;
   height: 100px;
   background-color: #ffe17f;
-}
-
-.delivery-icon .delivery-icon-image {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  background-image: url("../images/index/delivery-button.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
 }
 
 .delivery-button .delivery-text {
@@ -1118,22 +1214,35 @@ body {
   letter-spacing: 0.2em;
 }
 
-.delivery-button .delivery-info-icon {
-  position: relative;
+.delivery-button::after {
   width: 40px;
   height: 40px;
   margin: auto;
-  background-color: rgba(220, 220, 220, 0.5);
+  background-color: #dcdcdc;
   border-radius: 50%;
+  background-image: url("../images/index/icon-i.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5;
+  content: "";
 }
 
-.delivery-info-icon .info-icon-image {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+.delivery-button:hover::before {
+  background-color: #ffc700;
+}
+
+.delivery-button:hover::after {
+  opacity: 1;
+}
+
+.delivery-button:active {
+  outline: none;
+  opacity: 0.3;
+}
+
+.delivery-button:focus:not(:active) {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 /* Секция shop-info - Информация о магазине */
@@ -1277,6 +1386,19 @@ body {
   border-bottom: 3px solid #cecece;
 }
 
+.subscribe-form .subscribe-input:active {
+  opacity: 0.3;
+}
+
+.subscribe-form .subscribe-input:focus:not(:active) {
+  background-color: #dcdcdc;
+  outline: none;
+}
+
+.subscribe-form .subscribe-input.error {
+  border-bottom: 3px solid #ff3d3d;
+}
+
 .subscribe-form .checkbox-label {
   position: relative;
   display: flex;
@@ -1319,6 +1441,16 @@ body {
   text-align: center;
   letter-spacing: 0.2em;
   border: 3px solid #cecece;
+}
+
+.subscribe-form .subscribe-button:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+.subscribe-form .subscribe-button:focus:not(:active) {
+  background-color: #dcdcdc;
+  outline: none;
 }
 
 /*
