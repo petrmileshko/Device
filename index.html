@@ -93,7 +93,7 @@
             <!-- Вкл/выкл классом .submenu-active -->
             <li class="category-group" data-category="category-group-1">
               <!-- Вместо "category-group-1" будет подставляться alias группы категорий или ее id-номер -->
-              <a class="category-link" href="#">Виртуальная реальность</a>
+              <a class="category-link active-link" href="catalog.html">Виртуальная реальность</a> <!-- активная категория на станице-->
               <a class="category-link" href="catalog.html">Моноподы для cелфи</a>
               <a class="category-link" href="catalog.html">Экшн-камеры</a>
             </li>
@@ -107,7 +107,7 @@
           </ul>
         </li>
         <li class="menu-item">
-          <a class="menu-link" href="#delivery">доставка</a>
+          <a class="menu-link active-link" href="#delivery">доставка</a>
         </li>
         <li class="menu-item">
           <a class="menu-link" href="#warranty">гарантия</a>
@@ -405,20 +405,20 @@
 
         <ul class="service-info-list">
           <!-- Для вывода описания выбранной услуги используем класс .description-current -->
-          <li class="service-description description-current" id="#delivery">
+          <li class="service-description description-current" id="delivery">
             <h3 class="service-title">Доставка</h3>
             <p class="description-text">Мы с удовольствием доставим ваш товар прямо<br>к вашему подъезду совершенно
               бесплатно! Ведь<br>мы неплохо заработаем, поднимая его на ваш этаж.</p>
             <!-- декоративное изображение иконки сервиса - background-image у псевдо-элемнта service-description[id="#delivery"]::after -->
           </li>
-          <li class="service-description" id="#warranty">
+          <li class="service-description" id="warranty">
             <h3 class="service-title">Гарантия</h3>
             <p class="description-text">Если из-за возгорания купленного у нас товара у вас<br>
               сгорит дом — не переживайте, мы выдадим вам новый.<br>
               Товар, не дом, конечно же.</p>
             <!-- декоративное изображение иконки сервиса - background-image у псевдо-элемнта service-description[id="#warranty"]::after -->
           </li>
-          <li class="service-description" id="#credit">
+          <li class="service-description" id="credit">
             <h3 class="service-title">Кредит</h3>
             <p class="description-text">Залезть в долговую яму стало проще! Кредитные<br> консультанты подберут для вас
               наиболее выгодные<br> условия кредита. Выгодные для банка, разумеется.</p>
@@ -480,7 +480,7 @@
 
       </section>
 
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <!-- декоративное изображение полоски сверху - (CSS) псевдо-элемнт contacts-title::before -->
         <h3 class="contacts-title">Контакты</h3>
 

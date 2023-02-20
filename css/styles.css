@@ -156,9 +156,11 @@ body {
 }
 
 .navigation {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 17px 49px 0 60px;
+  z-index: 2;
 }
 
 .catalog-page .navigation {
@@ -296,6 +298,29 @@ body {
   padding: 5px 0;
 }
 
+.menu-link.active-link,
+.category-link.active-link {
+  position: relative;
+}
+
+.menu-link.active-link::after,
+.category-link.active-link::after {
+  position: absolute;
+  top: 93%;
+  left: 0;
+  height: 2px;
+  background-color: #000000;
+  content: "";
+}
+
+.menu-link.active-link::after {
+  right: 1px;
+}
+
+.category-link.active-link::after {
+  width: 100%;
+}
+
 .menu-link.cart-link {
   min-width: 128px;
   padding-right: 11px;
@@ -346,6 +371,9 @@ body {
 
 .submenu-categories {
   position: absolute;
+  width: 1160px;
+  left: 0;
+  padding-left: 60px;
   display: none;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
@@ -354,14 +382,20 @@ body {
   letter-spacing: normal;
   text-transform: none;
   background-color: #ffe17f;
-  z-index: 1;
 }
 
-.submenu-categories.submenu-active {
+.submenu-categories.submenu-active {    /* Активация подменю с помощью дополнительного класса*/
   display: flex;
-  padding: 14px 0 34px 0;
+  margin-top: 2px;
+  padding: 12px 1px 60px 60px;
 }
 
+.menu-item.submenu-inside:focus-within .submenu-categories {    /* Активация подменю с помощью фокуса*/
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2px;
+  padding: 12px 1px 60px 60px;
+}
 
 .submenu-categories .category-group {
   display: flex;
@@ -404,7 +438,7 @@ body {
 }
 
 .navigation-menu:not(.navigtion-menu.user-menu) .menu-item:not(:last-of-type) {
-  margin-right: 47px;
+  margin-right: 46px;
 }
 
 .navigation-menu:not(.navigtion-menu.user-menu) .menu-item:first-of-type {
@@ -476,16 +510,10 @@ body {
 
 .menu-button:focus {
   position: relative;
-  z-index: 3;
 }
 
 .category-link:focus:not(:active) {
   outline: 2px solid #af4fff;
-}
-
-.menu-item.submenu-inside:focus-within .submenu-categories {
-  display: flex;
-  padding: 14px 0 34px 0;
 }
 
 /* Подвал сайта */
@@ -921,7 +949,7 @@ body {
   content: "";
 }
 
-.service-description.description-current {  /* Показываем описание выбранной услуги */
+.service-description.description-current { /* Показываем описание выбранной услуги */
   display: flex;
   flex-direction: column;
 }
