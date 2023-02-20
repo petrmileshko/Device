@@ -784,7 +784,7 @@ body {
 }
 
 .param-wrapper:not(:last-child) {
-  margin-right: 40px;
+  margin-right: 22px;
 }
 
 .slide-parameters .data-value {
