@@ -126,6 +126,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.2em;
+  background-color: transparent;
   background-image: linear-gradient(to bottom, transparent 40%, #ffe17f 40% 60%, transparent 60% 100%);
   border: none;
 }
@@ -146,6 +147,17 @@ body {
   outline-offset: 2px;
 }
 
+.button:disabled,
+.navigation-search *:disabled,
+.navigation-button:disabled,
+.indicator-toggle:disabled,
+.subscribe-button:disabled,
+.subscribe-input:disabled,
+.input-control:disabled + .checkbox-label {
+  opacity: 0.3;
+  cursor: auto;
+  pointer-events: none;
+}
 
 .container-center {
   width: 1160px;
@@ -285,12 +297,6 @@ body {
 
 .navigation-search .search-input:focus {
   outline: none;
-}
-
-.navigation-search *:disabled {
-  opacity: 0.3;
-  cursor: auto;
-  pointer-events: none;
 }
 
 .navigtion-menu.user-menu {
@@ -719,13 +725,6 @@ body {
   outline-offset: 2px;
 }
 
-.navigation-button:disabled {
-  opacity: 0.1;
-  cursor: auto;
-  pointer-events: none;
-}
-
-
 .slide {
   position: relative;
   display: none;
@@ -816,6 +815,7 @@ body {
 }
 
 .slide-indicator .indicator-toggle {
+  position: relative;
   width: 12px;
   height: 12px;
   padding: 0;
@@ -825,8 +825,32 @@ body {
   cursor: pointer;
 }
 
+.slide-indicator .indicator-toggle::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 0;
+  outline: 2px solid #af4fff;
+  outline-offset: 4px;
+}
+
 .indicator-toggle.indicator-active {
   background-color: #000000;
+}
+
+.indicator-toggle:hover {
+  opacity: 0.6;
+}
+
+.indicator-toggle:active {
+  opacity: 0.3;
+}
+
+.indicator-toggle:focus:not(:active)::after {
+  content: "";
 }
 
 .slide-parameters {
@@ -866,44 +890,21 @@ body {
 
 /* Секция categories - Категории товаров */
 .categories {
-  margin-bottom: 70px;
+  margin-bottom: 58px;
 }
 
 .categories-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(6, 160px);
+  column-gap: 40px;
+  row-gap: 5px;
 }
 
-.category {
-  position: relative;
+.category .category-name {
+  display: flex;
   width: 160px;
-}
-
-.category-icon {
-  position: relative;
-  display: flex;
+  min-height: 253px;
   flex-direction: column;
-  height: 160px;                /* необходимо задать высоту для контейнера с иконкой для придания квадратной формы */
-  margin-bottom: 33px;
-  background-color: #ffe17f;
-}
-
-.category-image {   /* паттерн для центрирования svg иконки внутри контейнера .category-icon*/
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
-.category-icon[aria-describedby="monopods"] .category-image {
-  margin-top: 43px;
-}
-
-.category-name {
-  display: block;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -913,14 +914,53 @@ body {
   color: #000000;
 }
 
-.category-name::after { /* паттерн для создания кликабельной зоны на всю область <li> */
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.category .category-name::before {
+  height: 160px;
+  margin-bottom: 32px;
+  background-color: #ffe17f;
+  background-repeat: no-repeat;
+  background-position: center;
   content: "";
 }
+
+.category .category-name[id="virtual-reality"]::before {
+  background-image: url("../images/index/virtual-reality.svg");
+}
+
+.category .category-name[id="monopods"]::before {
+  background-image: url("../images/index/monopods.svg");
+  background-position: top 43px center;
+}
+
+.category .category-name[id="action-cameras"]::before {
+  background-image: url("../images/index/action-cameras.svg");
+}
+
+.category .category-name[id="fitness-bracelets"]::before {
+  background-image: url("../images/index/fitness-bracelets.svg");
+}
+
+.category .category-name[id="smart-watches"]::before {
+  background-image: url("../images/index/smart-watches.svg");
+}
+
+.category .category-name[id="quadrocopters"]::before {
+  background-image: url("../images/index/quadrocopters.svg");
+}
+
+.category .category-name:hover::before {
+  background-color: #ffc700;
+}
+
+.category .category-name:focus:not(:active) {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.category .category-name:active {
+  opacity: 0.3;
+}
+
 
 /* Секция services - Дополнительные услуги */
 .services {
