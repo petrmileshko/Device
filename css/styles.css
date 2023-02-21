@@ -1578,9 +1578,36 @@ body {
   top: -9px;
   width: 18px;
   height: 18px;
-  background-color: #ffffff;
+  background-color: #ebebeb;
   border: 2px solid #000000;
   border-radius: 50%;
+}
+
+.min-pin::after,
+.max-pin::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  outline: 2px solid #af4fff;
+  outline-offset: 4px;
+}
+
+.min-pin:hover,
+.max-pin:hover {
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.min-pin:active,
+.max-pin:active {
+  background-color: #000000;
+}
+
+.min-pin:focus:not(:active)::after,
+.max-pin:focus:not(:active)::after {
+  content: "";
 }
 
 .min-pin {
@@ -1601,19 +1628,22 @@ body {
   appearance: textfield;
 }
 
+.filters-group .input-price:focus {
+  outline: none;
+}
+
 .filters-group .input-price::-webkit-outer-spin-button,
 .filters-group .input-price::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
 }
 
-.filters-group .input-price:focus {
-  outline: none;
+.range-inputs-wrapper > .input-label {
+  position: relative;
 }
 
 .range-inputs-wrapper > .input-label:first-of-type {
-  position: relative;
-  left: -12px;
+  left: -14px;
 }
 
 .filters-group .input-label,
@@ -1627,7 +1657,21 @@ body {
 }
 
 .range-inputs-wrapper .input-label + .input-label {
-  margin-left: 18px;
+  margin-left: 19px;
+}
+
+.focus-mark::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  outline: 2px solid #af4fff;
+  outline-offset: 4px;
+}
+
+.input-price:focus + .focus-mark::after {
+  content: "";
 }
 
 .filters-group .filters-list {
