@@ -1006,7 +1006,7 @@ body {
   color: #000000;
 }
 
-.category .category-name::before {
+.category .category-name::before {  /* Базовый стиль иконок категорий */
   height: 160px;
   margin-bottom: 32px;
   background-color: #ffe17f;
@@ -1014,7 +1014,7 @@ body {
   background-position: center;
   content: "";
 }
-
+/* стили для каждой категории по отдельности */
 .category .category-name[id="virtual-reality"]::before {
   background-image: url("../images/index/virtual-reality.svg");
 }
@@ -1524,6 +1524,8 @@ body {
 
 /* Фильтры */
 .catalog-filters {
+  display: flex;
+  flex-direction: column;
   width: 260px;
   padding-top: 25px;
 }
@@ -1541,7 +1543,7 @@ body {
 }
 
 .filters-group .group-name {
-  margin: 0 0 15px 0;
+  margin: 0 0 20px 0;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.02em;
@@ -1628,28 +1630,100 @@ body {
   margin-left: 18px;
 }
 
-.filters-group .item-label {
-  font-size: 16px;
-  line-height: 19px;
-  color: #000000;
-}
-
 .filters-group .filters-list {
   display: flex;
   flex-direction: column;
 }
 
-.filters-group .filters-item {
-  padding-left: 36px;
+.filters-list .filters-item {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  background-color: transparent;
 }
 
-.filters-group .filters-item:not(:last-of-type) {
-  margin-bottom: 7px;
+.filters-list .filters-item:not(:last-of-type) {
+  margin-bottom: 18px;
+}
+
+.filters-item .item-label {
+  display: flex;
+}
+
+.control-input + .control-mark {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+  border: 2px solid #cccccc;
+  border-radius: 3px;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../images/catalog/filter-tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+}
+
+.control-mark::after {  /* формируем прямоугольную рамку для фильтра в фокусе */
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  outline: 2px solid #af4fff;
+  outline-offset: 4px;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input:checked + .control-mark {
+  border-color: #000000;
+}
+
+.item-label:hover {
+  opacity: 0.6;
+}
+
+.item-label:active {
+  opacity: 0.3;
+}
+
+.control-input:focus + .control-mark::after { /* выводим рамку для фильтра в фокусе */
+  content: "";
+}
+
+.control-input:disabled + * {
+  opacity: 0.3;
+  cursor: auto;
+  pointer-events: none;
 }
 
 .catalog-filters .button {
   position: relative;
-  top: 2px;
+  top: 7px;
   display: block;
   width: 220px;
   padding: 10px 0 10px 0;
