@@ -1636,6 +1636,7 @@ body {
 }
 
 .filters-list .filters-item {
+  display: flex;
   font-size: 16px;
   line-height: 19px;
   color: #000000;
@@ -1647,7 +1648,7 @@ body {
 }
 
 .filters-item .item-label {
-  display: flex;
+  display: block;
 }
 
 .control-input + .control-mark {
@@ -1685,6 +1686,25 @@ body {
   content: "";
 }
 
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input:checked + .control-mark {
+  border-color: #000000;
+}
+
+.filters-item:hover .control-input:not(:disabled) + .control-mark,
+.filters-item:hover .control-input:not(:disabled) ~ .item-label {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.filters-item:active .control-input:not(:disabled) + .control-mark,
+.filters-item:active .control-input:not(:disabled) ~ .item-label {
+  opacity: 0.3;
+}
+
 .control-mark::after {  /* формируем прямоугольную рамку для фильтра в фокусе */
   position: absolute;
   top: 0;
@@ -1695,28 +1715,12 @@ body {
   outline-offset: 4px;
 }
 
-.control-input[type="radio"] + .control-mark {
-  border-radius: 50%;
-}
-
-.control-input:checked + .control-mark {
-  border-color: #000000;
-}
-
-.item-label:hover {
-  opacity: 0.6;
-}
-
-.item-label:active {
-  opacity: 0.3;
-}
-
 .control-input:focus + .control-mark::after { /* выводим рамку для фильтра в фокусе */
   content: "";
 }
 
-.control-input:disabled + * {
-  opacity: 0.3;
+.control-input:disabled ~ * {
+  opacity: 0.1;
   cursor: auto;
   pointer-events: none;
 }

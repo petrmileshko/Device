@@ -180,39 +180,31 @@
             <p class="group-name">Цвет</p>
             <ul class="filters-list">
               <li class="filters-item">
-                <label class="item-label">
-                  <input class="visually-hidden control-input" type="checkbox" name="colors" value="black" checked>
-                  <span class="control-mark"></span>
-                  Черный
-                </label>
+                <input class="visually-hidden control-input" type="checkbox" id="black" name="colors" value="black"
+                  checked>
+                <span class="control-mark"></span>
+                <label class="item-label" for="black">Черный</label>
               </li>
               <li class="filters-item">
-                <label class="item-label">
-                  <input class="visually-hidden control-input" type="checkbox" name="colors" value="white" checked>
-                  <span class="control-mark"></span>
-                  Белый
-                </label>
+                <input class="visually-hidden control-input" type="checkbox" id="white" name="colors" value="white"
+                  checked>
+                <span class="control-mark"></span>
+                <label class="item-label" for="white">Белый</label>
               </li>
               <li class="filters-item">
-                <label class="item-label">
-                  <input class="visually-hidden control-input" type="checkbox" name="colors" value="blue">
-                  <span class="control-mark"></span>
-                  Синий
-                </label>
+                <input class="visually-hidden control-input" type="checkbox" id="blue" name="colors" value="blue">
+                <span class="control-mark"></span>
+                <label class="item-label" for="blue">Синий</label>
               </li>
               <li class="filters-item">
-                <label class="item-label">
-                  <input class="visually-hidden control-input" type="checkbox" name="colors" value="red">
-                  <span class="control-mark"></span>
-                  Красный
-                </label>
+                <input class="visually-hidden control-input" type="checkbox" id="red" name="colors" value="red">
+                <span class="control-mark"></span>
+                <label class="item-label" for="red">Красный</label>
               </li>
               <li class="filters-item">
-                <label class="item-label">
-                  <input class="visually-hidden control-input" type="checkbox" name="colors" value="pink">
-                  <span class="control-mark"></span>
-                  Розовый
-                </label>
+                <input class="visually-hidden control-input" type="checkbox" id="pink" name="colors" value="pink">
+                <span class="control-mark"></span>
+                <label class="item-label" for="pink">Розовый</label>
               </li>
             </ul>
           </fieldset>
@@ -221,18 +213,16 @@
             <p class="group-name">Bluetooth</p>
             <ul class="filters-list">
               <li class="filters-item">
-                <label class="item-label">
-                  <input class="visually-hidden control-input" type="radio" name="Bluetooth" value="yes" checked>
-                  <span class="control-mark"></span>
-                  Есть
-                </label>
+                <input class="visually-hidden control-input" type="radio" id="affirmative" name="bluetooth"
+                  value="affirmative" checked>
+                <span class="control-mark"></span>
+                <label class="item-label" for="affirmative">Есть</label>
               </li>
               <li class="filters-item">
-                <label class="item-label">
-                  <input class="visually-hidden control-input" type="radio" name="Bluetooth" value="no">
-                  <span class="control-mark"></span>
-                  Нет
-                </label>
+                <input class="visually-hidden control-input" type="radio" id="negative" name="bluetooth"
+                  value="negative">
+                <span class="control-mark"></span>
+                <label class="item-label" for="negative">Нет</label>
               </li>
             </ul>
           </fieldset>
@@ -277,7 +267,8 @@
                 <img class="product-image" src="images/catalog/product-1.jpg" width="360" height="380"
                   alt="Любительская селфи-палка.">
                 <!-- Реализация кликабельной области с помощью псевдо-элемента product-link::before и появление кнопки Подробнее с помощью  product-link::before:hover -->
-                <button class="product-link button" type="button">Подробнее</button>   <!--Согласно стайлгайда эти элементы должны иметь состояние disabled поэтому тег <a> не может быть использоыван! -->
+                <button class="product-link button" type="button">Подробнее</button>
+                <!--Согласно стайлгайда эти элементы должны иметь состояние disabled поэтому тег <a> не может быть использоыван! -->
               </div>
               <h3 class="product-name">Любительская<br> селфи-палка</h3>
               <p class="product-price">500 ₽</p>
@@ -286,7 +277,8 @@
               <div class="product-wrapper">
                 <img class="product-image" src="images/catalog/product-2.jpg" width="360" height="380"
                   alt="Профессиональная селфи-палка.">
-                <button class="product-link button" type="button">Подробнее</button>   <!--Согласно стайлгайда эти элементы должны иметь состояние disabled поэтому тег <a> не может быть использоыван! -->
+                <button class="product-link button" type="button">Подробнее</button>
+                <!--Согласно стайлгайда эти элементы должны иметь состояние disabled поэтому тег <a> не может быть использоыван! -->
               </div>
               <h3 class="product-name">Профессиональная селфи-палка</h3>
               <p class="product-price">1 500 ₽</p>
@@ -295,7 +287,8 @@
               <div class="product-wrapper">
                 <img class="product-image" src="images/catalog/product-3.jpg" width="360" height="380"
                   alt="Непотопляемая селфи-палка.">
-                <button class="product-link button" type="button">Подробнее</button>   <!--Согласно стайлгайда эти элементы должны иметь состояние disabled поэтому тег <a> не может быть использоыван! -->
+                <button class="product-link button" type="button">Подробнее</button>
+                <!--Согласно стайлгайда эти элементы должны иметь состояние disabled поэтому тег <a> не может быть использоыван! -->
               </div>
               <h3 class="product-name">Непотопляемая<br> селфи-палка</h3>
               <p class="product-price">2 500 ₽</p>
@@ -304,7 +297,8 @@
               <div class="product-wrapper">
                 <img class="product-image" src="images/catalog/product-4.jpg" width="360" height="380"
                   alt="Селфи-палка «Следуй за мной».">
-                <button class="product-link button" type="button">Подробнее</button>   <!--Согласно стайлгайда эти элементы должны иметь состояние disabled поэтому тег <a> не может быть использоыван! -->
+                <button class="product-link button" type="button">Подробнее</button>
+                <!--Согласно стайлгайда эти элементы должны иметь состояние disabled поэтому тег <a> не может быть использоыван! -->
               </div>
               <h3 class="product-name">Селфи-палка «Следуй за мной»</h3>
               <p class="product-price">1 500 ₽</p>
