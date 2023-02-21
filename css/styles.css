@@ -1504,6 +1504,20 @@ body {
   content: "";
 }
 
+.breadcramps-item .breadcramps-link:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcramps-item .breadcramps-link:active {
+  color: rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.breadcramps-item .breadcramps-link:focus:not(:active) {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
 /* Секция container-catalog - тело/контейнер каталога */
 .catalog-body {
   display: flex;
