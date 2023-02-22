@@ -155,7 +155,7 @@ body {
 .subscribe-input:disabled,
 .input-control:disabled + .checkbox-label {
   opacity: 0.3;
-  cursor: auto;
+  cursor: not-allowed;
   pointer-events: none;
 }
 
