@@ -153,7 +153,8 @@ body {
 .indicator-toggle:disabled,
 .subscribe-button:disabled,
 .subscribe-input:disabled,
-.input-control:disabled + .checkbox-label {
+.input-control:disabled + .checkbox-label,
+.catalog-more:disabled {
   opacity: 0.3;
   cursor: not-allowed;
   pointer-events: none;
@@ -1833,7 +1834,7 @@ body {
 
 .catalog-sorting .sorting-select:disabled {
   opacity: 0.1;
-  cursor: auto;
+  cursor: not-allowed;
   pointer-events: none;
 }
 
@@ -1997,6 +1998,19 @@ body {
   letter-spacing: 0.2em;
   background-color: transparent;
   border: 3px solid #e5e5e5;
+}
+
+.catalog-more:hover {
+  border-color: #000000;
+}
+
+.catalog-more:active {
+  opacity: 0.3;
+}
+
+.catalog-more:focus:not(:active) {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .pagination-list {
