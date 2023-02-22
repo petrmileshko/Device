@@ -2141,8 +2141,10 @@ body {
 
 .modal {
   position: relative;
+  display: flex;
   flex: 0 1 920px;
   min-height: 568px;
+  padding: 72px 80px;
   color: #000000;
   background: #ffffff;
   border: 10px solid #000000;
