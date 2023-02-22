@@ -1,4 +1,4 @@
-# Личный проект «Device» верстка с [макета](https://www.figma.com/file/wGpArAFCFMuEsozyOGeZVu/HTML-1-%D0%94%D0%B5%D0%B2%D0%B0%D0%B9%D1%81-33-Copy)
+# Личный проект «Device» верстка с [макета](https://www.figma.com/file/Pc3HdZMgCBkY2kRchWRXdJ/HTML-1-%2F-%D0%94%D0%B5%D0%B2%D0%B0%D0%B9%D1%81-%2F-petr?node-id=0%3A1&t=7pO5fDrBG4SVk7oJ-0)
 
 * Студент: [Петр Милешко](https://htmlacademy.ru/profile/webpeternet).
 * Наставник: `Неизвестно`.
