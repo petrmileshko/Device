@@ -977,10 +977,12 @@ body {
 }
 
 .slide-parameters .data-value {
+  order: 1;
   margin: 0;
 }
 
 .slide-parameters .heading-name {
+  order: 2;
   margin-top: 5px;
 }
 
