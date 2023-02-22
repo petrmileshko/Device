@@ -2121,3 +2121,47 @@ body {
 .pagination-item.scroll-next {
   margin-left: auto;
 }
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(240, 240, 240, 0.9);
+  z-index: 2;
+}
+
+.modal-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  position: relative;
+  flex: 0 1 920px;
+  min-height: 568px;
+  color: #000000;
+  background: #ffffff;
+  border: 10px solid #000000;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 83px;
+  right: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal-close .icon-close {
+  fill: #000000;
+}
