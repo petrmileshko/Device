@@ -722,12 +722,18 @@ body {
   color: #ffc700;
 }
 
-.site-footer .contacts-phone:active {
+.contacts .contacts-phone:hover:not(:focus) {
+  opacity: 0.6;
+}
+
+.site-footer .contacts-phone:active,
+.contacts .contacts-phone:active {
   opacity: 0.3;
   outline: none;
 }
 
-.site-footer .contacts-phone:focus:not(:active) {
+.site-footer .contacts-phone:focus:not(:active),
+.contacts .contacts-phone:focus:not(:active) {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
@@ -1909,9 +1915,31 @@ body {
   grid-template-columns: 226px 1fr;
 }
 
+.products-item.new-item::before {
+  position: absolute;
+  top: 27px;
+  right: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(240, 240, 240, 0.8);
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  content: "new";
+}
+
 .products-item .product-wrapper {
   grid-column: 1/-1;
   margin-bottom: 32px;
+  background-color: rgba(240, 240, 240, 0.8);
 }
 
 .products-item .product-image {
@@ -1938,8 +1966,9 @@ body {
   left: 0;
   right: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding-top: 170px;
   z-index: 1;
 }
 
@@ -1963,12 +1992,14 @@ body {
 }
 
 .products-item:hover .product-name,
-.products-item:hover .product-price {
+.products-item:hover .product-price,
+.products-item.new-item:hover::before {
   opacity: 0.6;
 }
 
 .products-item:active .product-name,
-.products-item:active .product-price {
+.products-item:active .product-price,
+.products-item.new-item:active::before {
   opacity: 0.3;
 }
 
