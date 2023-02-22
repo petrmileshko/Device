@@ -646,6 +646,7 @@ body {
   width: 150px;
   grid-template-columns: repeat(3, 40px);
   column-gap: 15px;
+  row-gap: 5px;
 }
 
 .footer-menu-list .footer-menu-link:hover {
@@ -713,7 +714,7 @@ body {
   text-decoration-line: underline;
 }
 
-.site-footer .contacts-phone {
+.site-footer .contacts-phone:last-of-type {
   display: block;
   margin-bottom: 63px;
 }
@@ -900,9 +901,16 @@ body {
   margin-bottom: 49px;
 }
 
+.slide-control .button {
+  max-width: 250px;
+}
+
 .slide-indicators {
   display: flex;
+  flex-wrap: wrap;
   justify-self: flex-end;
+  row-gap: 5px;
+  max-width: 200px;
 }
 
 .slide-indicator {
@@ -1198,6 +1206,7 @@ body {
 
 .delivery-button {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
 }
