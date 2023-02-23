@@ -520,15 +520,25 @@
   <!-- Использовать дополнительный класс .modal-open для активации модального окна <div class="modal-overlay modal-open"> -->
   <div class="modal-overlay">
     <div class="modal">
-      <div class="modal-close">
-        <svg class="icon-close" aria-hidden="true" focusable="false" width="26" height="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+      <button class="modal-close" type="button">
+        <!-- Кнопка закрытия модального окна-->
+        <svg class="icon-close" aria-hidden="true" focusable="false" width="26" height="26" viewBox="0 0 26 26"
+          xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#a)">
             <path
               d="M26 2.36 23.64 0 13 10.64 2.36 0 0 2.36 10.64 13 0 23.64 2.36 26 13 15.36 23.64 26 26 23.64 15.36 13 26 2.36Z" />
           </g>
         </svg>
-      </div>
-      <h2 class="modal-title">Доставка под заказ</h2>
+      </button>
+      <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+        <h2 class="modal-title">Доставка под заказ</h2>
+        <label class="modal-label user-name">Ваше имя:
+          <input class="modal-input" type="text" name="nick" placeholder="Введите имя">
+        </label>
+        <label class="modal-label user-mail">Ваш e-mail:
+          <input class="modal-input" type="email" name="email" placeholder="Введите e-mail">
+        </label>
+      </form>
     </div>
   </div>
 

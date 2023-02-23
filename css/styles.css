@@ -2123,6 +2123,7 @@ body {
   margin-left: auto;
 }
 
+/* Модальное окно*/
 .modal-overlay {
   display: none;
   position: fixed;
@@ -2142,7 +2143,6 @@ body {
 
 .modal {
   position: relative;
-  display: flex;
   flex: 0 1 920px;
   min-height: 568px;
   padding: 72px 80px;
@@ -2156,15 +2156,84 @@ body {
   position: absolute;
   top: 83px;
   right: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   width: 26px;
   height: 26px;
+  margin: 0;
+  padding: 0;
   background-color: transparent;
+  border: none;
   cursor: pointer;
 }
 
 .modal-close .icon-close {
   fill: #000000;
 }
+
+.modal-close:hover .icon-close {
+  fill: rgba(0, 0, 0, 0.6);
+}
+
+.modal-close:active .icon-close {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.modal-close:active {
+  outline: none;
+}
+
+.modal-close:focus:not(:active) {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.modal-form {
+  display: grid;
+  grid-template-columns: 360px 180px 220px;
+  grid-template-areas:
+    "heading heading heading"
+    "name email email";
+  gap: 42px 40px;
+}
+
+.modal .modal-title {
+  grid-area: heading;
+  padding-right: 25px;
+}
+
+.modal-label.user-name {
+  grid-area: name;
+}
+
+.modal-label.user-mail {
+  grid-area: email;
+}
+
+.modal-label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.modal-label::after {
+  position: absolute;
+}
+
+.modal-input {
+  padding: 20px 35px 20px 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.modal-input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
