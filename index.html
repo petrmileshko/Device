@@ -547,7 +547,9 @@
         <label class="modal-label user-quantity">
           <div class="container-wrapper">
             <span class="modal-label-text">Количество:</span>
-            <span class="popover-icon"></span>
+            <span class="popover-icon">
+              <span class="visually-hidden">информация подсказка</span>
+            </span>
             <p class="popover-text">
               Постараемся найти, сколько нужно. Привезём сколько получится по требованиям<br>
               к провозу багажа.
@@ -555,8 +557,8 @@
           </div>
           <!-- используем дополнительный класс .error для обрамления красной рамкой-->
           <input class="modal-input" type="number" name="quntity" value="1" min="1" step="1">
-          <button class="toggle-pin pin-minus"></button>
-          <button class="toggle-pin pin-plus"></button>
+          <button class="toggle-pin pin-minus"><span class="visually-hidden">уменьшить количество</span></button>
+          <button class="toggle-pin pin-plus"><span class="visually-hidden">увеличить количество</span></button>
         </label>
         <button class="modal-submit button" type="submit">Отправить</button>
       </form>
