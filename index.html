@@ -463,7 +463,7 @@
           <h3 class="visually-hidden">МЫ в социальных сетях</h3>
           <ul class="socials-list">
             <li class="socials-item">
-              <a class="socials-button" href="#">
+              <a class="socials-button" href="https://www.facebook.com/htmlacademy">
                 <span class="visually-hidden">Facebook</span>
                 <svg class="icon-facebook" aria-hidden="true" focusable="false" width="40" height="40"
                   xmlns="http://www.w3.org/2000/svg">
@@ -474,7 +474,7 @@
               </a>
             </li>
             <li class="socials-item">
-              <a class="socials-button" href="#">
+              <a class="socials-button" href="https://www.instagram.com/htmlacademy/">
                 <span class="visually-hidden">Instagramm</span>
                 <svg class="icon-instagramm" aria-hidden="true" focusable="false" width="40" height="40"
                   xmlns="http://www.w3.org/2000/svg">
@@ -486,7 +486,7 @@
               </a>
             </li>
             <li class="socials-item">
-              <a class="socials-button" href="#">
+              <a class="socials-button" href="https://twitter.com/htmlacademy_ru">
                 <span class="visually-hidden">Twitter</span>
                 <svg class="icon-twitter" aria-hidden="true" focusable="false" width="40" height="40"
                   xmlns="http://www.w3.org/2000/svg">
@@ -532,12 +532,33 @@
       </button>
       <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
         <h2 class="modal-title">Доставка под заказ</h2>
-        <label class="modal-label user-name">Ваше имя:
+        <label class="modal-label user-name"><span class="modal-label-text">Ваше имя:</span>
           <input class="modal-input" type="text" name="nick" placeholder="Введите имя">
         </label>
-        <label class="modal-label user-mail">Ваш e-mail:
-          <input class="modal-input" type="email" name="email" placeholder="Введите e-mail">
+        <label class="modal-label user-mail"><span class="modal-label-text">Ваш e-mail:</span>
+          <!-- используем дополнительный класс .error для обрамления красной рамкой-->
+          <input class="modal-input error" type="email" name="email" placeholder="Введите e-mail" value="почта">
+          <!-- используем дополнительный класс .error для выделения шрифта красным цветом -->
+          <span class="response-message error">Забавный у вас адрес</span>
         </label>
+        <label class="modal-label user-delivery"><span class="modal-label-text">Что нужно привезти:</span>
+          <input class="modal-input" type="text" name="delivery" placeholder="В свободной форме">
+        </label>
+        <label class="modal-label user-quantity">
+          <div class="container-wrapper">
+            <span class="modal-label-text">Количество:</span>
+            <span class="popover-icon"></span>
+            <p class="popover-text">
+              Постараемся найти, сколько нужно. Привезём сколько получится по требованиям<br>
+              к провозу багажа.
+            </p>
+          </div>
+          <!-- используем дополнительный класс .error для обрамления красной рамкой-->
+          <input class="modal-input" type="number" name="quntity" value="1" min="1" step="1">
+          <button class="toggle-pin pin-minus"></button>
+          <button class="toggle-pin pin-plus"></button>
+        </label>
+        <button class="modal-submit button" type="submit">Отправить</button>
       </form>
     </div>
   </div>
