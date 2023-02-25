@@ -374,6 +374,73 @@ body {
   justify-content: flex-end;
 }
 
+.menu-item .popover-wrapper {
+  position: absolute;
+  top: 40px;
+  left: -126px;
+  display: none;
+  width: 320px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: normal;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.menu-link.cart-link:hover + .popover-wrapper,
+.menu-link.cart-link:focus-within + .popover-wrapper {
+  display: block;
+}
+
+.menu-item .popover-wrapper::before {
+  position: absolute;
+  top: -13px;
+  left: 48%;
+  width: 14px;
+  height: 6px;
+  border: 7px solid transparent;
+  border-bottom-color: #000000;
+  content: "";
+}
+
+.popover-wrapper .cart-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-list .cart-item {
+  position: relative;
+  display: flex;
+  padding: 20px;
+}
+
+.cart-item .cart-item-link {
+  display: flex;
+}
+
+.cart-item-link .cart-item-thumbnail {
+  display: block;
+  object-fit: cover;
+  margin-right: 23px;
+}
+
+.cart-item-link .cart-item-name {
+  max-width: 152px;
+}
+
+.cart-item .item-del {
+  padding: 0;
+  margin-left: auto;
+  background: transparent;
+  width: 12px;
+  height: 12px;
+  background-image: url("../images/popup/cross-del.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
 .menu-item .menu-link:hover:not(:focus),
 .category-link:hover:not(:focus) {
   opacity: 0.6;

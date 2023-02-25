@@ -72,6 +72,29 @@
               </span>
               Корзина
             </a>
+            <div class="popover-wrapper">
+              <ol class="cart-list">
+                <li class="cart-item">
+                  <a class="cart-item-link" href="">
+                    <img class="cart-item-thumbnail" src="" width="39" height="43" alt="">
+                    <span class="cart-item-name">Любительская селфи-палка</span>
+                  </a>
+                  <button class="item-del">
+                    <span class="visually-hidden">Удалить позицию из корзины</span>
+                  </button>
+                </li>
+                <li class="cart-item">
+                  <a class="cart-item-link" href="">
+                    <img class="cart-item-thumbnail" src="" width="39" height="43" alt="">
+                    <span class="cart-item-name">Профессиональная
+                      селфи-палка</span>
+                  </a>
+                  <button class="item-del">
+                    <span class="visually-hidden">Удалить позицию из корзины</span>
+                  </button>
+                </li>
+              </ol>
+            </div>
           </li>
         </ul>
       </div>
@@ -557,8 +580,10 @@
           </div>
           <!-- используем дополнительный класс .error для обрамления красной рамкой-->
           <input class="modal-input" type="number" name="quntity" value="1" min="1" step="1">
-          <button class="toggle-pin pin-minus" type="button"><span class="visually-hidden">уменьшить количество</span></button>
-          <button class="toggle-pin pin-plus" type="button"><span class="visually-hidden">увеличить количество</span></button>
+          <button class="toggle-pin pin-minus" type="button"><span class="visually-hidden">уменьшить
+              количество</span></button>
+          <button class="toggle-pin pin-plus" type="button"><span class="visually-hidden">увеличить
+              количество</span></button>
         </label>
         <button class="modal-submit button" type="submit">Отправить</button>
       </form>
