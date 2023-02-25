@@ -389,7 +389,7 @@ body {
 }
 
 .menu-link.cart-link:hover + .popover-wrapper,
-.menu-link.cart-link:focus-within + .popover-wrapper {
+.menu-item:focus-within .popover-wrapper {
   display: block;
 }
 
