@@ -2292,6 +2292,7 @@ body {
   display: block;
   width: 200px;
   padding: 20px 20px 20px 19px;
+  z-index: 1;
 }
 
 .modal-label .response-message {
