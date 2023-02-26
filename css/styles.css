@@ -82,7 +82,8 @@ body {
 .product-price,
 .slide-description,
 .slide-number,
-.category-icon {
+.category-icon,
+.cart-lumpsum {
   margin: 0;
   padding: 0;
 }
@@ -101,6 +102,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  border: none;
   cursor: pointer;
 }
 
@@ -374,6 +376,7 @@ body {
   justify-content: flex-end;
 }
 
+/* Корзина всплывающее окно*/
 .menu-item .popover-wrapper {
   position: absolute;
   top: 40px;
@@ -415,13 +418,15 @@ body {
   padding: 20px;
 }
 
+.cart-list .cart-item:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .cart-item .cart-item-link {
   display: flex;
 }
 
 .cart-item-link .cart-item-thumbnail {
-  display: block;
-  object-fit: cover;
   margin-right: 23px;
 }
 
@@ -440,6 +445,29 @@ body {
   background-position: center;
   cursor: pointer;
 }
+
+.popover-wrapper .cart-lumpsum {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background-color: #1a1a1a;
+}
+
+.popover-wrapper .cart-open-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 280px;
+  min-height: 50px;
+  margin: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+}
+/* Конец вплывающее окно корзины*/
 
 .menu-item .menu-link:hover:not(:focus),
 .category-link:hover:not(:focus) {
