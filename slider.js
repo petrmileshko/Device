@@ -1,5 +1,5 @@
-let prevBut = document.querySelector('.slide-prev');
-let nextBut = document.querySelector('.slide-next');
+let prevBut = document.querySelector('.prev');
+let nextBut = document.querySelector('.next');
 let slides = document.querySelectorAll('.slide');
 let toggles = document.querySelectorAll('.indicator-toggle');
 
