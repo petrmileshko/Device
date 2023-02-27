@@ -44,6 +44,7 @@
 body {
   display: flex;
   flex-direction: column;
+  min-width: 1160px;
   min-height: 100%;
   margin: 0;
   font-family: "Rubik", sans-serif;
@@ -81,7 +82,8 @@ body {
 .product-price,
 .slide-description,
 .slide-number,
-.category-icon {
+.category-icon,
+.cart-lumpsum {
   margin: 0;
   padding: 0;
 }
@@ -100,6 +102,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  border: none;
   cursor: pointer;
 }
 
@@ -153,6 +156,7 @@ body {
 .indicator-toggle:disabled,
 .subscribe-button:disabled,
 .subscribe-input:disabled,
+.modal-input:disabled,
 .input-control:disabled + .checkbox-label,
 .catalog-more:disabled {
   opacity: 0.3;
@@ -371,6 +375,127 @@ body {
   padding-right: 11px;
   justify-content: flex-end;
 }
+
+/* Корзина всплывающее окно*/
+.menu-item .popover-wrapper {
+  position: absolute;
+  top: 40px;
+  left: -126px;
+  display: none;
+  width: 320px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: normal;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.menu-link.cart-link:hover + .popover-wrapper,
+.menu-item:focus-within .popover-wrapper {
+  display: block;
+}
+
+.menu-item .popover-wrapper::before {
+  position: absolute;
+  top: -13px;
+  left: 48%;
+  width: 14px;
+  height: 6px;
+  border: 7px solid transparent;
+  border-bottom-color: #000000;
+  content: "";
+}
+
+.popover-wrapper .cart-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-list .cart-item {
+  position: relative;
+  display: flex;
+  padding: 20px;
+}
+
+.cart-list .cart-item:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cart-item .cart-item-link {
+  display: flex;
+}
+
+.cart-item .cart-item-link:hover,
+.cart-item .item-del:hover {
+  opacity: 0.6;
+}
+
+.cart-item .cart-item-link:active,
+.cart-item .item-del:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+.cart-item-link .cart-item-thumbnail {
+  margin-right: 23px;
+}
+
+.cart-item-link .cart-item-name {
+  max-width: 152px;
+}
+
+.cart-item .item-del {
+  padding: 0;
+  margin-left: auto;
+  background: transparent;
+  width: 12px;
+  height: 12px;
+  background-image: url("../images/popup/cross-del.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.popover-wrapper .cart-lumpsum {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background-color: #1a1a1a;
+}
+
+.popover-wrapper .cart-open-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 280px;
+  min-height: 50px;
+  margin: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+}
+
+.popover-wrapper .cart-open-button:hover {
+  background-color: #ffe17f;
+}
+
+.popover-wrapper .cart-open-button:active {
+  color: rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.popover-wrapper .cart-open-button:focus:not(:active),
+.cart-item .item-del:focus:not(:active),
+.cart-item .cart-item-link:focus:not(:active) {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+/* Конец вплывающее окно корзины*/
 
 .menu-item .menu-link:hover:not(:focus),
 .category-link:hover:not(:focus) {
@@ -2120,4 +2245,287 @@ body {
 
 .pagination-item.scroll-next {
   margin-left: auto;
+}
+
+/* Модальное окно*/
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(240, 240, 240, 0.9);
+  z-index: 2;
+}
+
+.modal-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  position: relative;
+  width: 920px;
+  min-height: 568px;
+  padding: 62px 70px;
+  color: #000000;
+  background: #ffffff;
+  border: 10px solid #000000;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 74px;
+  right: 70px;
+  display: block;
+  width: 26px;
+  height: 26px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-close .icon-close {
+  fill: #000000;
+}
+
+.modal-close:hover .icon-close {
+  fill: rgba(0, 0, 0, 0.6);
+}
+
+.modal-close:active .icon-close {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.modal-close:active {
+  outline: none;
+}
+
+.modal-close:focus:not(:active) {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.modal-form {
+  display: grid;
+  grid-template-columns: 360px 180px 220px;
+  grid-template-areas:
+    "heading heading heading"
+    "name email email"
+    "delivery delivery quantity"
+    "submit submit submit";
+  gap: 42px 0;
+}
+
+.modal .modal-title {
+  grid-area: heading;
+  padding-right: 25px;
+}
+
+.modal-label.user-name {
+  grid-area: name;
+}
+
+.modal-label.user-mail {
+  grid-area: email;
+  margin-left: 40px;
+}
+
+.modal-label.user-delivery {
+  grid-area: delivery;
+}
+
+.modal-label.user-quantity {
+  position: relative;
+  grid-area: quantity;
+  margin-left: 40px;
+}
+
+.modal-submit.button {
+  grid-area: submit;
+  justify-self: start;
+  padding: 0 30px;
+}
+
+.modal-label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.modal-label-text {
+  margin-bottom: 14px;
+}
+
+.modal-label.user-quantity .container-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.modal-label.user-quantity .popover-icon {
+  flex-shrink: 0;
+  display: block;
+  width: 26px;
+  height: 26px;
+  margin-top: -14px;
+  margin-left: 10px;
+  background-color: #ffe17f;
+  border-radius: 50%;
+  background-image: url("../images/modal/icon-i.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+}
+
+.modal-label.user-quantity .popover-text {
+  display: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: normal;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.modal-label.user-quantity .popover-text::before {
+  position: absolute;
+  top: -13px;
+  right: 40px;
+  width: 14px;
+  height: 6px;
+  border: 7px solid transparent;
+  border-bottom-color: #000000;
+  content: "";
+}
+
+.popover-icon:hover + .popover-text {
+  position: absolute;
+  top: 34px;
+  left: -19px;
+  display: block;
+  width: 200px;
+  padding: 20px 20px 20px 19px;
+  z-index: 1;
+}
+
+.modal-label .response-message {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.modal-label .response-message.error {
+  color: #ff3d3d;
+}
+
+.modal-input.error {
+  outline: 2px solid #ff3d3d;
+  outline-offset: -2px;
+}
+
+.modal-input {
+  padding: 20px 35px 20px 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  background-color: #ebebeb;
+  border: none;
+}
+
+.modal-input:placeholder-shown,
+.modal-label.user-quantity .modal-input {
+  background-color: #f0f0f0;
+}
+
+.modal-label.user-name .modal-input {
+  background-image: url("../images/modal/enter-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center right 21px;
+}
+
+.modal-label.user-mail .modal-input {
+  background-image: url("../images/modal/icon-mail.svg");
+  background-repeat: no-repeat;
+  background-position: center right 20px;
+}
+
+.modal-label.user-quantity .modal-input {
+  padding-left: 60px;
+  padding-right: 60px;
+  text-align: center;
+}
+
+.modal-label.user-quantity .modal-input::-webkit-inner-spin-button,
+.modal-label.user-quantity .modal-input::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+.toggle-pin {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-pin.pin-minus {
+  left: 0;
+}
+
+.toggle-pin.pin-minus::before,
+.toggle-pin.pin-plus::before,
+.toggle-pin.pin-plus::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 16px;
+  height: 2px;
+  margin: auto;
+  background-color: #000000;
+  content: "";
+}
+
+.toggle-pin.pin-plus {
+  right: 0;
+}
+
+.toggle-pin.pin-plus::after {
+  width: 2px;
+  height: 16px;
+}
+
+.modal-input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-input:hover:not(:disabled) {
+  background-color: #dcdcdc;
+}
+
+.modal-input:active:not(:disabled) {
+  outline: none;
+}
+
+.modal-input:focus:not(:active):not(.error) {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
