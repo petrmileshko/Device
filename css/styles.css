@@ -426,6 +426,17 @@ body {
   display: flex;
 }
 
+.cart-item .cart-item-link:hover,
+.cart-item .item-del:hover {
+  opacity: 0.6;
+}
+
+.cart-item .cart-item-link:active,
+.cart-item .item-del:active {
+  opacity: 0.3;
+  outline: none;
+}
+
 .cart-item-link .cart-item-thumbnail {
   margin-right: 23px;
 }
@@ -467,6 +478,23 @@ body {
   line-height: 21px;
   letter-spacing: 0.2em;
 }
+
+.popover-wrapper .cart-open-button:hover {
+  background-color: #ffe17f;
+}
+
+.popover-wrapper .cart-open-button:active {
+  color: rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.popover-wrapper .cart-open-button:focus:not(:active),
+.cart-item .item-del:focus:not(:active),
+.cart-item .cart-item-link:focus:not(:active) {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
 /* Конец вплывающее окно корзины*/
 
 .menu-item .menu-link:hover:not(:focus),
