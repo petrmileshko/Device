@@ -489,6 +489,13 @@ body {
   outline: none;
 }
 
+.popover-wrapper .cart-open-button:disabled {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .popover-wrapper .cart-open-button:focus:not(:active),
 .cart-item .item-del:focus:not(:active),
 .cart-item .cart-item-link:focus:not(:active) {
