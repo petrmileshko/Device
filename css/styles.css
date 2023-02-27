@@ -2349,9 +2349,7 @@ body {
 }
 
 .modal-label.user-quantity {
-  position: relative;
-  grid-area: quantity;
-  margin-left: 40px;
+  display: flex;
 }
 
 .modal-submit.button {
@@ -2374,18 +2372,20 @@ body {
   margin-bottom: 14px;
 }
 
-.modal-label.user-quantity .container-wrapper {
+.modal-form .container-wrapper {
   position: relative;
+  grid-area: quantity;
+  margin-left: 40px;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
 }
 
-.modal-label.user-quantity .popover-icon {
+.container-wrapper .popover-icon {
   flex-shrink: 0;
   display: block;
   width: 26px;
   height: 26px;
-  margin-top: -14px;
+  margin-top: -3px;
   margin-left: 10px;
   background-color: #ffe17f;
   border-radius: 50%;
@@ -2395,7 +2395,7 @@ body {
   content: "";
 }
 
-.modal-label.user-quantity .popover-text {
+.container-wrapper .popover-text {
   display: none;
   font-weight: 400;
   font-size: 16px;
@@ -2405,7 +2405,7 @@ body {
   background-color: #000000;
 }
 
-.modal-label.user-quantity .popover-text::before {
+.container-wrapper .popover-text::before {
   position: absolute;
   top: -13px;
   right: 40px;
@@ -2454,7 +2454,7 @@ body {
 }
 
 .modal-input:placeholder-shown,
-.modal-label.user-quantity .modal-input {
+.container-wrapper .modal-input {
   background-color: #f0f0f0;
 }
 
@@ -2470,14 +2470,15 @@ body {
   background-position: center right 20px;
 }
 
-.modal-label.user-quantity .modal-input {
+.container-wrapper .modal-input {
+  width: 100%;
   padding-left: 60px;
   padding-right: 60px;
   text-align: center;
 }
 
-.modal-label.user-quantity .modal-input::-webkit-inner-spin-button,
-.modal-label.user-quantity .modal-input::-webkit-outer-spin-button {
+.container-wrapper .modal-input::-webkit-inner-spin-button,
+.container-wrapper .modal-input::-webkit-outer-spin-button {
   appearance: none;
 }
 
@@ -2491,6 +2492,11 @@ body {
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+.modal-input:disabled ~ .toggle-pin {
+  cursor: not-allowed;
+  opacity: 0.3;
 }
 
 .toggle-pin.pin-minus {

@@ -76,7 +76,8 @@
               <ol class="cart-list">
                 <li class="cart-item">
                   <a class="cart-item-link" href="">
-                    <img class="cart-item-thumbnail" src="images/catalog/product-1.jpg" width="39" height="43" aria-describedby="product-1">
+                    <img class="cart-item-thumbnail" src="images/catalog/product-1.jpg" width="39" height="43" alt=""
+                      aria-describedby="product-1">
                     <span class="cart-item-name" id="product-1">Любительская селфи-палка</span>
                   </a>
                   <button class="item-del">
@@ -85,7 +86,8 @@
                 </li>
                 <li class="cart-item">
                   <a class="cart-item-link" href="">
-                    <img class="cart-item-thumbnail" src="images/catalog/product-2.jpg" width="39" height="43" aria-describedby="product-2">
+                    <img class="cart-item-thumbnail" src="images/catalog/product-2.jpg" width="39" height="43" alt=""
+                      aria-describedby="product-2">
                     <span class="cart-item-name" id="product-2">Профессиональная
                       селфи-палка</span>
                   </a>
@@ -560,36 +562,41 @@
       </button>
       <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
         <h2 class="modal-title">Доставка под заказ</h2>
+
         <label class="modal-label user-name"><span class="modal-label-text">Ваше имя:</span>
           <input class="modal-input" type="text" name="nick" placeholder="Введите имя">
         </label>
+
         <label class="modal-label user-mail"><span class="modal-label-text">Ваш e-mail:</span>
           <!-- используем дополнительный класс .error для обрамления красной рамкой-->
           <input class="modal-input error" type="email" name="email" placeholder="Введите e-mail" value="почта">
           <!-- используем дополнительный класс .error для выделения шрифта красным цветом -->
           <span class="response-message error">Забавный у вас адрес</span>
         </label>
+
         <label class="modal-label user-delivery"><span class="modal-label-text">Что нужно привезти:</span>
           <input class="modal-input" type="text" name="delivery" placeholder="В свободной форме">
         </label>
-        <label class="modal-label user-quantity">
-          <div class="container-wrapper">
+
+        <div class="container-wrapper">
+          <label class="modal-label user-quantity" for="quntity">
             <span class="modal-label-text">Количество:</span>
-            <span class="popover-icon">
-              <span class="visually-hidden">информация подсказка</span>
-            </span>
-            <p class="popover-text">
-              Постараемся найти, сколько нужно. Привезём сколько получится по требованиям<br>
-              к провозу багажа.
-            </p>
-          </div>
+          </label>
+          <span class="popover-icon">
+            <span class="visually-hidden">информация подсказка</span>
+          </span>
+          <p class="popover-text">
+            Постараемся найти, сколько нужно. Привезём сколько получится по требованиям<br>
+            к провозу багажа.
+          </p>
           <!-- используем дополнительный класс .error для обрамления красной рамкой-->
-          <input class="modal-input" type="number" name="quntity" value="1" min="1" step="1">
+          <input class="modal-input" type="number" id="quntity" name="quntity" value="1" min="1" step="1">
           <button class="toggle-pin pin-minus" type="button"><span class="visually-hidden">уменьшить
               количество</span></button>
           <button class="toggle-pin pin-plus" type="button"><span class="visually-hidden">увеличить
               количество</span></button>
-        </label>
+        </div>
+
         <button class="modal-submit button" type="submit">Отправить</button>
       </form>
     </div>
