@@ -1262,7 +1262,7 @@ body {
   display: none;
 }
 
-.service-description:first-child::after {
+.service-description.service-delivery::after {
   position: absolute;
   top: 4px;
   right: -244px;
@@ -1274,7 +1274,7 @@ body {
   content: "";
 }
 
-.service-description:nth-child(2)::after {
+.service-description.service-warranty::after {
   position: absolute;
   top: -11px;
   right: -253px;
@@ -1286,7 +1286,7 @@ body {
   content: "";
 }
 
-.service-description:nth-child(3)::after {
+.service-description.service-credit::after {
   position: absolute;
   top: -8px;
   right: -274px;
@@ -1334,6 +1334,10 @@ body {
 .service-description.description-current { /* Показываем описание выбранной услуги */
   display: flex;
   flex-direction: column;
+}
+
+.service-description .description-text {
+  max-width: 475px;
 }
 
 /* Секция delivery-order - Заказ доставки */
