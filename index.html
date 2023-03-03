@@ -53,7 +53,7 @@
                     fill="#000" />
                 </svg>
               </span>
-                  Войти
+              Войти
             </a>
             <a class="menu-link log-out-text" href="#">Выйти</a>
           </li>
@@ -104,12 +104,14 @@
                     <span class="visually-hidden">Удалить позицию из корзины</span>
                   </button>
                 </li>
+                <li class="cart-item cart-lumpsum">
+                    <span class="total-items">Товаров: 2</span>
+                    <span class="total-price">Сумма: 2000 ₽</span>
+                </li>
+                <li class="cart-item open-cart">
+                  <button class="cart-open-button" type="button">Открыть корзину</button>
+                </li>
               </ol>
-              <p class="cart-lumpsum">
-                <span class="total-items">Товаров: 2</span>
-                <span class="total-price">Сумма: 2000 ₽</span>
-              </p>
-              <button class="cart-open-button" type="button">Открыть корзину</button>
             </div>
           </li>
         </ul>
@@ -578,7 +580,8 @@
 
         <label class="modal-label user-mail"><span class="modal-label-text">Ваш e-mail:</span>
           <!-- используем дополнительный класс .error для обрамления красной рамкой-->
-          <input class="modal-input error" type="email" name="email" placeholder="Введите e-mail" value="почта" required>
+          <input class="modal-input error" type="email" name="email" placeholder="Введите e-mail" value="почта"
+            required>
           <!-- используем дополнительный класс .error для выделения шрифта красным цветом -->
           <span class="response-message error">Забавный у вас адрес</span>
         </label>

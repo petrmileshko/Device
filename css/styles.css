@@ -385,27 +385,34 @@ body {
 /* Корзина всплывающее окно*/
 .menu-item .popover-wrapper {
   position: absolute;
-  top: 40px;
+  top: 20px;
   left: -126px;
-  display: none;
+  display: block;
   width: 320px;
+  padding-top: 20px;
+  z-index: 2;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: normal;
+  background-color: transparent;
+}
+
+.popover-wrapper .cart-list {
+  display: none;
+}
+
+.popover-wrapper:hover > .cart-list,
+.menu-item:focus-within .cart-list {
+  display: flex;
+  flex-direction: column;
   color: #ffffff;
   background-color: #000000;
 }
 
-.menu-link.cart-link:hover + .popover-wrapper,
-.menu-item:focus-within .popover-wrapper {
-  display: block;
-  z-index: 2;
-}
-
-.menu-item .popover-wrapper::before {
+.menu-item .cart-list::before {
   position: absolute;
-  top: -13px;
+  top: 7px;
   left: 48%;
   width: 14px;
   height: 6px;
@@ -414,18 +421,30 @@ body {
   content: "";
 }
 
-.popover-wrapper .cart-list {
-  display: flex;
-  flex-direction: column;
-}
-
 .cart-list .cart-item {
   position: relative;
   display: flex;
   padding: 20px;
 }
 
-.cart-list .cart-item:not(:last-child) {
+.cart-list .cart-item.cart-lumpsum {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background-color: #1a1a1a;
+  padding-top: 0 20px;
+}
+
+.cart-item.cart-lumpsum .total-items {
+
+}
+
+.cart-item.open-cart {
+  padding: 0;
+}
+
+.cart-list .cart-item:not(:last-child):not(.cart-item.cart-lumpsum) {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -462,14 +481,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-}
-
-.popover-wrapper .cart-lumpsum {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 12px 20px;
-  background-color: #1a1a1a;
 }
 
 .popover-wrapper .cart-open-button {
