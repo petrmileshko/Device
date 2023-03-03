@@ -333,6 +333,11 @@ body {
   justify-content: flex-end;
 }
 
+.menu-item.authorisation-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .navigtion-menu.user-menu .menu-icon.icon-login {
   margin-right: 13px;
 }
@@ -591,13 +596,14 @@ body {
   margin-bottom: 17px;
 }
 
-.navigtion-menu.user-menu .user-name,
-.log-in-text,
-.log-out-text { /* Изначально имя пользователя и названия кнопок авторизации скрыто */
+.navigtion-menu.user-menu .menu-link.user-name,
+.menu-link.log-in-text,
+.menu-link.log-out-text { /* Изначально имя пользователя и названия кнопок авторизации скрыто */
   display: none;
 }
 
 .navigtion-menu.user-menu .user-name.switch-on {
+  display: flex;
   margin-right: 28px;
 }
 
@@ -606,7 +612,7 @@ body {
 }
 
 .navigtion-menu.user-menu .switch-on { /* Этот класс вкл/откл Имя пользователя и меняет название кнопки авторизации */
-  display: inline-block;
+  display: flex;
 }
 
 .navigation-menu:not(.navigtion-menu.user-menu) {
