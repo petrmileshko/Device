@@ -436,10 +436,6 @@ body {
   padding-top: 0 20px;
 }
 
-.cart-item.cart-lumpsum .total-items {
-
-}
-
 .cart-item.open-cart {
   padding: 0;
 }
@@ -1060,7 +1056,7 @@ body {
 
 .slide-indicators {
   position: absolute;
-  top: 65;
+  top: 65%;
   right: 0;
   display: flex;
   flex-wrap: wrap;
