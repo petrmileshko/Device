@@ -1540,6 +1540,7 @@ body {
 .subscribe-form .subscribe-input {
   width: 557px;
   padding-left: 16px;
+  background-color: transparent;
   border: none;
   border-bottom: 3px solid #cecece;
 }
