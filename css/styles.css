@@ -158,7 +158,8 @@ body {
 .subscribe-input:disabled,
 .modal-input:disabled,
 .input-control:disabled + .checkbox-label,
-.catalog-more:disabled {
+.catalog-more:disabled,
+.toggle-pin:disabled {
   opacity: 0.3;
   cursor: not-allowed;
   pointer-events: none;
@@ -2531,6 +2532,19 @@ body {
 .toggle-pin.pin-plus::after {
   width: 2px;
   height: 16px;
+}
+
+.toggle-pin:hover {
+  opacity: 0.6;
+}
+
+.toggle-pin:active {
+  opacity: 0.3;
+}
+
+.toggle-pin:focus:not(:active) {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .modal-input::placeholder {
