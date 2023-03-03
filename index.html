@@ -23,7 +23,7 @@
       <div class="utilits-wrapper">
         <form class="navigation-search" action="https://echo.htmlacademy.ru/" method="post">
           <label class="search-label">
-            <input class="search-input" type="text" name="search" placeholder="Текст поиска">
+            <input class="search-input" type="search" name="search" placeholder="Текст поиска" required>
             <span class="visually-hidden">Поле ввода строки для поиска</span>
           </label>
           <button class="button-submit" type="submit">Найти</button>
@@ -460,11 +460,9 @@
           <input class="subscribe-input" type="email" id="email" name="email" placeholder="Ваш e-mail" required>
           <!-- ДЛя обозначения ошибок в поле использовать класс .error -->
           <button class="subscribe-button" type="submit">Подписаться</button>
-          <input class="visually-hidden input-control" type="checkbox" id="confirm" name="confirm" checked required>
-          <label class="checkbox-label" for="confirm">
+          <span class="free-label" for="confirm">
             Это бесплатно
-            <span class="visually-hidden">Подтвердить отправку</span>
-          </label>
+          </span>
         </form>
       </div>
     </section>
@@ -580,7 +578,7 @@
 
         <label class="modal-label user-mail"><span class="modal-label-text">Ваш e-mail:</span>
           <!-- используем дополнительный класс .error для обрамления красной рамкой-->
-          <input class="modal-input error" type="email" name="email" placeholder="Введите e-mail" value="почта">
+          <input class="modal-input error" type="email" name="email" placeholder="Введите e-mail" value="почта" required>
           <!-- используем дополнительный класс .error для выделения шрифта красным цветом -->
           <span class="response-message error">Забавный у вас адрес</span>
         </label>

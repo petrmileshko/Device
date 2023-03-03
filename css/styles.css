@@ -1565,7 +1565,7 @@ body {
   border-bottom: 3px solid #ff3d3d;
 }
 
-.subscribe-form .checkbox-label {
+.subscribe-form .free-label {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -1575,12 +1575,7 @@ body {
   cursor: pointer;
 }
 
-.subscribe-form .input-control {
-  top: 50%;
-  right: 10%;
-}
-
-.input-control:checked + .checkbox-label::before {
+.free-label::before {
   position: absolute;
   top: 50%;
   left: -33px;
