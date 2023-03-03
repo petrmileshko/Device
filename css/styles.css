@@ -158,7 +158,8 @@ body {
 .subscribe-input:disabled,
 .modal-input:disabled,
 .input-control:disabled + .checkbox-label,
-.catalog-more:disabled {
+.catalog-more:disabled,
+.toggle-pin:disabled {
   opacity: 0.3;
   cursor: not-allowed;
   pointer-events: none;
@@ -332,6 +333,11 @@ body {
   justify-content: flex-end;
 }
 
+.menu-item.authorisation-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .navigtion-menu.user-menu .menu-icon.icon-login {
   margin-right: 13px;
 }
@@ -379,27 +385,34 @@ body {
 /* Корзина всплывающее окно*/
 .menu-item .popover-wrapper {
   position: absolute;
-  top: 40px;
+  top: 20px;
   left: -126px;
-  display: none;
+  display: block;
   width: 320px;
+  padding-top: 20px;
+  z-index: 2;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: normal;
+  background-color: transparent;
+}
+
+.popover-wrapper .cart-list {
+  display: none;
+}
+
+.popover-wrapper:hover > .cart-list,
+.menu-item:focus-within .cart-list {
+  display: flex;
+  flex-direction: column;
   color: #ffffff;
   background-color: #000000;
 }
 
-.menu-link.cart-link:hover + .popover-wrapper,
-.menu-item:focus-within .popover-wrapper {
-  display: block;
-  z-index: 2;
-}
-
-.menu-item .popover-wrapper::before {
+.menu-item .cart-list::before {
   position: absolute;
-  top: -13px;
+  top: 7px;
   left: 48%;
   width: 14px;
   height: 6px;
@@ -408,18 +421,26 @@ body {
   content: "";
 }
 
-.popover-wrapper .cart-list {
-  display: flex;
-  flex-direction: column;
-}
-
 .cart-list .cart-item {
   position: relative;
   display: flex;
   padding: 20px;
 }
 
-.cart-list .cart-item:not(:last-child) {
+.cart-list .cart-item.cart-lumpsum {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background-color: #1a1a1a;
+  padding-top: 0 20px;
+}
+
+.cart-item.open-cart {
+  padding: 0;
+}
+
+.cart-list .cart-item:not(:last-child):not(.cart-item.cart-lumpsum) {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -456,14 +477,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-}
-
-.popover-wrapper .cart-lumpsum {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 12px 20px;
-  background-color: #1a1a1a;
 }
 
 .popover-wrapper .cart-open-button {
@@ -590,13 +603,14 @@ body {
   margin-bottom: 17px;
 }
 
-.navigtion-menu.user-menu .user-name,
-.log-in-text,
-.log-out-text { /* Изначально имя пользователя и названия кнопок авторизации скрыто */
+.navigtion-menu.user-menu .menu-link.user-name,
+.menu-link.log-in-text,
+.menu-link.log-out-text { /* Изначально имя пользователя и названия кнопок авторизации скрыто */
   display: none;
 }
 
 .navigtion-menu.user-menu .user-name.switch-on {
+  display: flex;
   margin-right: 28px;
 }
 
@@ -605,7 +619,7 @@ body {
 }
 
 .navigtion-menu.user-menu .switch-on { /* Этот класс вкл/откл Имя пользователя и меняет название кнопки авторизации */
-  display: inline-block;
+  display: flex;
 }
 
 .navigation-menu:not(.navigtion-menu.user-menu) {
@@ -1041,11 +1055,15 @@ body {
 }
 
 .slide-indicators {
+  position: absolute;
+  top: 65%;
+  right: 0;
   display: flex;
   flex-wrap: wrap;
   justify-self: flex-end;
   row-gap: 5px;
   max-width: 200px;
+  z-index: 2;
 }
 
 .slide-indicator {
@@ -1099,11 +1117,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   row-gap: 10px;
+  max-width: 385px;
 }
 
 .param-wrapper {
   display: flex;
   flex-direction: column;
+  max-width: 156px;
 }
 
 .param-wrapper:not(:last-child) {
@@ -1262,7 +1282,7 @@ body {
   display: none;
 }
 
-.service-description:first-child::after {
+.service-description.service-delivery::after {
   position: absolute;
   top: 4px;
   right: -244px;
@@ -1274,7 +1294,7 @@ body {
   content: "";
 }
 
-.service-description:nth-child(2)::after {
+.service-description.service-warranty::after {
   position: absolute;
   top: -11px;
   right: -253px;
@@ -1286,7 +1306,7 @@ body {
   content: "";
 }
 
-.service-description:nth-child(3)::after {
+.service-description.service-credit::after {
   position: absolute;
   top: -8px;
   right: -274px;
@@ -1334,6 +1354,10 @@ body {
 .service-description.description-current { /* Показываем описание выбранной услуги */
   display: flex;
   flex-direction: column;
+}
+
+.service-description .description-text {
+  max-width: 475px;
 }
 
 /* Секция delivery-order - Заказ доставки */
@@ -1536,6 +1560,7 @@ body {
 .subscribe-form .subscribe-input {
   width: 557px;
   padding-left: 16px;
+  background-color: transparent;
   border: none;
   border-bottom: 3px solid #cecece;
 }
@@ -1553,7 +1578,7 @@ body {
   border-bottom: 3px solid #ff3d3d;
 }
 
-.subscribe-form .checkbox-label {
+.subscribe-form .free-label {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -1563,12 +1588,7 @@ body {
   cursor: pointer;
 }
 
-.subscribe-form .input-control {
-  top: 50%;
-  right: 10%;
-}
-
-.input-control:checked + .checkbox-label::before {
+.free-label::before {
   position: absolute;
   top: 50%;
   left: -33px;
@@ -2526,6 +2546,19 @@ body {
 .toggle-pin.pin-plus::after {
   width: 2px;
   height: 16px;
+}
+
+.toggle-pin:hover {
+  opacity: 0.6;
+}
+
+.toggle-pin:active {
+  opacity: 0.3;
+}
+
+.toggle-pin:focus:not(:active) {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .modal-input::placeholder {

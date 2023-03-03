@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Каталог: Магазин электроники Device</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
 </head>
 
 <body class="catalog-page">
@@ -23,35 +24,47 @@
       <div class="utilits-wrapper">
         <form class="navigation-search" action="https://echo.htmlacademy.ru/" method="post">
           <label class="search-label">
-            <input class="search-input" type="text" name="search" placeholder="Текст поиска">
+            <input class="search-input" type="search" name="search" placeholder="Текст поиска" required>
             <span class="visually-hidden">Поле ввода строки для поиска</span>
           </label>
           <button class="button-submit" type="submit">Найти</button>
         </form>
 
         <ul class="navigtion-menu user-menu">
-          <li class="menu-item">
-            <a class="menu-link" href="#">
+          <li class="menu-item authorisation-links">
+            <!-- с помощью класса switch-on включаем имя пользователя -->
+            <a class="menu-link user-name switch-on" href="#" id="user_id">
               <span class="menu-icon icon-login">
                 <svg class="enter-icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M0 12.39h13c-.2-2.6-2.1-4.8-4.7-5.5 1-.6 1.7-1.7 1.7-3 0-1.9-1.6-3.5-3.5-3.5S3 1.99 3 3.89c0 1.3.7 2.4 1.7 3-2.6.7-4.5 2.9-4.7 5.5Z"
-                    fill="#000" /></svg>
+                    fill="#000" />
+                </svg>
               </span>
-              <!-- с помощью класса switch-on включаем имя пользователя -->
-              <span class="user-name switch-on" id="user_id">Коля Петухов</span>
-              <!-- с помощью класса switch-on вкл/выкл нужную подпись кнопки -->
-              <span class="log-in-text">Войти</span>
-              <span class="log-out-text switch-on">Выйти</span>
+              Коля Петухов
             </a>
+            <!-- с помощью класса switch-on вкл/выкл кнопки -->
+            <a class="menu-link log-in-text" href="#">
+              <span class="menu-icon icon-login">
+                <svg class="enter-icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0 12.39h13c-.2-2.6-2.1-4.8-4.7-5.5 1-.6 1.7-1.7 1.7-3 0-1.9-1.6-3.5-3.5-3.5S3 1.99 3 3.89c0 1.3.7 2.4 1.7 3-2.6.7-4.5 2.9-4.7 5.5Z"
+                    fill="#000" />
+                </svg>
+              </span>
+              Войти
+            </a>
+            <a class="menu-link log-out-text switch-on" href="#">Выйти</a>
           </li>
           <li class="menu-item">
             <a class="menu-link" href="#">
               <span class="menu-icon">
                 <svg class="compare-icon" aria-hidden="true" focusable="false" width="10" height="13" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 .39H4v12h2v-12ZM2 4.39H0v8h2v-8ZM10 3.39H8v9h2v-9Z" fill="#000" /></svg>
+                  <path d="M6 .39H4v12h2v-12ZM2 4.39H0v8h2v-8ZM10 3.39H8v9h2v-9Z" fill="#000" />
+                </svg>
               </span>
               Сравнить
             </a>
@@ -75,31 +88,31 @@
               <ol class="cart-list">
                 <li class="cart-item">
                   <a class="cart-item-link" href="">
-                    <img class="cart-item-thumbnail" src="images/catalog/product-1.jpg" width="39" height="43" alt=""
-                      aria-describedby="product-1">
-                    <span class="cart-item-name" id="product-1">Любительская селфи-палка</span>
+                    <img class="cart-item-thumbnail" src="images/catalog/product-1.jpg" width="39" height="43" alt="">
+                    <span class="cart-item-name">Любительская селфи-палка</span>
                   </a>
-                  <button class="item-del">
+                  <button class="item-del" type="button">
                     <span class="visually-hidden">Удалить позицию из корзины</span>
                   </button>
                 </li>
                 <li class="cart-item">
                   <a class="cart-item-link" href="">
-                    <img class="cart-item-thumbnail" src="images/catalog/product-2.jpg" width="39" height="43" alt=""
-                      aria-describedby="product-2">
-                    <span class="cart-item-name" id="product-2">Профессиональная
+                    <img class="cart-item-thumbnail" src="images/catalog/product-2.jpg" width="39" height="43" alt="">
+                    <span class="cart-item-name">Профессиональная
                       селфи-палка</span>
                   </a>
-                  <button class="item-del">
+                  <button class="item-del" type="button">
                     <span class="visually-hidden">Удалить позицию из корзины</span>
                   </button>
                 </li>
+                <li class="cart-item cart-lumpsum">
+                  <span class="total-items">Товаров: 2</span>
+                  <span class="total-price">Сумма: 2000 ₽</span>
+                </li>
+                <li class="cart-item open-cart">
+                  <button class="cart-open-button" type="button">Открыть корзину</button>
+                </li>
               </ol>
-              <p class="cart-lumpsum">
-                <span class="total-items">Товаров: 2</span>
-                <span class="total-price">Сумма: 2000 ₽</span>
-              </p>
-              <button class="cart-open-button">Открыть корзину</button>
             </div>
           </li>
         </ul>
@@ -267,13 +280,15 @@
                 <span class="visually-hidden">Отсортировать по возрастанию</span>
                 <svg class="icon-sort" aria-hidden="true" focusable="false" width="12" height="10"
                   xmlns="http://www.w3.org/2000/svg">
-                  <path d="m6 0 5.5 10H.5" /></svg>
+                  <path d="m6 0 5.5 10H.5" />
+                </svg>
               </a>
               <a class="sorting-button-descending" href="#">
                 <span class="visually-hidden">Отсортировать по убыванию</span>
                 <svg class="icon-sort" aria-hidden="true" focusable="false" width="12" height="10"
                   xmlns="http://www.w3.org/2000/svg">
-                  <path d="m6 0 5.5 10H.5" /></svg>
+                  <path d="m6 0 5.5 10H.5" />
+                </svg>
               </a>
             </div>
           </form>
@@ -317,7 +332,7 @@
             </li>
           </ul>
           <div class="catalog-footer">
-            <button class="catalog-more">Загрузить ещЁ</button>
+            <button class="catalog-more" type="button">Загрузить ещЁ</button>
             <ul class="pagination-list">
               <!-- С помощью класса  scroll-available реализуем появление/скрытие подписей кнопок прокрутки -->
               <!-- С помощью классов  scroll-prev и scroll-next зададим стили и реализуем прокурутку списка страниц -->
