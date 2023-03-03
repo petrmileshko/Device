@@ -10,6 +10,15 @@ function toggleClick(toggle,key) {
     event.preventDefault();
     indexToggle = toggle.getAttribute('data-toggle');
 
+    if(!toggle.classList.contains('indicator-active')) {
+      toggles.forEach((item)=>{
+        if(item.classList.contains('indicator-active')) {
+          item.classList.remove('indicator-active');
+        }
+      });
+      toggle.classList.add('indicator-active');
+    }
+
     slides.forEach((slide,key)=> {
       if(slide.classList.contains('slide-active')) {
         indexSlide =  key + 1;
@@ -22,6 +31,11 @@ function toggleClick(toggle,key) {
     if ( indexSlide != indexToggle) {
       slides[indexToggle-1].classList.add('slide-active');
     }
+
+    if( !toggle.classList.contains('indicator-active')) {
+      toggle.classList.add('indicator-active');
+    }
+
   });
 }
 
