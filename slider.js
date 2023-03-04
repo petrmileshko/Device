@@ -59,10 +59,16 @@ nextBut.addEventListener('click', (event)=> {
     if(slide.classList.contains('slide-active')) {
       slide.classList.remove('slide-active');
       indexSlide = key < slides.length - 1 ? key + 1 : 0;
+      toggles.forEach((item)=>{
+        if(item.classList.contains('indicator-active')) {
+          item.classList.remove('indicator-active');
+        }
+      });
     }
   });
 
   slides[indexSlide].classList.add('slide-active');
+  toggles[indexSlide].classList.add('indicator-active');
 });
 
 toggles.forEach((toggle,key)=>{
