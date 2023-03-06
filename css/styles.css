@@ -44,7 +44,7 @@
 body {
   display: flex;
   flex-direction: column;
-  min-width: 1160px;
+  min-width: 1200px;
   min-height: 100%;
   margin: 0;
   font-family: "Rubik", sans-serif;
