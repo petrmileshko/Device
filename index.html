@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Главная: Магазин электроники Device</title>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
 </head>
 
 <body class="main-page">
@@ -17,7 +17,7 @@
     <nav class="navigation">
       <h2 class="visually-hidden">Навигация по магазиу</h2>
 
-      <a class="header-logo" href="">
+      <a class="header-logo" href="/">
         <img class="logo-image" src="images/logo-header.svg" width="145" height="37" alt="Логотип магазина.">
       </a>
 
@@ -33,7 +33,7 @@
         <ul class="navigtion-menu user-menu">
           <li class="menu-item authorisation-links">
             <!-- с помощью класса switch-on включаем имя пользователя -->
-            <a class="menu-link user-name" href="#" id="user_id">
+            <a class="menu-link user-name" href="user_profile.html" id="user_id">
               <span class="menu-icon icon-login">
                 <svg class="enter-icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13"
                   xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +45,7 @@
               Коля Петухов
             </a>
             <!-- с помощью класса switch-on вкл/выкл кнопки -->
-            <a class="menu-link log-in-text switch-on" href="#">
+            <a class="menu-link log-in-text switch-on" href="login.html">
               <span class="menu-icon icon-login">
                 <svg class="enter-icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13"
                   xmlns="http://www.w3.org/2000/svg">
@@ -56,10 +56,10 @@
               </span>
               Войти
             </a>
-            <a class="menu-link log-out-text" href="#">Выйти</a>
+            <a class="menu-link log-out-text" href="logout.html">Выйти</a>
           </li>
           <li class="menu-item">
-            <a class="menu-link" href="#">
+            <a class="menu-link" href="compare.html">
               <span class="menu-icon">
                 <svg class="compare-icon" aria-hidden="true" focusable="false" width="10" height="13" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +70,7 @@
             </a>
           </li>
           <li class="menu-item">
-            <a class="menu-link cart-link" href="#">
+            <a class="menu-link cart-link" href="cart.html">
               <span class="cart-goods">2</span>
               <span class="menu-icon">
                 <svg class="cart-icon" aria-hidden="true" focusable="false" width="16" height="15"
@@ -87,7 +87,7 @@
             <div class="popover-wrapper">
               <ol class="cart-list">
                 <li class="cart-item">
-                  <a class="cart-item-link" href="">
+                  <a class="cart-item-link" href="product.html">
                     <img class="cart-item-thumbnail" src="images/catalog/product-1.jpg" width="39" height="43" alt="">
                     <span class="cart-item-name">Любительская селфи-палка</span>
                   </a>
@@ -96,7 +96,7 @@
                   </button>
                 </li>
                 <li class="cart-item">
-                  <a class="cart-item-link" href="">
+                  <a class="cart-item-link" href="product.html">
                     <img class="cart-item-thumbnail" src="images/catalog/product-2.jpg" width="39" height="43" alt="">
                     <span class="cart-item-name">Профессиональная
                       селфи-палка</span>
@@ -120,7 +120,7 @@
 
       <ul class="navigation-menu">
         <li class="menu-item submenu-inside">
-          <a class="menu-button" href="#">
+          <a class="menu-button" href="catalog.html">
             <span class="button-text">Каталог товаров</span>
             <p class="button-toggle">
               <span class="visually-hidden">Подменю категорий</span>
@@ -199,7 +199,7 @@
             <p class="slide-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
               замаскированным под стандартную камеру.</p>
             <div class="slide-control">
-              <a class="button" href="#">Подробнее</a>
+              <a class="button" href="product_card.html">Подробнее</a>
             </div>
             <dl class="slide-parameters">
               <div class="param-wrapper">
@@ -225,7 +225,7 @@
             <p class="slide-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и
               соблюдать диету.</p>
             <div class="slide-control">
-              <a class="button" href="#">Подробнее</a>
+              <a class="button" href="product_card.html">Подробнее</a>
             </div>
             <dl class="slide-parameters">
               <div class="param-wrapper">
@@ -246,7 +246,7 @@
             <p class="slide-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!)
               метров длиной и весом всего 5 кг.</p>
             <div class="slide-control">
-              <a class="button" href="#">Подробнее</a>
+              <a class="button" href="product_card.html">Подробнее</a>
             </div>
             <dl class="slide-parameters">
               <div class="param-wrapper">
@@ -425,7 +425,7 @@
           <input class="subscribe-input" type="email" id="email" name="email" placeholder="Ваш e-mail" required>
           <!-- ДЛя обозначения ошибок в поле использовать класс .error -->
           <button class="subscribe-button" type="submit">Подписаться</button>
-          <span class="free-label" for="confirm">
+          <span class="free-label">
             Это бесплатно
           </span>
         </form>
@@ -439,7 +439,7 @@
 
       <section class="footer-about">
         <h3 class="visually-hidden">О нас</h3>
-        <a class="footer-about-logo" href="">
+        <a class="footer-about-logo" href="/">
           <img class="logo-image" src="images/logo-footer.svg" width="145" height="37" alt="Логотип магазина.">
         </a>
         <address class="footer-about-address">Санкт-Петербург, набережная

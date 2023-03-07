@@ -1839,7 +1839,7 @@ body {
   font-family: inherit;
   font-size: 15px;
   line-height: 18px;
-  color: rgba(0, 0, 0, 0.3);
+  color: #4F4F4F;
   background-color: transparent;
   border: none;
 }
@@ -2231,7 +2231,7 @@ body {
   justify-content: center;
   min-width: 40px;
   min-height: 40px;
-  color: rgba(68, 68, 68, 0.3);
+  color: #444444f2;
 }
 
 .pagination-link.scroll {

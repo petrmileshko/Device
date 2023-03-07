@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Каталог: Магазин электроники Device</title>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
 </head>
 
 <body class="catalog-page">
@@ -33,7 +33,7 @@
         <ul class="navigtion-menu user-menu">
           <li class="menu-item authorisation-links">
             <!-- с помощью класса switch-on включаем имя пользователя -->
-            <a class="menu-link user-name switch-on" href="#" id="user_id">
+            <a class="menu-link user-name switch-on" href="user_profile.html" id="user_id">
               <span class="menu-icon icon-login">
                 <svg class="enter-icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13"
                   xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +45,7 @@
               Коля Петухов
             </a>
             <!-- с помощью класса switch-on вкл/выкл кнопки -->
-            <a class="menu-link log-in-text" href="#">
+            <a class="menu-link log-in-text" href="login.html">
               <span class="menu-icon icon-login">
                 <svg class="enter-icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13"
                   xmlns="http://www.w3.org/2000/svg">
@@ -56,10 +56,10 @@
               </span>
               Войти
             </a>
-            <a class="menu-link log-out-text switch-on" href="#">Выйти</a>
+            <a class="menu-link log-out-text switch-on" href="logout.html">Выйти</a>
           </li>
           <li class="menu-item">
-            <a class="menu-link" href="#">
+            <a class="menu-link" href="compare.html">
               <span class="menu-icon">
                 <svg class="compare-icon" aria-hidden="true" focusable="false" width="10" height="13" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +70,7 @@
             </a>
           </li>
           <li class="menu-item">
-            <a class="menu-link cart-link" href="#">
+            <a class="menu-link cart-link" href="cart.html">
               <span class="cart-goods">2</span>
               <span class="menu-icon">
                 <svg class="cart-icon" aria-hidden="true" focusable="false" width="16" height="15"
@@ -87,7 +87,7 @@
             <div class="popover-wrapper">
               <ol class="cart-list">
                 <li class="cart-item">
-                  <a class="cart-item-link" href="">
+                  <a class="cart-item-link" href="catalog.html">
                     <img class="cart-item-thumbnail" src="images/catalog/product-1.jpg" width="39" height="43" alt="">
                     <span class="cart-item-name">Любительская селфи-палка</span>
                   </a>
@@ -96,7 +96,7 @@
                   </button>
                 </li>
                 <li class="cart-item">
-                  <a class="cart-item-link" href="">
+                  <a class="cart-item-link" href="catalog.html">
                     <img class="cart-item-thumbnail" src="images/catalog/product-2.jpg" width="39" height="43" alt="">
                     <span class="cart-item-name">Профессиональная
                       селфи-палка</span>
@@ -120,7 +120,7 @@
 
       <ul class="navigation-menu">
         <li class="menu-item submenu-inside">
-          <a class="menu-button" href="#">
+          <a class="menu-button" href="catalog.html">
             <span class="button-text">Каталог товаров</span>
             <p class="button-toggle">
               <span class="visually-hidden">Подменю категорий</span>
@@ -130,16 +130,16 @@
             <!-- Вкл/выкл классом .submenu-active -->
             <li class="category-group" data-category="category-group-1">
               <!-- Вместо "category-group-1" будет подставляться alias группы категорий или ее id-номер -->
-              <a class="category-link active-link" href="#">Виртуальная реальность</a>
-              <a class="category-link" href="#">Моноподы для cелфи</a>
-              <a class="category-link" href="#">Экшн-камеры</a>
+              <a class="category-link active-link" href="catalog.html">Виртуальная реальность</a>
+              <a class="category-link" href="catalog.html">Моноподы для cелфи</a>
+              <a class="category-link" href="catalog.html">Экшн-камеры</a>
             </li>
             <li class="category-group" data-category="category-group-2">
-              <a class="category-link" href="#">Фитнес-браслеты</a>
-              <a class="category-link" href="#">Умные часы</a>
+              <a class="category-link" href="catalog.html">Фитнес-браслеты</a>
+              <a class="category-link" href="catalog.html">Умные часы</a>
             </li>
             <li class="category-group" data-category="category-group-3">
-              <a class="category-link" href="#">Квадрокоптеры</a>
+              <a class="category-link" href="catalog.html">Квадрокоптеры</a>
             </li>
           </ul>
         </li>
@@ -276,14 +276,14 @@
             <button class="visually-hidden" type="submit">Отсортировать по критерию</button>
 
             <div class="container-sorting-buttons">
-              <a class="sorting-button-ascending" href="#">
+              <a class="sorting-button-ascending" href="catalog.html">
                 <span class="visually-hidden">Отсортировать по возрастанию</span>
                 <svg class="icon-sort" aria-hidden="true" focusable="false" width="12" height="10"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="m6 0 5.5 10H.5" />
                 </svg>
               </a>
-              <a class="sorting-button-descending" href="#">
+              <a class="sorting-button-descending" href="catalog.html">
                 <span class="visually-hidden">Отсортировать по убыванию</span>
                 <svg class="icon-sort" aria-hidden="true" focusable="false" width="12" height="10"
                   xmlns="http://www.w3.org/2000/svg">
@@ -298,7 +298,10 @@
               <div class="product-wrapper">
                 <img class="product-image" src="images/catalog/product-1.jpg" width="360" height="380"
                   alt="Любительская селфи-палка.">
-                <a class="product-link" href="#"><span class="button">Подробнее</span></a>
+                <a class="product-link" href="product_card.html">
+                  <span class="button">Подробнее</span>
+                  <span class="visually-hidden">Информация о Любительская селфи-палка</span>
+                </a>
               </div>
               <h3 class="product-name">Любительская<br> селфи-палка</h3>
               <p class="product-price">500 ₽</p>
@@ -307,7 +310,10 @@
               <div class="product-wrapper">
                 <img class="product-image" src="images/catalog/product-2.jpg" width="360" height="380"
                   alt="Профессиональная селфи-палка.">
-                <a class="product-link" href="#"><span class="button">Подробнее</span></a>
+                <a class="product-link" href="product_card.html">
+                  <span class="button">Подробнее</span>
+                  <span class="visually-hidden">Информация о Профессиональная селфи-палка</span>
+                </a>
               </div>
               <h3 class="product-name">Профессиональная селфи-палка</h3>
               <p class="product-price">1 500 ₽</p>
@@ -316,7 +322,10 @@
               <div class="product-wrapper">
                 <img class="product-image" src="images/catalog/product-3.jpg" width="360" height="380"
                   alt="Непотопляемая селфи-палка.">
-                <a class="product-link" href="#"><span class="button">Подробнее</span></a>
+                <a class="product-link" href="product_card.html">
+                  <span class="button">Подробнее</span>
+                  <span class="visually-hidden">Информация о Непотопляемая селфи-палка</span>
+                </a>
               </div>
               <h3 class="product-name">Непотопляемая<br> селфи-палка</h3>
               <p class="product-price">2 500 ₽</p>
@@ -325,7 +334,10 @@
               <div class="product-wrapper">
                 <img class="product-image" src="images/catalog/product-4.jpg" width="360" height="380"
                   alt="Селфи-палка «Следуй за мной».">
-                <a class="product-link" href="#"><span class="button">Подробнее</span></a>
+                <a class="product-link" href="product_card.html">
+                  <span class="button">Подробнее</span>
+                  <span class="visually-hidden">Информация о Селфи-палка «Следуй за мной»</span>
+                </a>
               </div>
               <h3 class="product-name">Селфи-палка «Следуй за мной»</h3>
               <p class="product-price">1 500 ₽</p>
@@ -337,14 +349,14 @@
               <!-- С помощью класса  scroll-available реализуем появление/скрытие подписей кнопок прокрутки -->
               <!-- С помощью классов  scroll-prev и scroll-next зададим стили и реализуем прокурутку списка страниц -->
               <li class="pagination-item scroll-prev scroll-available">
-                <a class="pagination-link scroll" href="#">Назад</a></li>
-              <li class="pagination-item"><a class="pagination-link" href="#">1</a></li>
-              <li class="pagination-item"><a class="pagination-link" href="#">2</a></li>
-              <li class="pagination-item"><a class="pagination-link" href="#">3</a></li>
+                <a class="pagination-link scroll" href="catalog.html">Назад</a></li>
+              <li class="pagination-item"><a class="pagination-link" href="catalog.html">1</a></li>
+              <li class="pagination-item"><a class="pagination-link" href="catalog.html">2</a></li>
+              <li class="pagination-item"><a class="pagination-link" href="catalog.html">3</a></li>
               <li class="pagination-item"><span class="pagination-link">...</span></li>
-              <li class="pagination-item"><a class="pagination-link" href="#">15</a></li>
+              <li class="pagination-item"><a class="pagination-link" href="catalog.html">15</a></li>
               <li class="pagination-item scroll-next scroll-available">
-                <a class="pagination-link scroll" href="#">Вперёд</a></li>
+                <a class="pagination-link scroll" href="catalog.html">Вперёд</a></li>
             </ul>
           </div>
         </div>
@@ -386,7 +398,7 @@
           <h3 class="visually-hidden">МЫ в социальных сетях</h3>
           <ul class="socials-list">
             <li class="socials-item">
-              <a class="socials-button" href="#">
+              <a class="socials-button" href="https://www.facebook.com/htmlacademy/">
                 <span class="visually-hidden">Facebook</span>
                 <svg class="icon-facebook" aria-hidden="true" focusable="false" width="40" height="40"
                   xmlns="http://www.w3.org/2000/svg">
@@ -397,7 +409,7 @@
               </a>
             </li>
             <li class="socials-item">
-              <a class="socials-button" href="#">
+              <a class="socials-button" href="https://www.instagram.com/htmlacademy/">
                 <span class="visually-hidden">Instagramm</span>
                 <svg class="icon-instagramm" aria-hidden="true" focusable="false" width="40" height="40"
                   xmlns="http://www.w3.org/2000/svg">
@@ -409,7 +421,7 @@
               </a>
             </li>
             <li class="socials-item">
-              <a class="socials-button" href="#">
+              <a class="socials-button" href="https://twitter.com/htmlacademy_ru/">
                 <span class="visually-hidden">Twitter</span>
                 <svg class="icon-twitter" aria-hidden="true" focusable="false" width="40" height="40"
                   xmlns="http://www.w3.org/2000/svg">

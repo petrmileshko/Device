@@ -7,6 +7,7 @@
 ## [результат первой проверки](https://htmlacademy.notion.site/2171653-0d693bce7aaa4b239dad4f1df89cd4f7)
 ## [результат второй проверки](https://htmlacademy.notion.site/2171653-87300bd759c4430a9e3072d1b82f3b77)
 Исправлено. Проект завершен.
+* Изменил цвет текста на странице каталога (пагинация и подпись ползунка ценового) для улучшения читаемости (contrast ratio в макете 1.64, когда минимальная должна быть не меньше 4)
 ---
 
 <a href="https://htmlacademy.ru/intensive/htmlcss"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/htmlcss/logo-for-github-2.png"></a>
