@@ -386,7 +386,7 @@ body {
 .menu-item .popover-wrapper {
   position: absolute;
   top: 20px;
-  left: -126px;
+  right: -48px;
   display: block;
   width: 320px;
   padding-top: 20px;
