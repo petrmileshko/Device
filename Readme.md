@@ -3,7 +3,6 @@
 * Студент: [Петр Милешко](https://htmlacademy.ru/profile/webpeternet).
 * Наставник: `Неизвестно`.
 
-## [Просмотр](https://portfolio.webpeternet.ru/device/)
 ## [результат первой проверки](https://htmlacademy.notion.site/2171653-0d693bce7aaa4b239dad4f1df89cd4f7)
 ## [результат второй проверки](https://htmlacademy.notion.site/2171653-87300bd759c4430a9e3072d1b82f3b77)
 Исправлено. Проект завершен.
@@ -17,10 +16,10 @@
 * Файлы для pixel perfect:
 
 Главная страница
-![image](https://files.webpeternet.ru/index.jpg)
+![image](https://files.webpetr.ru/index.jpg)
 
 Страница каталога
-![image](https://files.webpeternet.ru/catalog.jpg)
+![image](https://files.webpetr.ru/catalog.jpg)
 
 Модальное окно
-![image](https://files.webpeternet.ru/index+modal.jpg)
+![image](https://files.webpetr.ru/index+modal.jpg)
